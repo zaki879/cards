@@ -8091,7 +8091,6 @@
           }
         }),
         (window.lenisVersion = "1.0.42"),
-        (t !== document.documentElement && t !== document.body) || (t = window),
         (this.options = {
           wrapper: t,
           content: e,
@@ -8360,7 +8359,7 @@
           {},
           {
             el: null,
-            container: document.body,
+            container:".cardanimation-craftwaves" ,
             className: "mf-cursor",
             innerClassName: "mf-cursor-inner",
             textClassName: "mf-cursor-text",
@@ -28442,9 +28441,7 @@
       {
         namespace: "layout",
         component: class extends n {
-          constructor() {
-            super(...arguments), this.initLenis(), this.bindScrollToElements();
-          }
+       
           onEnter() {
             try {
               return to.refresh(), Promise.resolve();
@@ -28479,21 +28476,7 @@
               return Promise.reject(t);
             }
           }
-          bindScrollToElements() {
-            document.body.addEventListener("click", (t) => {
-              for (let e = t.target; e && e !== document.body; e = e.parentNode)
-                if (e.dataset.scrollTo || e.dataset.scrollToTarget) {
-                  const n = e.dataset.scrollToOptions
-                    ? JSON.parse(e.dataset.scrollToOptions)
-                    : void 0;
-                  e.dataset.scrollToTarget
-                    ? this.scrollToTarget(e.dataset.scrollToTarget, n) &&
-                      (t.stopPropagation(), t.preventDefault())
-                    : this.scrollTo(e.dataset.scrollTo, 0, n) &&
-                      (t.stopPropagation(), t.preventDefault());
-                }
-            });
-          }
+     
           initLenis() {
             to.isTouch ||
               ((this.lenis = new Uo()),
