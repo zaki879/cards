@@ -919,7 +919,7 @@
     font-size: 4.2rem;
     line-height: 90%;
     letter-spacing: -0.03em;
-    text-transform: uppercase;
+    text-transform: inherit;
   }
   @media (orientation: landscape) {
     .cw-loader_overlay-box-craftwaves {
@@ -1001,12 +1001,12 @@
   }
   .cw-btn_cta-craftwaves {
     overflow: hidden;
-    padding: 1.4rem 2rem;
+   
     border-radius: 1000px;
     font-weight: 500;
     font-size: 1.4rem;
     line-height: 110%;
-    text-transform: uppercase;
+    text-transform: inherit;
     transition: transform 0.3s;
   }
   @media (min-width: 768px), (orientation: landscape) {
@@ -1115,16 +1115,17 @@
     }
   }
   .cw-btn_cta-title-craftwaves {
+    
     position: relative;
     display: block;
-    padding: 0 0.16em 0 0;
+    padding: 0 2rem 0 2rem;
     overflow: hidden;
     z-index: 2;
   }
   .cw-btn_cta-title-craftwaves span {
     display: block;
     transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-    font-size: 1.4rem;
+    font-size: 1rem;
   }
   .cw-btn_cta-title-craftwaves span:after {
     content: attr(data-text);
@@ -1477,7 +1478,7 @@
     font-size: 6.8rem;
     line-height: 90%;
     letter-spacing: -0.03em;
-    text-transform: uppercase;
+    text-transform: inherit;
     transform: translateZ(0);
   }
   @media (min-width: 768px), (orientation: landscape) {
@@ -1546,7 +1547,7 @@
     font-weight: 500;
     font-size: 1.4rem;
     line-height: 110%;
-    text-transform: uppercase;
+    text-transform: inherit;
   }
   @media (min-width: 768px), (orientation: landscape) {
     .cw-intro-detail-craftwaves {
@@ -1787,7 +1788,7 @@
     font-size: 6.8rem;
     line-height: 85%;
     letter-spacing: -0.03em;
-    text-transform: uppercase;
+    text-transform: inherit;
   }
   @media (min-width: 768px), (orientation: landscape) {
     .cw-overview-reel-item-title-craftwaves {
@@ -1812,7 +1813,7 @@
     font-size: 5.2rem;
     line-height: 85%;
     letter-spacing: -0.02em;
-    text-transform: uppercase;
+    text-transform: inherit;
   }
   @media (min-width: 768px), (orientation: landscape) {
     .cw-overview-header-craftwaves h2 {
@@ -1959,7 +1960,7 @@
     font-weight: 500;
     font-size: 1.4rem;
     line-height: 110%;
-    text-transform: uppercase;
+    text-transform: inherit;
   }
   @media (min-width: 768px), (orientation: landscape) {
     .cw-overview-caption-craftwaves h2,
@@ -2027,7 +2028,7 @@
     font-weight: 500;
     font-size: 20px;
     line-height: 110%;
-    text-transform: uppercase;
+    text-transform: inherit;
   }
   @media (min-width: 768px), (orientation: landscape) {
     .cw-overview-tag-craftwaves {
@@ -2086,7 +2087,7 @@
     font-size: 5.8rem;
     line-height: 89%;
     letter-spacing: -0.03em;
-    text-transform: uppercase;
+    text-transform: inherit;
   }
   @media (min-width: 768px), (orientation: landscape) {
     .cw-greeting-header-craftwaves h2 {
@@ -2127,7 +2128,7 @@
     font-size: 5.4rem;
     line-height: 110%;
     letter-spacing: -0.03em;
-    text-transform: uppercase;
+    text-transform: inherit;
     white-space: nowrap;
   }
   @media (min-width: 768px), (orientation: landscape) {
@@ -2215,7 +2216,7 @@
     font-size: 7.2rem;
     line-height: 110%;
     letter-spacing: -0.03em;
-    text-transform: uppercase;
+    text-transform: inherit;
   }
   @media (min-width: 768px), (orientation: landscape) {
     .cw-showcase-item-ico-craftwaves,
@@ -2303,7 +2304,7 @@
     font-size: 3rem;
     line-height: 120%;
     letter-spacing: -0.02em;
-    text-transform: uppercase;
+    text-transform: inherit;
   }
   @media (min-width: 768px), (orientation: landscape) {
     .cw-brandreel-text-craftwaves {
@@ -2568,7 +2569,7 @@
     font-weight: 400;
     font-size: 3.2rem;
     line-height: 110%;
-    text-transform: uppercase;
+    text-transform: inherit;
   }
   @media (min-width: 768px), (orientation: landscape) {
     .cw-postcard-item-title-craftwaves {
@@ -2596,7 +2597,7 @@
     font-weight: 500;
     font-size: 1.7rem;
     line-height: 110%;
-    text-transform: uppercase;
+    text-transform: inherit;
   }
   @media (min-width: 768px), (orientation: landscape) {
     .cw-postcard-item-tag-craftwaves {
@@ -2671,7 +2672,7 @@
     font-size: 3.2rem;
     line-height: 120%;
     letter-spacing: -0.02em;
-    text-transform: uppercase;
+    text-transform: inherit;
   }
   @media (min-width: 768px), (orientation: landscape) {
     .cw-achievement-text-craftwaves {
@@ -2750,7 +2751,7 @@
     font-size: 10.2rem;
     line-height: 110%;
     letter-spacing: -0.03em;
-    text-transform: uppercase;
+    text-transform: inherit;
   }
   @media (min-width: 768px), (orientation: landscape) {
     .cw-achievement-item-title-craftwaves {
@@ -2851,7 +2852,7 @@
     font-size: 6.8rem;
     line-height: 77%;
     letter-spacing: -0.05em;
-    text-transform: uppercase;
+    text-transform: inherit;
   }
   @media (min-width: 768px), (orientation: landscape) {
     .cw-outro-header-craftwaves h2 {
@@ -2875,7 +2876,7 @@
     font-weight: 500;
     font-size: 1.4rem;
     line-height: 110%;
-    text-transform: uppercase;
+    text-transform: inherit;
   }
   @media (min-width: 768px), (orientation: landscape) {
     .cw-outro-caption-craftwaves h3 {
@@ -2907,7 +2908,7 @@
     font-weight: 500;
     font-size: 1.8rem;
     line-height: 110%;
-    text-transform: uppercase;
+    text-transform: inherit;
   }
   @media (min-width: 768px), (orientation: landscape) {
     .cw-outro-social-title-craftwaves {
@@ -2998,7 +2999,7 @@
     margin: 0 2.8rem 0 0;
     font-size: 1.4rem;
     line-height: 110%;
-    text-transform: uppercase;
+    text-transform: inherit;
   }
   @media (min-width: 768px), (orientation: landscape) {
     .cw-outro-location-caption-craftwaves {
@@ -3116,7 +3117,7 @@
     font-weight: 400;
     font-size: 8.1rem;
     line-height: 77%;
-    text-transform: uppercase;
+    text-transform: inherit;
   }
   @media (min-width: 768px), (orientation: landscape) {
     .cw-footer-header-craftwaves h2 {
@@ -3160,7 +3161,7 @@
     font-weight: 500;
     font-size: 1.2rem;
     line-height: 110%;
-    text-transform: uppercase;
+    text-transform: inherit;
     text-decoration: none;
   }
   @media (pointer: coarse) {
