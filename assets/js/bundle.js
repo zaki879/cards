@@ -9375,7 +9375,7 @@
           e
         ),
         i = new Yi.timeline(),
-        r = t.querySelectorAll(".cw-coin, video"),
+        r = t.querySelectorAll(".cw-coin-craftwaves, video"),
         s = new Cl(t, { type: n.type }),
         a = new Cl(s[n.type], { type: n.type });
       return (
@@ -9549,8 +9549,8 @@
       void 0 === e && (e = {}),
         Al({ from: 0, to: 1, duration: 2, stagger: 0.1, ease: "expo.out" }, e);
       const n = new Yi.timeline(),
-        i = t.querySelector(".cw-btn_cta-border"),
-        r = t.querySelector(".cw-btn_cta-title");
+        i = t.querySelector(".cw-btn_cta-border-craftwaves"),
+        r = t.querySelector(".cw-btn_cta-title-craftwaves");
       return (
         Yi.set(t, { pointerEvents: "none" }),
         n.set([i, r], { willChange: "transform" }),
@@ -28569,12 +28569,12 @@
           initFollower() {
             window.matchMedia("(pointer:fine)").matches &&
               (this.follower = new Fo({
-                className: "cw-cursor",
-                innerClassName: "cw-cursor-inner",
-                textClassName: "cw-cursor-text",
-                mediaClassName: "cw-cursor-media",
-                mediaBoxClassName: "cw-cursor-media-box",
-                iconSvgClassName: "cw-svgsprite",
+                className: "cw-cursor-craftwaves",
+                innerClassName: "cw-cursor-inner-craftwaves",
+                textClassName: "cw-cursor-text-craftwaves",
+                mediaClassName: "cw-cursor-media-craftwaves",
+                mediaBoxClassName: "cw-cursor-media-box-craftwaves",
+                iconSvgClassName: "cw-svgsprite-craftwaves",
                 iconSvgSrc: "/assets/img/sprites/svgsprites.svg",
                 skewing: 1.5,
                 skewingMedia: 1.5,
@@ -28584,20 +28584,20 @@
       },
       {
         namespace: "loader",
-        assign: ".cw-loader",
+        assign: ".cw-loader-craftwaves",
         component: class extends n {
           constructor() {
             super(...arguments),
-              (this.fill = this.el.querySelectorAll(".cw-loader_overlay-fill")),
-              (this.word = this.el.querySelectorAll(".cw-loader_overlay-word")),
+              (this.fill = this.el.querySelectorAll(".cw-loader_overlay-fill-craftwaves")),
+              (this.word = this.el.querySelectorAll(".cw-loader_overlay-word-craftwaves")),
               (this.wordSpan = this.el.querySelectorAll(
-                ".cw-loader_overlay-word span"
+                ".cw-loader_overlay-word-craftwaves span"
               )),
               (this.percent = this.el.querySelector(
-                ".cw-loader_overlay-percent"
+                ".cw-loader_overlay-percent-craftwaves"
               )),
               (this.percentSpan = this.el.querySelector(
-                ".cw-loader_overlay-percent span"
+                ".cw-loader_overlay-percent-craftwaves span"
               )),
               (this.loaded = !1),
               (this.hideTl = this.tlHide()),
@@ -28811,7 +28811,7 @@
       },
       {
         namespace: "divider",
-        assign: ".cw-divider",
+        assign: ".cw-divider-craftwaves",
         component: class extends n {
           constructor() {
             super(...arguments),
@@ -28955,7 +28955,7 @@
       },
       {
         namespace: "button",
-        assign: ".cw-btn",
+        assign: ".cw-btn-craftwaves",
         component: class extends n {
           constructor() {
             super(...arguments), (this.layout = this.app.get("layout"));
@@ -28979,7 +28979,7 @@
       },
       {
         namespace: "navbar",
-        assign: ".cw-navbar",
+        assign: ".cw-navbar-craftwaves",
         component: class extends n {
           constructor() {
             super(...arguments);
@@ -28988,18 +28988,18 @@
       },
       {
         namespace: "menu",
-        assign: ".cw-menu",
+        assign: ".cw-menu-craftwaves",
         component: class extends n {
           constructor() {
             super(...arguments),
               (this.opened = !1),
               (this.toggleBtn = this.el.querySelector(
-                ".cw-menu-toggle button"
+                ".cw-menu-toggle-craftwaves button"
               )),
-              (this.box = this.el.querySelector(".cw-menu-box")),
-              (this.backdrop = this.el.querySelector(".cw-menu-backdrop")),
-              (this.fill = this.el.querySelector(".cw-menu-fill")),
-              (this.content = this.el.querySelector(".cw-menu-content"));
+              (this.box = this.el.querySelector(".cw-menu-box-craftwaves")),
+              (this.backdrop = this.el.querySelector(".cw-menu-backdrop-craftwaves")),
+              (this.fill = this.el.querySelector(".cw-menu-fill-craftwaves")),
+              (this.content = this.el.querySelector(".cw-menu-content-craftwaves"));
           }
           onInit() {
             try {
@@ -29207,11 +29207,11 @@
       },
       {
         namespace: "intouch",
-        assign: ".cw-intouch",
+        assign: ".cw-intouch-craftwaves",
         component: class extends n {
           constructor() {
             super(...arguments),
-              (this.video = this.el.querySelector(".cw-intouch-video"));
+              (this.video = this.el.querySelector(".cw-intouch-video-craftwaves"));
           }
           onInit() {
             try {
@@ -29264,14 +29264,14 @@
         component: class extends n {
           constructor() {
             super(...arguments),
-              (this.header = this.el.querySelector(".cw-intro-header")),
-              (this.details = this.el.querySelector(".cw-intro-details")),
-              (this.detail = this.el.querySelectorAll(".cw-intro-detail")),
-              (this.figure = this.el.querySelector(".cw-intro-figure")),
+              (this.header = this.el.querySelector(".cw-intro-header-craftwaves")),
+              (this.details = this.el.querySelector(".cw-intro-details-craftwaves")),
+              (this.detail = this.el.querySelectorAll(".cw-intro-detail-craftwaves")),
+              (this.figure = this.el.querySelector(".cw-intro-figure-craftwaves")),
               (this.figureMedia = this.el.querySelector(
                 ".cw-intro-figure-media"
               )),
-              (this.bottom = this.el.querySelector(".cw-intro-bottom")),
+              (this.bottom = this.el.querySelector(".cw-intro-bottom-craftwaves")),
               this.magicScroll();
           }
           onInit() {
@@ -29297,7 +29297,7 @@
           tlEnter() {
             const t = new Yi.timeline({ paused: !0 }),
               e = this.header.querySelectorAll(".-word"),
-              n = this.header.querySelector(".cw-btn_cta");
+              n = this.header.querySelector(".cw-btn_cta-craftwaves");
             return (
               Yi.set(e, { y: "110%" }),
               t.set([e, this.detail, this.figureMedia], {
@@ -29392,7 +29392,7 @@
         component: class extends n {
           constructor() {
             super(...arguments),
-              (this.text = this.el.querySelector(".cw-focused-text"));
+              (this.text = this.el.querySelector(".cw-focused-text-craftwaves"));
           }
           onInit() {
             try {
@@ -29417,19 +29417,19 @@
         component: class extends n {
           constructor() {
             super(...arguments),
-              (this.bg = this.el.querySelector(".cw-overview-bg")),
-              (this.content = this.el.querySelector(".cw-overview-content")),
-              (this.header = this.el.querySelector(".cw-overview-header")),
-              (this.caption = this.el.querySelectorAll(".cw-overview-caption")),
-              (this.icon = this.el.querySelector(".cw-overview-icon")),
-              (this.text = this.el.querySelector(".cw-overview-text")),
-              (this.tag = this.el.querySelectorAll(".cw-overview-tag")),
-              (this.reel = this.el.querySelector(".cw-overview-reel")),
-              (this.offset = this.el.querySelector(".cw-overview-offset")),
-              (this.figure = this.el.querySelector(".cw-overview-figure")),
-              (this.figureBg = this.el.querySelector(".cw-overview-figure-bg")),
+              (this.bg = this.el.querySelector(".cw-overview-bg-craftwaves")),
+              (this.content = this.el.querySelector(".cw-overview-content-craftwaves")),
+              (this.header = this.el.querySelector(".cw-overview-header-craftwaves")),
+              (this.caption = this.el.querySelectorAll(".cw-overview-caption-craftwaves")),
+              (this.icon = this.el.querySelector(".cw-overview-icon-craftwaves")),
+              (this.text = this.el.querySelector(".cw-overview-text-craftwaves")),
+              (this.tag = this.el.querySelectorAll(".cw-overview-tag-craftwaves")),
+              (this.reel = this.el.querySelector(".cw-overview-reel-craftwaves")),
+              (this.offset = this.el.querySelector(".cw-overview-offset-craftwaves")),
+              (this.figure = this.el.querySelector(".cw-overview-figure-craftwaves")),
+              (this.figureBg = this.el.querySelector(".cw-overview-figure-bg-craftwaves")),
               (this.figureMedia = this.el.querySelector(
-                ".cw-overview-figure-media"
+                ".cw-overview-figure-media-craftwaves"
               )),
               (this.cursor = this.app.get("cursor")),
               (this.layout = this.app.get("layout"));
@@ -29454,8 +29454,8 @@
             this.reel &&
               (this.reeller = new Xl({
                 container: this.reel,
-                wrapper: ".cw-overview-reel-wrap",
-                itemSelector: ".cw-overview-reel-item",
+                wrapper: ".cw-overview-reel-wrap-craftwaves",
+                itemSelector: ".cw-overview-reel-item-craftwaves",
                 speed: 10,
                 plugins: {
                   scroller: {
@@ -29625,14 +29625,14 @@
       },
       {
         namespace: "greeting",
-        assign: ".cw-greeting",
+        assign: ".cw-greeting-craftwaves",
         component: class extends n {
           constructor() {
             super(...arguments),
-              (this.bg = this.el.querySelector(".cw-greeting-bg")),
-              (this.bgMedia = this.bg.querySelector(".cw-greeting-bg-media")),
-              (this.header = this.el.querySelector(".cw-greeting-header")),
-              (this.text = this.el.querySelector(".cw-greeting-text"));
+              (this.bg = this.el.querySelector(".cw-greeting-bg-craftwaves")),
+              (this.bgMedia = this.bg.querySelector(".cw-greeting-bg-media-craftwaves")),
+              (this.header = this.el.querySelector(".cw-greeting-header-craftwaves")),
+              (this.text = this.el.querySelector(".cw-greeting-text-craftwaves"));
           }
           onInit() {
             try {
@@ -29674,13 +29674,13 @@
       },
       {
         namespace: "showcase",
-        assign: ".cw-showcase",
+        assign: ".cw-showcase-craftwaves",
         component: class extends n {
           constructor() {
             super(...arguments),
               (this.layout = this.app.get("layout")),
-              (this.header = this.el.querySelector(".cw-showcase-header")),
-              (this.item = this.el.querySelectorAll(".cw-showcase-item")),
+              (this.header = this.el.querySelector(".cw-showcase-header-craftwaves")),
+              (this.item = this.el.querySelectorAll(".cw-showcase-item-craftwaves")),
               this.initItems();
           }
           onInit() {
@@ -29696,11 +29696,11 @@
           initItems() {
             (this.reellers = []),
               this.item.forEach((t, e) => {
-                const n = t.querySelector(".cw-showcase-item-reel"),
+                const n = t.querySelector(".cw-showcase-item-reel-craftwaves"),
                   i = new Xl({
                     container: n,
-                    wrapper: ".cw-showcase-item-reel-wrap",
-                    itemSelector: ".cw-showcase-item-reel-item",
+                    wrapper: ".cw-showcase-item-reel-wrap-craftwaves",
+                    itemSelector: ".cw-showcase-item-reel-item-craftwaves",
                     speed: 10,
                     plugins: {
                       scroller: {
@@ -29733,7 +29733,7 @@
           }
           tlParallax(t) {
             const e = new Yi.timeline(),
-              n = t.querySelector(".cw-showcase-item-bg");
+              n = t.querySelector(".cw-showcase-item-bg-craftwaves");
             return (
               e.set(n, { scale: 1.05, willChange: "transform" }),
               e.fromTo(n, { yPercent: -20 }, { yPercent: 20, ease: "none" }),
@@ -29745,14 +29745,14 @@
       },
       {
         namespace: "brandreel",
-        assign: ".cw-brandreel",
+        assign: ".cw-brandreel-craftwaves",
         component: class extends n {
           constructor() {
             super(...arguments),
               (this.layout = this.app.get("layout")),
-              (this.figure = this.el.querySelector(".cw-brandreel-figure")),
-              (this.text = this.el.querySelector(".cw-brandreel-text")),
-              (this.reel = this.el.querySelectorAll(".cw-brandreel-reel"));
+              (this.figure = this.el.querySelector(".cw-brandreel-figure-craftwaves")),
+              (this.text = this.el.querySelector(".cw-brandreel-text-craftwaves")),
+              (this.reel = this.el.querySelectorAll(".cw-brandreel-reel-craftwaves"));
           }
           onInit() {
             try {
@@ -29767,8 +29767,8 @@
               this.reel.forEach((t, e) => {
                 const n = new Xl({
                   container: t,
-                  wrapper: ".cw-brandreel-reel-wrap",
-                  itemSelector: ".cw-brandreel-reel-item",
+                  wrapper: ".cw-brandreel-reel-wrap-craftwaves",
+                  itemSelector: ".cw-brandreel-reel-item-craftwaves",
                   speed: 20,
                   plugins: {
                     scroller: {
@@ -29791,11 +29791,11 @@
       },
       {
         namespace: "postcard",
-        assign: ".cw-postcard",
+        assign: ".cw-postcard-craftwaves",
         component: class extends n {
           constructor() {
             super(...arguments),
-              (this.item = this.el.querySelectorAll(".cw-postcard-item")),
+              (this.item = this.el.querySelectorAll(".cw-postcard-item-craftwaves")),
               this.bindOpen();
           }
           bindOpen() {
@@ -29821,13 +29821,13 @@
       },
       {
         namespace: "achievement",
-        assign: ".cw-achievement",
+        assign: ".cw-achievement-craftwaves",
         component: class extends n {
           constructor() {
             super(...arguments),
-              (this.text = this.el.querySelector(".cw-achievement-text")),
-              (this.items = this.el.querySelector(".cw-achievement-items")),
-              (this.item = this.el.querySelectorAll(".cw-achievement-item"));
+              (this.text = this.el.querySelector(".cw-achievement-text-craftwaves")),
+              (this.items = this.el.querySelector(".cw-achievement-items-craftwaves")),
+              (this.item = this.el.querySelectorAll(".cw-achievement-item-craftwaves"));
           }
           onInit() {
             try {
@@ -29846,10 +29846,10 @@
             const t = Yi.matchMedia();
             t.add("(max-width:767px)", () => {
               this.item.forEach((t) => {
-                const e = t.querySelector(".cw-achievement-item-bg"),
-                  n = t.querySelector(".cw-achievement-item-figure"),
-                  i = t.querySelector(".cw-achievement-item-title"),
-                  r = t.querySelector(".cw-achievement-item-text");
+                const e = t.querySelector(".cw-achievement-item-bg-craftwaves"),
+                  n = t.querySelector(".cw-achievement-item-figure-craftwaves"),
+                  i = t.querySelector(".cw-achievement-item-title-craftwaves"),
+                  r = t.querySelector(".cw-achievement-item-text-craftwaves");
                 Fl(e, n), Ll(i), Ll(r);
               });
             }),
@@ -29866,10 +29866,10 @@
           }
           tlStretchItem(t) {
             const e = new Yi.timeline(),
-              n = t.querySelector(".cw-achievement-item-bg"),
-              i = t.querySelector(".cw-achievement-item-figure"),
-              r = t.querySelector(".cw-achievement-item-title"),
-              s = t.querySelector(".cw-achievement-item-text");
+              n = t.querySelector(".cw-achievement-item-bg-craftwaves"),
+              i = t.querySelector(".cw-achievement-item-figure-craftwaves"),
+              r = t.querySelector(".cw-achievement-item-title-craftwaves"),
+              s = t.querySelector(".cw-achievement-item-text-craftwaves");
             return (
               e.fromTo(
                 i,
@@ -29901,10 +29901,10 @@
         component: class extends n {
           constructor() {
             super(...arguments),
-              (this.header = this.el.querySelector(".cw-outro-header")),
-              (this.caption = this.el.querySelector(".cw-outro-caption")),
-              (this.social = this.el.querySelectorAll(".cw-outro-social")),
-              (this.location = this.el.querySelectorAll(".cw-outro-location")),
+              (this.header = this.el.querySelector(".cw-outro-header-craftwaves")),
+              (this.caption = this.el.querySelector(".cw-outro-caption-craftwaves")),
+              (this.social = this.el.querySelectorAll(".cw-outro-social-craftwaves")),
+              (this.location = this.el.querySelectorAll(".cw-outro-location-craftwaves")),
               this.initReeller();
           }
           onInit() {
@@ -29920,11 +29920,11 @@
           initReeller() {
             to.isTouch ||
               this.social.forEach((t) => {
-                const e = t.querySelector(".cw-outro-social-reel"),
+                const e = t.querySelector(".cw-outro-social-reel-craftwaves"),
                   n = new Xl({
                     container: e,
-                    wrapper: ".cw-outro-social-reel-wrap",
-                    itemSelector: ".cw-outro-social-reel-item",
+                    wrapper: ".cw-outro-social-reel-wrap-craftwaves",
+                    itemSelector: ".cw-outro-social-reel-item-craftwaves",
                     autoStop: !1,
                     speed: 3,
                   });
@@ -29960,9 +29960,9 @@
           }
           tlShowSocialItem(t) {
             const e = new Yi.timeline(),
-              n = t.querySelector(".cw-outro-social-title"),
-              i = t.querySelector(".cw-outro-social-divider"),
-              r = t.querySelector(".cw-outro-social-arr");
+              n = t.querySelector(".cw-outro-social-title-craftwaves"),
+              i = t.querySelector(".cw-outro-social-divider-craftwaves"),
+              r = t.querySelector(".cw-outro-social-arr-craftwaves");
             return (
               Yi.set(i, { scaleX: 0, transformOrigin: "left center" }),
               e.to(
@@ -29984,13 +29984,13 @@
         component: class extends n {
           constructor() {
             super(...arguments),
-              (this.header = this.el.querySelector(".cw-footer-header")),
-              (this.bgMedia = this.el.querySelector(".cw-footer-bg-media")),
+              (this.header = this.el.querySelector(".cw-footer-header-craftwaves")),
+              (this.bgMedia = this.el.querySelector(".cw-footer-bg-media-craftwaves")),
               (this.bgVideo = this.bgMedia.querySelector("video")),
-              (this.action = this.el.querySelector(".cw-footer-action")),
+              (this.action = this.el.querySelector(".cw-footer-action-craftwaves")),
               (this.actionBtn = this.action.querySelector("a")),
-              (this.tag = this.el.querySelectorAll(".cw-footer-tag")),
-              (this.link = this.el.querySelectorAll(".cw-footer-link")),
+              (this.tag = this.el.querySelectorAll(".cw-footer-tag-craftwaves")),
+              (this.link = this.el.querySelectorAll(".cw-footer-link-craftwaves")),
               (this.sceneVisible = !1);
           }
           onInit() {
