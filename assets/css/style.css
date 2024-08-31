@@ -1077,7 +1077,7 @@
     right: 0;
     bottom: 0;
     z-index: 3;
-    border: 1px solid;
+    border: 2px solid #333;
     border-radius: 1000px;
   }
   @media (min-width: 768px), (orientation: landscape) {
@@ -1124,6 +1124,7 @@
   .cw-btn_cta-title-craftwaves span {
     display: block;
     transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    font-size: 1.4rem;
   }
   .cw-btn_cta-title-craftwaves span:after {
     content: attr(data-text);
@@ -3021,6 +3022,7 @@
   }
   @media (min-width: 768px), (orientation: landscape) {
     .cw-outro-location-action-craftwaves {
+
       margin-top: 4rem;
     }
   }
