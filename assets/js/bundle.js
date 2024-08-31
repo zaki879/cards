@@ -28478,7 +28478,21 @@
               return Promise.reject(t);
             }
           }
-     
+          bindScrollToElements() {
+            document.body.addEventListener("click", (t) => {
+              for (let e = t.target; e && e !== document.body; e = e.parentNode)
+                if (e.dataset.scrollTo || e.dataset.scrollToTarget) {
+                  const n = e.dataset.scrollToOptions
+                    ? JSON.parse(e.dataset.scrollToOptions)
+                    : void 0;
+                  e.dataset.scrollToTarget
+                    ? this.scrollToTarget(e.dataset.scrollToTarget, n) &&
+                      (t.stopPropagation(), t.preventDefault())
+                    : this.scrollTo(e.dataset.scrollTo, 0, n) &&
+                      (t.stopPropagation(), t.preventDefault());
+                }
+            });
+          }
           initLenis() {
             to.isTouch ||
               ((this.lenis = new Uo()),

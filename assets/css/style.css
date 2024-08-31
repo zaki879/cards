@@ -386,7 +386,17 @@
       width: 880px;
     }
   }
-
+  .cw-menu-content-craftwaves {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
+    height: 100vh;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 100px 0 90px 0;
+  }
   @media (min-height: 550px) {
     .cw-menu-content-craftwaves {
       display: flex;
