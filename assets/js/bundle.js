@@ -405,10 +405,7 @@
       );
     },
     Gt = function (t, e) {
-      return (
-        (K.ScrollTrigger || $("scrollTrigger", e)) &&
-        K.ScrollTrigger.create(e, t)
-      );
+      
     },
     Wt = function (t, e, n, i, r) {
       return (
@@ -750,12 +747,7 @@
         );
     },
     me = function (t) {
-      return (
-        Lt(t),
-        t.scrollTrigger && t.scrollTrigger.kill(!!a),
-        t.progress() < 1 && fe(t, "onInterrupt"),
-        t
-      );
+     
     },
     ge = [],
     ve = function (t) {
@@ -1634,7 +1626,6 @@
         l && Ht(e.parent || l, i(r), n),
         e.reversed && r.reverse(),
         e.paused && r.paused(!0),
-        e.scrollTrigger && Gt(i(r), e.scrollTrigger),
         r
       );
     }
@@ -2390,7 +2381,7 @@
     },
     Je = dt + "repeat,repeatDelay,yoyo,repeatRefresh,yoyoEase,autoRevert",
     $e = {};
-  gt(Je + ",id,stagger,delay,duration,paused,scrollTrigger", function (t) {
+  gt(Je + ",id,stagger,delay,duration,paused", function (t) {
     return ($e[t] = 1);
   });
   var Qe = (function (t) {
@@ -3073,10 +3064,7 @@
                     r--;
 
                   )
-                    (e = n.data[r]) instanceof He
-                      ? "nested" !== e.data &&
-                        (e.scrollTrigger && e.scrollTrigger.revert(), e.kill())
-                      : !(e instanceof Qe) && e.revert && e.revert(t);
+                
                   n._r.forEach(function (e) {
                     return e(t, n);
                   }),
@@ -4773,20 +4761,7 @@
       return (ar && ar.isPressed) || dr.cache++;
     },
     Er = function (t, e) {
-      var n = function n(i) {
-        if (i || 0 === i) {
-          ur && ($i.history.scrollRestoration = "manual");
-          var r = ar && ar.isPressed;
-          (i = n.v = Math.round(i) || (ar && ar.iOS ? 1 : 0)),
-            t(i),
-            (n.cacheID = dr.cache),
-            r && mr("ss", i);
-        } else
-          (e || dr.cache !== n.cacheID || mr("ref")) &&
-            ((n.cacheID = dr.cache), (n.v = t()));
-        return n.v + n.offset;
-      };
-      return (n.offset = 0), t && n;
+ 
     },
     Tr = {
       s: yr,
@@ -7055,8 +7030,6 @@
                 }),
                 i.borderTopStyle = "solid",
                 e = aa(zr),
-                br.m = Math.round(e.top + br.sc()) || 0,
-                Tr.m = Math.round(e.left + Tr.sc()) || 0,
                 r
                   ? (i.borderTopStyle = r)
                   : i.removeProperty("border-top-style"),
@@ -28458,7 +28431,7 @@
           }
           onLeave() {
             try {
-              return this.scrollEnable(), Promise.resolve();
+              
             } catch (t) {
               return Promise.reject(t);
             }
@@ -28469,7 +28442,6 @@
                 this.flushLenis(),
                 to.clearMatchMedia(),
                 to.killAll(),
-                to.clearScrollMemory(),
                 Promise.resolve()
               );
             } catch (t) {
@@ -28477,65 +28449,10 @@
             }
           }
      
-          initLenis() {
-            to.isTouch ||
-              ((this.lenis = new Uo()),
-              this.lenis.on("scroll", to.update),
-              Yi.ticker.add((t) => this.lenis.raf(1e3 * t)),
-              Yi.ticker.lagSmoothing(0));
-          }
           flushLenis() {
             this.lenis && (this.lenis.stop(), this.lenis.start());
           }
-          scrollEnable() {
-            this.lenis && this.lenis.start(),
-              document.documentElement.classList.remove("no-scroll");
-          }
-          scrollDisable() {
-            this.lenis && this.lenis.stop(),
-              document.documentElement.classList.add("no-scroll");
-          }
-          scrollTop() {
-            return this.lenis ? this.lenis.actualScroll : window.scrollY;
-          }
-          scrollLeft() {
-            return window.scrollX;
-          }
-          scrollHeight() {
-            return this.lenis
-              ? this.lenis.limit
-              : document.documentElement.scrollHeight;
-          }
-          scrollWidth() {
-            return document.documentElement.scrollWidth;
-          }
-          scrollTo(t, e, n) {
-            void 0 === e && (e = 0), void 0 === n && (n = {});
-            const i = No({ offsetY: 0, offsetX: 0, duration: 0.3 }, n);
-            return (
-              (t += i.offsetY),
-              (e += i.offsetX),
-              this.flushLenis(),
-              i.duration
-                ? Yi.to(window, {
-                    scrollTo: { y: t, x: e, autoKill: !1 },
-                    ease: i.ease,
-                    duration: i.duration,
-                    onComplete: i.onComplete,
-                  })
-                : window.scrollTo({ top: t, left: e, behavior: "instant" }),
-              !0
-            );
-          }
-          scrollToTarget(t, e) {
-            const n = this.app.query(t);
-            if (!n) return !1;
-            const i = getComputedStyle(n),
-              r = n.getBoundingClientRect(),
-              s = r.top + this.scrollTop() - parseInt(i.scrollMarginTop),
-              a = r.left + this.scrollLeft() - parseInt(i.scrollMarginLeft);
-            return this.scrollTo(s, a, e);
-          }
+   
           loadLazyImages() {
             this.app
               .queryAll("img[loading=lazy]")
@@ -28950,14 +28867,7 @@
                 e && (t.preventDefault(), t.stopPropagation(), e.open());
               });
           }
-          bindScrollTo() {
-            this.el.dataset.scrollTo ||
-              this.el.addEventListener("click", (t) => {
-                t.preventDefault(),
-                  t.stopPropagation(),
-                  this.layout.scrollToTarget(this.el.dataset.scrollTo);
-              });
-          }
+        
         },
       },
       {
@@ -29254,8 +29164,7 @@
               (this.figureMedia = this.el.querySelector(
                 ".cw-intro-figure-media"
               )),
-              (this.bottom = this.el.querySelector(".cw-intro-bottom-craftwaves")),
-              this.magicScroll();
+              (this.bottom = this.el.querySelector(".cw-intro-bottom-craftwaves"));
           }
           onInit() {
             try {
@@ -29318,46 +29227,8 @@
               t
             );
           }
-          magicScroll() {
-            const t = Yi.matchMedia();
-            t.add("(max-width:767px), (orientation:portrait)", () => {
-              to.create({
-                trigger: this.el,
-                animation: this.tlParallax(),
-                start: "top top",
-                end: "bottom top",
-                scrub: !0,
-              });
-            }),
-              t.add("(min-width:768px), (orientation:landscape)", () => {
-                to.create({
-                  trigger: this.el,
-                  animation: this.tlScroll(),
-                  start: "top top",
-                  end: "50%",
-                  scrub: !0,
-                });
-              });
-          }
-          tlScroll() {
-            const t = new Yi.timeline();
-            return (
-              t.set(this.figure, { willChange: "transform,max-width" }),
-              t.fromTo(
-                this.figure,
-                { y: "0%" },
-                { y: "40%", maxWidth: "100%", duration: 1, ease: "power1.out" },
-                0
-              ),
-              t.to(
-                this.details,
-                { opacity: 0, duration: 0.15, ease: "none" },
-                0
-              ),
-              t.set(this.figure, { willChange: "auto" }),
-              t
-            );
-          }
+       
+       
           tlParallax() {
             const t = new Yi.timeline();
             return (
@@ -29440,15 +29311,7 @@
                 wrapper: ".cw-overview-reel-wrap-craftwaves",
                 itemSelector: ".cw-overview-reel-item-craftwaves",
                 speed: 10,
-                plugins: {
-                  scroller: {
-                    multiplier: 0.3,
-                    speed: 1,
-                    threshold: 1,
-                    reversed: !0,
-                    scrollProxy: () => this.layout.scrollTop(),
-                  },
-                },
+              
               }));
           }
           magicShow() {
@@ -29685,15 +29548,7 @@
                     wrapper: ".cw-showcase-item-reel-wrap-craftwaves",
                     itemSelector: ".cw-showcase-item-reel-item-craftwaves",
                     speed: 10,
-                    plugins: {
-                      scroller: {
-                        multiplier: 0.3,
-                        speed: 1,
-                        threshold: 1,
-                        reversed: !!(e % 2),
-                        scrollProxy: () => this.layout.scrollTop(),
-                      },
-                    },
+                  
                   });
                 this.reellers.push(i), this.magicParallax(t);
               });
@@ -29753,15 +29608,7 @@
                   wrapper: ".cw-brandreel-reel-wrap-craftwaves",
                   itemSelector: ".cw-brandreel-reel-item-craftwaves",
                   speed: 20,
-                  plugins: {
-                    scroller: {
-                      multiplier: 0.1,
-                      speed: 1.5,
-                      threshold: 1,
-                      reversed: !!(e % 2),
-                      scrollProxy: () => this.layout.scrollTop(),
-                    },
-                  },
+              
                 });
                 this.reellers.push(n);
               });
@@ -30112,6 +29959,5 @@
         },
       },
     ],
-  }),
-    window.addEventListener("pagehide", () => window.scrollTo(0, 0));
+  });
 })();
