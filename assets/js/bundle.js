@@ -2404,7 +2404,6 @@
         E = v.overwrite,
         T = v.keyframes,
         b = v.defaults,
-        D = v.scrollTrigger,
         w = v.yoyoEase,
         C = n.parent || l,
         A = (V(e) || k(e) ? U(e[0]) : "length" in n) ? [e] : ie(e);
@@ -2916,13 +2915,7 @@
         t
       );
     })();
-  gt(
-    dt +
-      "parent,duration,ease,delay,overwrite,runBackwards,startAt,yoyo,immediateRender,repeat,repeatDelay,data,paused,reversed,lazy,callbackScope,stringFilter,id,yoyoEase,stagger,inherit,repeatRefresh,keyframes,autoRevert,scrollTrigger",
-    function (t) {
-      return (st[t] = 1);
-    }
-  ),
+
     (K.TweenMax = K.TweenLite = Qe),
     (K.TimelineLite = K.TimelineMax = He),
     (l = new He({
@@ -4755,8 +4748,7 @@
     xr = function (t, e, n, i) {
       return t.removeEventListener(e, n, !!i);
     },
-    yr = "scrollLeft",
-    Sr = "scrollTop",
+
     Mr = function () {
       return (ar && ar.isPressed) || dr.cache++;
     },
@@ -4764,7 +4756,6 @@
  
     },
     Tr = {
-      s: yr,
       p: "left",
       p2: "Left",
       os: "right",
@@ -4772,14 +4763,9 @@
       d: "width",
       d2: "Width",
       a: "x",
-      sc: Er(function (t) {
-        return arguments.length
-          ? $i.scrollTo(t, br.sc())
-          : $i.pageXOffset || Qi[yr] || tr[yr] || er[yr] || 0;
-      }),
+     
     },
     br = {
-      s: Sr,
       p: "top",
       p2: "Top",
       os: "bottom",
@@ -4788,11 +4774,7 @@
       d2: "Height",
       a: "y",
       op: Tr,
-      sc: Er(function (t) {
-        return arguments.length
-          ? $i.scrollTo(Tr.sc(), t)
-          : $i.pageYOffset || Qi[Sr] || tr[Sr] || er[Sr] || 0;
-      }),
+    
     },
     Dr = function (t, e) {
       return (
@@ -4805,10 +4787,8 @@
     wr = function (t, e) {
       var n = e.s,
         i = e.sc;
-      vr(t) && (t = Qi.scrollingElement || tr);
       var r = dr.indexOf(t),
         s = i === br.sc ? 1 : 2;
-      !~r && (r = dr.push(t) - 1), dr[r + s] || _r(t, "scroll", Mr);
       var a = dr[r + s],
         o =
           a ||
@@ -4819,11 +4799,7 @@
               : Er(function (e) {
                   return arguments.length ? (t[n] = e) : t[n];
                 })));
-      return (
-        (o.target = t),
-        a || (o.smooth = "smooth" === Zi.getProperty(t, "scrollBehavior")),
-        o
-      );
+ 
     },
     Cr = function (t, e, n) {
       var i = t,
@@ -4871,11 +4847,9 @@
     },
     Pr = function () {
       var t, e, n, i;
-      (rr = Zi.core.globals().ScrollTrigger) &&
         rr.core &&
         ((t = rr.core),
         (e = t.bridge || {}),
-        (n = t._scrollers),
         (i = t._proxies),
         n.push.apply(n, dr),
         i.push.apply(i, pr),
@@ -4972,7 +4946,6 @@
           N = t.onEnable,
           F = t.onDisable,
           O = t.onClick,
-          B = t.scrollSpeed,
           z = t.capture,
           k = t.allowClicks,
           V = t.lockAxis,
@@ -5204,56 +5177,10 @@
           (Z.deltaX = Z.deltaY = 0),
           (Z._vx = Cr(0, 50, !0)),
           (Z._vy = Cr(0, 50, !0)),
-          (Z.scrollX = tt),
-          (Z.scrollY = et),
           (Z.isDragging = Z.isGesturing = Z.isPressed = !1),
           lr(this),
-          (Z.enable = function (t) {
-            return (
-              Z.isEnabled ||
-                (_r(st ? at : r, "scroll", Mr),
-                i.indexOf("scroll") >= 0 && _r(st ? at : r, "scroll", yt, Q, z),
-                i.indexOf("wheel") >= 0 && _r(r, "wheel", St, Q, z),
-                ((i.indexOf("touch") >= 0 && nr) ||
-                  i.indexOf("pointer") >= 0) &&
-                  (_r(r, or[0], gt, Q, z),
-                  _r(at, or[2], vt),
-                  _r(at, or[3], vt),
-                  k && _r(r, "click", ut, !0, !0),
-                  O && _r(r, "click", bt),
-                  L && _r(at, "gesturestart", _t),
-                  I && _r(at, "gestureend", xt),
-                  w && _r(r, ir + "enter", Et),
-                  C && _r(r, ir + "leave", Tt),
-                  A && _r(r, ir + "move", Mt)),
-                (Z.isEnabled = !0),
-                t && t.type && gt(t),
-                N && N(Z)),
-              Z
-            );
-          }),
-          (Z.disable = function () {
-            Z.isEnabled &&
-              (hr.filter(function (t) {
-                return t !== Z && vr(t.target);
-              }).length || xr(st ? at : r, "scroll", Mr),
-              Z.isPressed &&
-                (Z._vx.reset(), Z._vy.reset(), xr(P ? r : at, or[1], mt, !0)),
-              xr(st ? at : r, "scroll", yt, z),
-              xr(r, "wheel", St, z),
-              xr(r, or[0], gt, z),
-              xr(at, or[2], vt),
-              xr(at, or[3], vt),
-              xr(r, "click", ut, !0),
-              xr(r, "click", bt),
-              xr(at, "gesturestart", _t),
-              xr(at, "gestureend", xt),
-              xr(r, ir + "enter", Et),
-              xr(r, ir + "leave", Tt),
-              xr(r, ir + "move", Mt),
-              (Z.isEnabled = Z.isPressed = Z.isDragging = !1),
-              F && F(Z));
-          }),
+       
+      
           (Z.kill = Z.revert =
             function () {
               Z.disable();
@@ -5391,20 +5318,7 @@
             })
       );
     },
-    Ns = function (t, e) {
-      var n = e.s,
-        i = e.d2,
-        r = e.d,
-        s = e.a;
-      return Math.max(
-        0,
-        (n = "scroll" + i) && (s = gr(t, n))
-          ? s() - Us(t)()[r]
-          : Ls(t)
-          ? (Br[n] || zr[n]) - Is(i)
-          : t[n] - t["offset" + i]
-      );
-    },
+  
     Fs = function (t, e) {
       for (var n = 0; n < $r.length; n += 3)
         (!e || ~e.indexOf($r[n + 1])) && t($r[n], $r[n + 1], $r[n + 2]);
@@ -5559,7 +5473,6 @@
         d = r.fontWeight,
         p = Or.createElement("div"),
         f = Ls(n) || "fixed" === gr(n, "pinType"),
-        m = -1 !== t.indexOf("scroller"),
         g = f ? zr : n,
         v = -1 !== t.indexOf("start"),
         _ = v ? l : c,
@@ -5613,7 +5526,7 @@
       (!ns || !ns.isPressed || ns.startX > zr.clientWidth) &&
         (dr.cache++,
         ns ? fs || (fs = requestAnimationFrame(ka)) : ka(),
-        Ss || Aa("scrollStart"),
+        Ss,
         (Ss = xs()));
     },
     Ta = function () {
@@ -5632,9 +5545,7 @@
     },
     Da = {},
     wa = [],
-    Ca = function t() {
-      return da(to, "scrollEnd", t) || Oa(!0);
-    },
+ 
     Aa = function (t) {
       return (
         (Da[t] &&
@@ -5665,8 +5576,7 @@
         (e || !ms) &&
           dr.forEach(function (t) {
             return Bs(t) && t.cacheID++ && (t.rec = 0);
-          }),
-        Os(t) && (Fr.history.scrollRestoration = ls = t);
+          });
     },
     Ua = 0,
     Na = function () {
@@ -5674,13 +5584,7 @@
         (us = (!ns && cs.offsetHeight) || Fr.innerHeight),
         zr.removeChild(cs);
     },
-    Fa = function (t) {
-      return Hr(
-        ".gsap-marker-start, .gsap-marker-end, .gsap-marker-scroller-start, .gsap-marker-scroller-end"
-      ).forEach(function (e) {
-        return (e.style.display = t ? "none" : "block");
-      });
-    },
+
     Oa = function (t, e) {
       if (!Ss || t || hs) {
         Na(),
@@ -5691,10 +5595,7 @@
         var n = Aa("refreshInit");
         Qr && to.sort(),
           e || La(),
-          dr.forEach(function (t) {
-            Bs(t) &&
-              (t.smooth && (t.target.style.scrollBehavior = "auto"), t(0));
-          }),
+      
           ya.slice(0).forEach(function (t) {
             return t.refresh();
           }),
@@ -5708,17 +5609,7 @@
           }),
           (ds = 1),
           Fa(!0),
-          ya.forEach(function (t) {
-            var e = Ns(t.scroller, t._dir),
-              n = "max" === t.vars.end || (t._endClamp && t.end > e),
-              i = t._startClamp && t.start >= e;
-            (n || i) &&
-              t.setPositions(
-                i ? e - 1 : t.start,
-                n ? Math.max(i ? e : t.start + 1, e) : t.end,
-                !0
-              );
-          }),
+       
           Fa(!1),
           (ds = 0),
           n.forEach(function (t) {
@@ -5727,9 +5618,7 @@
           dr.forEach(function (t) {
             Bs(t) &&
               (t.smooth &&
-                requestAnimationFrame(function () {
-                  return (t.target.style.scrollBehavior = "smooth");
-                }),
+             
               t.rec && t(t.rec));
           }),
           Ia(ls, 1),
@@ -5742,33 +5631,11 @@
           }),
           (ms = to.isRefreshing = !1),
           Aa("refresh");
-      } else ha(to, "scrollEnd", Ca);
+      } ;
     },
     Ba = 0,
     za = 1,
-    ka = function (t) {
-      if (2 === t || (!ms && !hs)) {
-        (to.isUpdating = !0), vs && vs.update(0);
-        var e = ya.length,
-          n = xs(),
-          i = n - ys >= 50,
-          r = e && ya[0].scroll();
-        if (
-          ((za = Ba > r ? -1 : 1),
-          ms || (Ba = r),
-          i &&
-            (Ss && !jr && n - Ss > 200 && ((Ss = 0), Aa("scrollEnd")),
-            (Wr = ys),
-            (ys = n)),
-          za < 0)
-        ) {
-          for (Kr = e; Kr-- > 0; ) ya[Kr] && ya[Kr].update(0, i);
-          za = 1;
-        } else for (Kr = 0; Kr < e; Kr++) ya[Kr] && ya[Kr].update(0, i);
-        to.isUpdating = !1;
-      }
-      fs = 0;
-    },
+
     Va = [
       Ws,
       "top",
@@ -5860,14 +5727,7 @@
         g,
         v = d ? d.time() : 0;
       if ((d && d.seek(0), isNaN(t) || (t = +t), zs(t)))
-        d &&
-          (t = Ur.utils.mapRange(
-            d.scrollTrigger.start,
-            d.scrollTrigger.end,
-            0,
-            h,
-            t
-          )),
+        d,
           a && xa(a, n, i, !0);
       else {
         Bs(e) && (e = e(o));
@@ -5892,7 +5752,7 @@
       if ((p && ((o[p] = t || -0.001), t < 0 && (t = 0)), s)) {
         var E = t + n,
           T = s._isStart;
-        (f = "scroll" + i.d2),
+      
           xa(
             s,
             E,
@@ -5904,17 +5764,7 @@
             ((l = aa(a)),
             u && (s.style[i.op.p] = l[i.op.p] - i.op.m - s._offset + ia));
       }
-      return (
-        d &&
-          g &&
-          ((f = aa(g)),
-          d.seek(h),
-          (m = aa(g)),
-          (d._caScrollDist = f[i.p] - m[i.p]),
-          (t = (t / d._caScrollDist) * h)),
-        d && d.seek(v),
-        d ? t : Math.round(t)
-      );
+     
     },
     Ka = /(webkit|moz|length|cssText|inset)/i,
     Za = function (t, e, n, i) {
@@ -5958,7 +5808,6 @@
     },
     Qa = function (t, e) {
       var n = wr(t, e),
-        i = "_scroll" + e.p2,
         r = function e(r, s, a, o, l) {
           var c = e.tween,
             u = s.onComplete,
@@ -5997,13 +5846,7 @@
       );
     },
     to = (function () {
-      function t(e, n) {
-        Nr ||
-          t.register(Ur) ||
-          console.warn("Please gsap.registerPlugin(ScrollTrigger)"),
-          os(this),
-          this.init(e, n);
-      }
+     
       return (
         (t.prototype.init = function (e, n) {
           if (
@@ -6075,14 +5918,12 @@
               ot = X.pinReparent,
               lt = X.pinSpacer,
               ct = X.containerAnimation,
-              ut = X.fastScrollEnd,
               ht = X.preventOverlaps,
               dt =
                 e.horizontal || (e.containerAnimation && !1 !== e.horizontal)
                   ? Tr
                   : br,
               pt = !J && 0 !== J,
-              ft = Dr(e.scroller || Fr),
               mt = Ur.core.getCache(ft),
               gt = Ls(ft),
               vt =
@@ -6127,18 +5968,13 @@
               ((Mt._startClamp = Mt._endClamp = !1),
               (Mt._dir = dt),
               (nt *= 45),
-              (Mt.scroller = ft),
-              (Mt.scroll = ct ? ct.time.bind(ct) : At),
+            
               (a = At()),
               (Mt.vars = e),
               (n = n || e.animation),
               "refreshPriority" in e &&
                 ((Qr = 1), -9999 === e.refreshPriority && (vs = Mt)),
-              (mt.tweenScroll = mt.tweenScroll || {
-                top: Qa(ft, br),
-                left: Qa(ft, Tr),
-              }),
-              (Mt.tweenTo = i = mt.tweenScroll[dt.p]),
+            
               (Mt.scrubDuration = function (t) {
                 (N = zs(t) && t)
                   ? U
@@ -6163,20 +5999,15 @@
                     n.duration() &&
                     n.render(0, !0, !0)),
                 (Mt.animation = n.pause()),
-                (n.scrollTrigger = Mt),
                 Mt.scrubDuration(J),
                 (L = 0),
                 Y || (Y = n.vars.id)),
               at &&
                 ((ks(at) && !at.push) || (at = { snapTo: at }),
-                "scrollBehavior" in zr.style &&
-                  Ur.set(gt ? [zr, Br] : ft, { scrollBehavior: "auto" }),
+               
+                  Ur.set(gt ? [zr, Br] : ft, {}),
                 dr.forEach(function (t) {
-                  return (
-                    Bs(t) &&
-                    t.target === (gt ? Or.scrollingElement || Br : ft) &&
-                    (t.smooth = !1)
-                  );
+                 
                 }),
                 (s = Bs(at.snapTo)
                   ? at.snapTo
@@ -6313,8 +6144,7 @@
               yt)
             ) {
               (f = ks(yt) ? sa(yt, fa) : fa),
-                (d = _a("scroller-start", Y, ft, dt, f, 0)),
-                (p = _a("scroller-end", Y, ft, dt, f, 0, d)),
+               
                 (S = d["offset" + dt.op.d2]);
               var Rt = Dr(gr(ft, "content") || ft);
               (u = this.markerStart = _a("start", Y, Rt, dt, f, S, 0, ct)),
@@ -6349,7 +6179,7 @@
                   r = qr;
                 i !== Mt.isReverted &&
                   (i &&
-                    ((B = Math.max(At(), Mt.scroll.rec || 0)),
+                    ((B = Math.max(At(), 0)),
                     (Ct = Mt.progress),
                     (z = n && n.progress())),
                   u &&
@@ -6376,9 +6206,9 @@
                   (Mt.isReverted = i));
               }),
               (Mt.refresh = function (r, s, f, S) {
-                if ((!qr && Mt.enabled) || s)
-                  if (Q && r && Ss) ha(t, "scrollEnd", Ca);
-                  else {
+              
+                  
+                  
                     !ms && Et && Et(Mt),
                       (qr = Mt),
                       i.tween && !f && (i.tween.kill(), (i.tween = 0)),
@@ -6461,8 +6291,7 @@
                                     ? Ur.utils.mapRange(
                                         0,
                                         ct.duration(),
-                                        ct.scrollTrigger.start,
-                                        ct.scrollTrigger.end,
+                                  
                                         l
                                       )
                                     : l) + Y),
@@ -6539,16 +6368,7 @@
                         (T = parseFloat(M(dt.a)) + K),
                         !q &&
                           c > 1 &&
-                          ((V = {
-                            style: (V = (gt ? Or.scrollingElement || Br : ft)
-                              .style),
-                            value: V["overflow" + dt.a.toUpperCase()],
-                          }),
-                          gt &&
-                            "scroll" !==
-                              ra(zr)["overflow" + dt.a.toUpperCase()] &&
-                            (V.style["overflow" + dt.a.toUpperCase()] =
-                              "scroll")),
+                        
                         Ga(Q, y, E),
                         (x = qa(Q)),
                         (D = aa(Q, !0)),
@@ -6624,7 +6444,6 @@
                       (Mt.start = l),
                       (Mt.end = c),
                       (a = o = ms ? B : At()),
-                      ct || ms || (a < B && At(B), (Mt.scroll.rec = 0)),
                       Mt.revert(!1, !0),
                       (wt = xs()),
                       O && ((Dt = -1), O.restart(!0)),
@@ -6655,7 +6474,7 @@
                         $a(h, dt, G - (S || 0))),
                       j && !ms && Mt.update(),
                       !Z || ms || m || ((m = !0), Z(Mt), (m = !1));
-                  }
+                  
               }),
               (Mt.getVelocity = function () {
                 return ((At() - o) / (xs() - Wr)) * 1e3 || 0;
@@ -6669,15 +6488,7 @@
                       ? pt || Vs(n, Mt.direction < 0, 1)
                       : Vs(n, n.reversed()));
               }),
-              (Mt.labelToScroll = function (t) {
-                return (
-                  (n &&
-                    n.labels &&
-                    (l || Mt.refresh() || l) +
-                      (n.labels[t] / n.duration()) * g) ||
-                  0
-                );
-              }),
+         
               (Mt.getTrailing = function (t) {
                 var e = ya.indexOf(Mt),
                   n =
@@ -6703,7 +6514,6 @@
                     f,
                     m,
                     v,
-                    S = !0 === ms ? B : Mt.scroll(),
                     M = t ? 0 : (S - l) / g,
                     w = M < 0 ? 0 : M > 1 ? 1 : M || 0,
                     P = Mt.progress;
@@ -6819,20 +6629,13 @@
                               : Vs(n, "reverse" === h ? 1 : !w, 1)))
                         : pt && q && !qr && q(Mt);
                   }
-                  if (R) {
-                    var z = ct
-                      ? (S / ct.duration()) * (ct._caScrollDist || 0)
-                      : S;
-                    C(z + (d._isFlipped ? 1 : 0)), R(z);
-                  }
-                  k && k((-S / ct.duration()) * (ct._caScrollDist || 0));
+                 
                 }
               }),
               (Mt.enable = function (e, n) {
                 Mt.enabled ||
                   ((Mt.enabled = !0),
                   ha(ft, "resize", ba),
-                  gt || ha(ft, "scroll", Ea),
                   Et && ha(t, "refreshInit", Et),
                   !1 !== e && ((Mt.progress = Ct = 0), (a = o = Dt = At())),
                   !1 !== n && Mt.refresh());
@@ -6841,12 +6644,7 @@
                 return t && i ? i.tween : U;
               }),
               (Mt.setPositions = function (t, e, n, i) {
-                if (ct) {
-                  var r = ct.scrollTrigger,
-                    s = ct.duration(),
-                    a = r.end - r.start;
-                  (t = r.start + (a * t) / s), (e = r.start + (a * e) / s);
-                }
+              
                 Mt.refresh(
                   !1,
                   !1,
@@ -6878,39 +6676,10 @@
                   O && (O.pause(), i.tween && i.tween.kill() && (i.tween = 0)),
                   !gt)
                 ) {
-                  for (var s = ya.length; s--; )
-                    if (ya[s].scroller === ft && ya[s] !== Mt) return;
-                  da(ft, "resize", ba), gt || da(ft, "scroll", Ea);
+                  for (var s = ya.length; s--; );
                 }
               }),
-              (Mt.kill = function (t, i) {
-                Mt.disable(t, i), U && !i && U.kill(), Y && delete Sa[Y];
-                var s = ya.indexOf(Mt);
-                s >= 0 && ya.splice(s, 1),
-                  s === Kr && za > 0 && Kr--,
-                  (s = 0),
-                  ya.forEach(function (t) {
-                    return t.scroller === Mt.scroller && (s = 1);
-                  }),
-                  s || ms || (Mt.scroll.rec = 0),
-                  n &&
-                    ((n.scrollTrigger = null),
-                    t && n.revert({ kill: !1 }),
-                    i || n.kill()),
-                  u &&
-                    [u, h, d, p].forEach(function (t) {
-                      return t.parentNode && t.parentNode.removeChild(t);
-                    }),
-                  vs === Mt && (vs = 0),
-                  Q &&
-                    (r && (r.uncache = 1),
-                    (s = 0),
-                    ya.forEach(function (t) {
-                      return t.pin === Q && s++;
-                    }),
-                    s || (r.spacer = 0)),
-                  e.onKill && e.onKill(Mt);
-              }),
+        
               ya.push(Mt),
               Mt.enable(!1, !1),
               V && V(Mt),
@@ -6939,7 +6708,6 @@
           return (
             Nr ||
               ((Ur = e || Ps()),
-              Rs() && window.document && t.enable(),
               (Nr = Ms)),
             Nr
           );
@@ -6953,11 +6721,7 @@
             ya.forEach(function (n) {
               return n[e ? "kill" : "disable"](t);
             }),
-            da(Fr, "wheel", Ea),
-            da(Or, "scroll", Ea),
             clearInterval(Xr),
-            da(Or, "touchcancel", Cs),
-            da(zr, "touchstart", Cs),
             ua(da, Or, "pointerdown,touchstart,mousedown", Ds),
             ua(da, Or, "pointerup,touchend,mouseup", ws),
             Vr.kill(),
@@ -6965,117 +6729,7 @@
           for (var n = 0; n < dr.length; n += 3)
             pa(da, dr[n], dr[n + 1]), pa(da, dr[n], dr[n + 2]);
         }),
-        (t.enable = function () {
-          if (
-            ((Fr = window),
-            (Or = document),
-            (Br = Or.documentElement),
-            (zr = Or.body),
-            Ur &&
-              ((Hr = Ur.utils.toArray),
-              (Gr = Ur.utils.clamp),
-              (os = Ur.core.context || Cs),
-              (ts = Ur.core.suppressOverwrites || Cs),
-              (ls = Fr.history.scrollRestoration || "auto"),
-              (Ba = Fr.pageYOffset),
-              Ur.core.globals("ScrollTrigger", t),
-              zr))
-          ) {
-            (Ms = 1),
-              ((cs = document.createElement("div")).style.height = "100vh"),
-              (cs.style.position = "absolute"),
-              Na(),
-              bs(),
-              Ir.register(Ur),
-              (t.isTouch = Ir.isTouch),
-              (as =
-                Ir.isTouch &&
-                /(iPad|iPhone|iPod|Mac)/g.test(navigator.userAgent)),
-              (is = 1 === Ir.isTouch),
-              ha(Fr, "wheel", Ea),
-              (kr = [Fr, Or, Br, zr]),
-              Ur.matchMedia
-                ? ((t.matchMedia = function (t) {
-                    var e,
-                      n = Ur.matchMedia();
-                    for (e in t) n.add(e, t[e]);
-                    return n;
-                  }),
-                  Ur.addEventListener("matchMediaInit", function () {
-                    return La();
-                  }),
-                  Ur.addEventListener("matchMediaRevert", function () {
-                    return Pa();
-                  }),
-                  Ur.addEventListener("matchMedia", function () {
-                    Oa(0, 1), Aa("matchMedia");
-                  }),
-                  Ur.matchMedia("(orientation: portrait)", function () {
-                    return Ta(), Ta;
-                  }))
-                : console.warn("Requires GSAP 3.11.0 or later"),
-              Ta(),
-              ha(Or, "scroll", Ea);
-            var e,
-              n,
-              i = zr.style,
-              r = i.borderTopStyle,
-              s = Ur.core.Animation.prototype;
-            for (
-              s.revert ||
-                Object.defineProperty(s, "revert", {
-                  value: function () {
-                    return this.time(-0.01, !0);
-                  },
-                }),
-                i.borderTopStyle = "solid",
-                e = aa(zr),
-                r
-                  ? (i.borderTopStyle = r)
-                  : i.removeProperty("border-top-style"),
-                Xr = setInterval(Ma, 250),
-                Ur.delayedCall(0.5, function () {
-                  return (_s = 0);
-                }),
-                ha(Or, "touchcancel", Cs),
-                ha(zr, "touchstart", Cs),
-                ua(ha, Or, "pointerdown,touchstart,mousedown", Ds),
-                ua(ha, Or, "pointerup,touchend,mouseup", ws),
-                Yr = Ur.utils.checkPrefix("transform"),
-                Ha.push(Yr),
-                Nr = xs(),
-                Vr = Ur.delayedCall(0.2, Oa).pause(),
-                $r = [
-                  Or,
-                  "visibilitychange",
-                  function () {
-                    var t = Fr.innerWidth,
-                      e = Fr.innerHeight;
-                    Or.hidden
-                      ? ((Zr = t), (Jr = e))
-                      : (Zr === t && Jr === e) || ba();
-                  },
-                  Or,
-                  "DOMContentLoaded",
-                  Oa,
-                  Fr,
-                  "load",
-                  Oa,
-                  Fr,
-                  "resize",
-                  ba,
-                ],
-                Fs(ha),
-                ya.forEach(function (t) {
-                  return t.enable(0, 1);
-                }),
-                n = 0;
-              n < dr.length;
-              n += 3
-            )
-              pa(da, dr[n], dr[n + 1]), pa(da, dr[n], dr[n + 2]);
-          }
-        }),
+   
         (t.config = function (e) {
           "limitCallbacks" in e && (ps = !!e.limitCallbacks);
           var n = e.syncInterval;
@@ -7546,9 +7200,6 @@
     }
 
 
-    get progress() {
-      return 0 === this.limit ? 1 : this.scroll / this.limit;
-    }
     get isSmooth() {
       return this.__isSmooth;
     }
