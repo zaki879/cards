@@ -29800,33 +29800,49 @@
       
           bindOpen() {
             const isTouch = to.isTouch;
+      
             if (isTouch) {
+              // For touch devices, retain the click interaction
               this.item.forEach((e) => {
                 e.addEventListener("click", () => {
                   e.classList.toggle("-open");
                 });
               });
             } else {
-              // Observer for non-touch devices
+              // Use IntersectionObserver to ensure only visible elements are interactive
               const observer = new IntersectionObserver((entries) => {
                 entries.forEach((entry) => {
                   const element = entry.target;
                   if (entry.isIntersecting) {
-                    // Element is in the viewport
-                    element.classList.add("-open");
+                    // Element is in the viewport, enable hover events
+                    element.addEventListener("mouseenter", this.handleMouseEnter);
+                    element.addEventListener("mouseleave", this.handleMouseLeave);
                   } else {
-                    // Element is out of the viewport, remove the class after a delay
-                    setTimeout(() => element.classList.remove("-open"), 1000);
+                    // Element is out of the viewport, disable hover events
+                    element.removeEventListener("mouseenter", this.handleMouseEnter);
+                    element.removeEventListener("mouseleave", this.handleMouseLeave);
                   }
                 });
               }, {
                 threshold: 0.1 // Adjust threshold as needed
               });
       
+              // Observe each item
               this.item.forEach((e) => {
                 observer.observe(e);
               });
             }
+          }
+      
+          handleMouseEnter(e) {
+            clearTimeout(e.target._closeTimeout); // Clear any existing timeout
+            e.target.classList.add("-open");
+          }
+      
+          handleMouseLeave(e) {
+            e.target._closeTimeout = setTimeout(() => {
+              e.target.classList.remove("-open");
+            }, 1000); // Delay similar to the original hover-out delay
           }
         },
       },
