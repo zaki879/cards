@@ -7200,29 +7200,15 @@
     }
 
 
-    get isSmooth() {
-      return this.__isSmooth;
-    }
-    set isSmooth(t) {
-      this.__isSmooth !== t &&
-        ((this.__isSmooth = t), this.toggleClassName("lenis-smooth", t));
-    }
+   
   
  
     get isStopped() {
       return this.__isStopped;
     }
-    set isStopped(t) {
-      this.__isStopped !== t &&
-        ((this.__isStopped = t), this.toggleClassName("lenis-stopped", t));
-    }
-    get isLocked() {
-      return this.__isLocked;
-    }
-    set isLocked(t) {
-      this.__isLocked !== t &&
-        ((this.__isLocked = t), this.toggleClassName("lenis-locked", t));
-    }
+
+
+
     toggleClassName(t, e) {
       this.rootElement.classList.toggle(t, e),
         this.emitter.emit("className change", this);
@@ -27282,22 +27268,7 @@
               return Promise.reject(t);
             }
           }
-          onRefresh() {
-            try {
-              return (
-                this.flushLenis(),
-                to.clearMatchMedia(),
-                to.killAll(),
-                Promise.resolve()
-              );
-            } catch (t) {
-              return Promise.reject(t);
-            }
-          }
-     
-          flushLenis() {
-            this.lenis && (this.lenis.stop(), this.lenis.start());
-          }
+       
    
           loadLazyImages() {
             this.app
