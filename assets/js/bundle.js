@@ -29809,43 +29809,48 @@
                 });
               });
             } else {
-              // Use IntersectionObserver to ensure only visible elements are interactive
-              const observer = new IntersectionObserver((entries) => {
-                entries.forEach((entry) => {
-                  const element = entry.target;
-                  if (entry.isIntersecting) {
-                    // Element is in the viewport, enable hover events
-                    element.addEventListener("mouseenter", this.handleMouseEnter);
-                    element.addEventListener("mouseleave", this.handleMouseLeave);
-                  } else {
-                    // Element is out of the viewport, disable hover events
-                    element.removeEventListener("mouseenter", this.handleMouseEnter);
-                    element.removeEventListener("mouseleave", this.handleMouseLeave);
-                  }
-                });
-              }, {
-                threshold: 0.1 // Adjust threshold as needed
-              });
+              // Use GSAP Observer to detect when elements are in the viewport
+              gsap.registerPlugin(Observer);
       
-              // Observe each item
               this.item.forEach((e) => {
-                observer.observe(e);
+                // Create the GSAP Observer instance
+                Observer.create({
+                  target: e,
+                  type: "scroll", // Watch for scroll events
+                  onEnter: () => {
+                    // Element enters the viewport, enable hover events
+                    e.addEventListener("mouseenter", this.handleMouseEnter);
+                    e.addEventListener("mouseleave", this.handleMouseLeave);
+                  },
+                  onLeave: () => {
+                    // Element leaves the viewport, disable hover events
+                    e.removeEventListener("mouseenter", this.handleMouseEnter);
+                    e.removeEventListener("mouseleave", this.handleMouseLeave);
+                  },
+                  threshold: 0.1 // Adjust threshold as needed
+                });
               });
             }
           }
       
           handleMouseEnter(e) {
-            clearTimeout(e.target._closeTimeout); // Clear any existing timeout
-            e.target.classList.add("-open");
+            gsap.to(e.target, {
+              duration: 0.5,
+              className: "+=-open", // Adds the -open class with GSAP animation
+              ease: "power1.inOut"
+            });
           }
       
           handleMouseLeave(e) {
-            e.target._closeTimeout = setTimeout(() => {
-              e.target.classList.remove("-open");
-            }, 1000); // Delay similar to the original hover-out delay
+            gsap.to(e.target, {
+              duration: 1,
+              className: "-=-open", // Removes the -open class with GSAP animation
+              ease: "power1.inOut"
+            });
           }
         },
       },
+      
       
       {
         namespace: "achievement",
