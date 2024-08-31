@@ -7086,13 +7086,7 @@
               (Fs(da) || Fs(ha, e.autoRefreshEvents || "none"),
               (es = -1 === (e.autoRefreshEvents + "").indexOf("resize")));
         }),
-        (t.scrollerProxy = function (t, e) {
-          var n = Dr(t),
-            i = dr.indexOf(n),
-            r = Ls(n);
-          ~i && dr.splice(i, r ? 6 : 2),
-            e && (r ? pr.unshift(Fr, e, zr, e, Br, e) : pr.unshift(n, e));
-        }),
+    
         (t.clearMatchMedia = function (t) {
           ya.forEach(function (e) {
             return e._ctx && e._ctx.query === t && e._ctx.kill(!0, !0);
@@ -7121,20 +7115,7 @@
             ? (i.left + s) / Fr.innerWidth
             : (i.top + s) / Fr.innerHeight;
         }),
-        (t.killAll = function (t) {
-          if (
-            (ya.slice(0).forEach(function (t) {
-              return "ScrollSmoother" !== t.vars.id && t.kill();
-            }),
-            !0 !== t)
-          ) {
-            var e = Da.killAll || [];
-            (Da = {}),
-              e.forEach(function (t) {
-                return t();
-              });
-          }
-        }),
+     
         t
       );
     })();
@@ -7168,24 +7149,12 @@
     (to.update = function (t) {
       return ++dr.cache && ka(!0 === t ? 2 : 0);
     }),
-    (to.clearScrollMemory = Ia),
-    (to.maxScroll = function (t, e) {
-      return Ns(t, e ? Tr : br);
-    }),
-    (to.getScrollFunc = function (t, e) {
-      return wr(Dr(t), e ? Tr : br);
-    }),
+
     (to.getById = function (t) {
       return Sa[t];
     }),
-    (to.getAll = function () {
-      return ya.filter(function (t) {
-        return "ScrollSmoother" !== t.vars.id;
-      });
-    }),
-    (to.isScrolling = function () {
-      return !!Ss;
-    }),
+  
+   
     (to.snapDirectional = ca),
     (to.addEventListener = function (t, e) {
       var n = Da[t] || (Da[t] = []);
@@ -7252,7 +7221,6 @@
               : "none"),
         e === Br && t(zr, n);
     },
-    ro = { auto: 1, scroll: 1 },
     so = function (t) {
       var e,
         n = t.event,
@@ -7261,25 +7229,7 @@
         s = (n.changedTouches ? n.changedTouches[0] : n).target,
         a = s._gsap || Ur.core.getCache(s),
         o = xs();
-      if (!a._isScrollT || o - a._isScrollT > 2e3) {
-        for (
-          ;
-          s &&
-          s !== zr &&
-          ((s.scrollHeight <= s.clientHeight &&
-            s.scrollWidth <= s.clientWidth) ||
-            (!ro[(e = ra(s)).overflowY] && !ro[e.overflowX]));
-
-        )
-          s = s.parentNode;
-        (a._isScroll =
-          s &&
-          s !== i &&
-          !Ls(s) &&
-          (ro[(e = ra(s)).overflowY] || ro[e.overflowX])),
-          (a._isScrollT = o);
-      }
-      (a._isScroll || "x" === r) && (n.stopPropagation(), (n._gsapAllow = !0));
+   
     },
     ao = function (t, e, n, i) {
       return Ir.create({
@@ -7291,7 +7241,6 @@
         onWheel: (i = i && so),
         onPress: i,
         onDrag: i,
-        onScroll: i,
         onEnable: function () {
           return n && ha(Or, Ir.eventTypes[0], lo, !1, !0);
         },
@@ -7320,222 +7269,8 @@
     (to.observe = function (t) {
       return new Ir(t);
     }),
-    (to.normalizeScroll = function (t) {
-      if (void 0 === t) return ns;
-      if (!0 === t && ns) return ns.enable();
-      if (!1 === t) return ns && ns.kill(), void (ns = t);
-      var e =
-        t instanceof Ir
-          ? t
-          : (function (t) {
-              ks(t) || (t = {}),
-                (t.preventDefault = t.isNormalizer = t.allowClicks = !0),
-                t.type || (t.type = "wheel,touch"),
-                (t.debounce = !!t.debounce),
-                (t.id = t.id || "normalizer");
-              var e,
-                n,
-                i,
-                r,
-                s,
-                a,
-                o,
-                l,
-                c = t,
-                u = c.normalizeScrollX,
-                h = c.momentum,
-                d = c.allowNestedScroll,
-                p = c.onRelease,
-                f = Dr(t.target) || Br,
-                m = Ur.core.globals().ScrollSmoother,
-                g = m && m.get(),
-                v =
-                  as &&
-                  ((t.content && Dr(t.content)) ||
-                    (g && !1 !== t.content && !g.smooth() && g.content())),
-                _ = wr(f, br),
-                x = wr(f, Tr),
-                y = 1,
-                S =
-                  (Ir.isTouch && Fr.visualViewport
-                    ? Fr.visualViewport.scale * Fr.visualViewport.width
-                    : Fr.outerWidth) / Fr.innerWidth,
-                M = 0,
-                E = Bs(h)
-                  ? function () {
-                      return h(e);
-                    }
-                  : function () {
-                      return h || 2.8;
-                    },
-                T = ao(f, t.type, !0, d),
-                b = function () {
-                  return (r = !1);
-                },
-                D = Cs,
-                w = Cs,
-                C = function () {
-                  (n = Ns(f, br)),
-                    (w = Gr(as ? 1 : 0, n)),
-                    u && (D = Gr(0, Ns(f, Tr))),
-                    (i = Ua);
-                },
-                A = function () {
-                  (v._gsap.y = As(parseFloat(v._gsap.y) + _.offset) + "px"),
-                    (v.style.transform =
-                      "matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, " +
-                      parseFloat(v._gsap.y) +
-                      ", 0, 1)"),
-                    (_.offset = _.cacheID = 0);
-                },
-                R = function () {
-                  C(),
-                    s.isActive() &&
-                      s.vars.scrollY > n &&
-                      (_() > n
-                        ? s.progress(1) && _(n)
-                        : s.resetTo("scrollY", n));
-                };
-              return (
-                v && Ur.set(v, { y: "+=0" }),
-                (t.ignoreCheck = function (t) {
-                  return (
-                    (as &&
-                      "touchmove" === t.type &&
-                      (function () {
-                        if (r) {
-                          requestAnimationFrame(b);
-                          var t = As(e.deltaY / 2),
-                            n = w(_.v - t);
-                          if (v && n !== _.v + _.offset) {
-                            _.offset = n - _.v;
-                            var i = As(
-                              (parseFloat(v && v._gsap.y) || 0) - _.offset
-                            );
-                            (v.style.transform =
-                              "matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, " +
-                              i +
-                              ", 0, 1)"),
-                              (v._gsap.y = i + "px"),
-                              (_.cacheID = dr.cache),
-                              ka();
-                          }
-                          return !0;
-                        }
-                        _.offset && A(), (r = !0);
-                      })()) ||
-                    (y > 1.05 && "touchstart" !== t.type) ||
-                    e.isGesturing ||
-                    (t.touches && t.touches.length > 1)
-                  );
-                }),
-                (t.onPress = function () {
-                  r = !1;
-                  var t = y;
-                  (y = As(
-                    ((Fr.visualViewport && Fr.visualViewport.scale) || 1) / S
-                  )),
-                    s.pause(),
-                    t !== y && io(f, y > 1.01 || (!u && "x")),
-                    (a = x()),
-                    (o = _()),
-                    C(),
-                    (i = Ua);
-                }),
-                (t.onRelease = t.onGestureStart =
-                  function (t, e) {
-                    if ((_.offset && A(), e)) {
-                      dr.cache++;
-                      var i,
-                        r,
-                        a = E();
-                      u &&
-                        ((r = (i = x()) + (0.05 * a * -t.velocityX) / 0.227),
-                        (a *= no(x, i, r, Ns(f, Tr))),
-                        (s.vars.scrollX = D(r))),
-                        (r = (i = _()) + (0.05 * a * -t.velocityY) / 0.227),
-                        (a *= no(_, i, r, Ns(f, br))),
-                        (s.vars.scrollY = w(r)),
-                        s.invalidate().duration(a).play(0.01),
-                        ((as && s.vars.scrollY >= n) || i >= n - 1) &&
-                          Ur.to({}, { onUpdate: R, duration: a });
-                    } else l.restart(!0);
-                    p && p(t);
-                  }),
-                (t.onWheel = function () {
-                  s._ts && s.pause(), xs() - M > 1e3 && ((i = 0), (M = xs()));
-                }),
-                (t.onChange = function (t, e, n, r, s) {
-                  if (
-                    (Ua !== i && C(),
-                    e &&
-                      u &&
-                      x(D(r[2] === e ? a + (t.startX - t.x) : x() + e - r[1])),
-                    n)
-                  ) {
-                    _.offset && A();
-                    var l = s[2] === n,
-                      c = l ? o + t.startY - t.y : _() + n - s[1],
-                      h = w(c);
-                    l && c !== h && (o += h - c), _(h);
-                  }
-                  (n || e) && ka();
-                }),
-                (t.onEnable = function () {
-                  io(f, !u && "x"),
-                    to.addEventListener("refresh", R),
-                    ha(Fr, "resize", R),
-                    _.smooth &&
-                      ((_.target.style.scrollBehavior = "auto"),
-                      (_.smooth = x.smooth = !1)),
-                    T.enable();
-                }),
-                (t.onDisable = function () {
-                  io(f, !0),
-                    da(Fr, "resize", R),
-                    to.removeEventListener("refresh", R),
-                    T.kill();
-                }),
-                (t.lockAxis = !1 !== t.lockAxis),
-                ((e = new Ir(t)).iOS = as),
-                as && !_() && _(1),
-                as && Ur.ticker.add(Cs),
-                (l = e._dc),
-                (s = Ur.to(e, {
-                  ease: "power4",
-                  paused: !0,
-                  inherit: !1,
-                  scrollX: u ? "+=0.1" : "+=0",
-                  scrollY: "+=0.1",
-                  modifiers: {
-                    scrollY: Ja(_, _(), function () {
-                      return s.pause();
-                    }),
-                  },
-                  onUpdate: ka,
-                  onComplete: l.vars.onComplete,
-                })),
-                e
-              );
-            })(t);
-      return (
-        ns && ns.target === e.target && ns.kill(), Ls(e.target) && (ns = e), e
-      );
-    }),
-    (to.core = {
-      _getVelocityProp: Cr,
-      _inputObserver: ao,
-      _scrollers: dr,
-      _proxies: pr,
-      bridge: {
-        ss: function () {
-          Ss || Aa("scrollStart"), (Ss = xs());
-        },
-        ref: function () {
-          return qr;
-        },
-      },
-    }),
+   
+   
     Ps() && Ur.registerPlugin(to);
   var co,
     uo,
@@ -7559,14 +7294,14 @@
     },
     Mo = function (t, e) {
       var n = "x" === e ? "Width" : "Height",
-        i = "scroll" + n,
+        i = "" + n,
         r = "client" + n;
       return t === ho || t === po || t === fo
         ? Math.max(po[i], fo[i]) - (ho["inner" + n] || po[r] || fo[r])
         : t[i] - t["offset" + n];
     },
     Eo = function (t, e) {
-      var n = "scroll" + ("x" === e ? "Left" : "Top");
+      var n = "" + ("x" === e ? "Left" : "Top");
       return (
         t === ho &&
           (null != t.pageXOffset
@@ -7577,29 +7312,7 @@
         }
       );
     },
-    To = function (t, e) {
-      if (!(t = mo(t)[0]) || !t.getBoundingClientRect)
-        return (
-          console.warn("scrollTo target doesn't exist. Using 0") || {
-            x: 0,
-            y: 0,
-          }
-        );
-      var n = t.getBoundingClientRect(),
-        i = !e || e === ho || e === fo,
-        r = i
-          ? {
-              top:
-                po.clientTop -
-                (ho.pageYOffset || po.scrollTop || fo.scrollTop || 0),
-              left:
-                po.clientLeft -
-                (ho.pageXOffset || po.scrollLeft || fo.scrollLeft || 0),
-            }
-          : e.getBoundingClientRect(),
-        s = { x: n.left - r.left, y: n.top - r.top };
-      return !i && e && ((s.x += Eo(e, "x")()), (s.y += Eo(e, "y")())), s;
-    },
+   
     bo = function (t, e, n, i, r) {
       return isNaN(t) || "object" == typeof t
         ? yo(t) && "=" === t.charAt(1)
@@ -7622,126 +7335,9 @@
           co.config({ autoKillThreshold: 7 }),
           (go = co.config()),
           (uo = 1));
-    },
-    wo = {
-      version: "3.12.5",
-      name: "scrollTo",
-      rawVars: 1,
-      register: function (t) {
-        (co = t), Do();
-      },
-      init: function (t, e, n, i, r) {
-        uo || Do();
-        var s = this,
-          a = co.getProperty(t, "scrollSnapType");
-        (s.isWin = t === ho),
-          (s.target = t),
-          (s.tween = n),
-          (e = (function (t, e, n, i) {
-            if ((So(t) && (t = t(e, n, i)), "object" != typeof t))
-              return yo(t) && "max" !== t && "=" !== t.charAt(1)
-                ? { x: t, y: t }
-                : { y: t };
-            if (t.nodeType) return { y: t, x: t };
-            var r,
-              s = {};
-            for (r in t)
-              s[r] = "onAutoKill" !== r && So(t[r]) ? t[r](e, n, i) : t[r];
-            return s;
-          })(e, i, t, r)),
-          (s.vars = e),
-          (s.autoKill = !!e.autoKill),
-          (s.getX = Eo(t, "x")),
-          (s.getY = Eo(t, "y")),
-          (s.x = s.xPrev = s.getX()),
-          (s.y = s.yPrev = s.getY()),
-          vo || (vo = co.core.globals().ScrollTrigger),
-          "smooth" === co.getProperty(t, "scrollBehavior") &&
-            co.set(t, { scrollBehavior: "auto" }),
-          a &&
-            "none" !== a &&
-            ((s.snap = 1),
-            (s.snapInline = t.style.scrollSnapType),
-            (t.style.scrollSnapType = "none")),
-          null != e.x
-            ? (s.add(s, "x", s.x, bo(e.x, t, "x", s.x, e.offsetX || 0), i, r),
-              s._props.push("scrollTo_x"))
-            : (s.skipX = 1),
-          null != e.y
-            ? (s.add(s, "y", s.y, bo(e.y, t, "y", s.y, e.offsetY || 0), i, r),
-              s._props.push("scrollTo_y"))
-            : (s.skipY = 1);
-      },
-      render: function (t, e) {
-        for (
-          var n,
-            i,
-            r,
-            s,
-            a,
-            o = e._pt,
-            l = e.target,
-            c = e.tween,
-            u = e.autoKill,
-            h = e.xPrev,
-            d = e.yPrev,
-            p = e.isWin,
-            f = e.snap,
-            m = e.snapInline;
-          o;
-
-        )
-          o.r(t, o.d), (o = o._next);
-        (n = p || !e.skipX ? e.getX() : h),
-          (r = (i = p || !e.skipY ? e.getY() : d) - d),
-          (s = n - h),
-          (a = go.autoKillThreshold),
-          e.x < 0 && (e.x = 0),
-          e.y < 0 && (e.y = 0),
-          u &&
-            (!e.skipX && (s > a || s < -a) && n < Mo(l, "x") && (e.skipX = 1),
-            !e.skipY && (r > a || r < -a) && i < Mo(l, "y") && (e.skipY = 1),
-            e.skipX &&
-              e.skipY &&
-              (c.kill(),
-              e.vars.onAutoKill &&
-                e.vars.onAutoKill.apply(c, e.vars.onAutoKillParams || []))),
-          p
-            ? ho.scrollTo(e.skipX ? n : e.x, e.skipY ? i : e.y)
-            : (e.skipY || (l.scrollTop = e.y), e.skipX || (l.scrollLeft = e.x)),
-          !f ||
-            (1 !== t && 0 !== t) ||
-            ((i = l.scrollTop),
-            (n = l.scrollLeft),
-            m
-              ? (l.style.scrollSnapType = m)
-              : l.style.removeProperty("scroll-snap-type"),
-            (l.scrollTop = i + 1),
-            (l.scrollLeft = n + 1),
-            (l.scrollTop = i),
-            (l.scrollLeft = n)),
-          (e.xPrev = e.x),
-          (e.yPrev = e.y),
-          vo && vo.update();
-      },
-      kill: function (t) {
-        var e = "scrollTo" === t,
-          n = this._props.indexOf(t);
-        return (
-          (e || "scrollTo_x" === t) && (this.skipX = 1),
-          (e || "scrollTo_y" === t) && (this.skipY = 1),
-          n > -1 && this._props.splice(n, 1),
-          !this._props.length
-        );
-      },
     };
-  function Co(t, e, n) {
-    return Math.max(t, Math.min(e, n));
-  }
-  (wo.max = Mo),
-    (wo.getOffset = To),
-    (wo.buildGetter = Eo),
-    xo() && co.registerPlugin(wo);
+  
+
   class Ao {
     advance(t) {
       if (!this.isRunning) return;
@@ -7839,19 +7435,8 @@
         : ((this.width = this.wrapper.clientWidth),
           (this.height = this.wrapper.clientHeight));
     };
-    onContentResize = () => {
-      this.wrapper === window
-        ? ((this.scrollHeight = this.content.scrollHeight),
-          (this.scrollWidth = this.content.scrollWidth))
-        : ((this.scrollHeight = this.wrapper.scrollHeight),
-          (this.scrollWidth = this.wrapper.scrollWidth));
-    };
-    get limit() {
-      return {
-        x: this.scrollWidth - this.width,
-        y: this.scrollHeight - this.height,
-      };
-    }
+ 
+  
   }
   class Po {
     constructor() {
@@ -7916,234 +7501,28 @@
           passive: !1,
         });
     }
-    onTouchStart = (t) => {
-      const { clientX: e, clientY: n } = t.targetTouches
-        ? t.targetTouches[0]
-        : t;
-      (this.touchStart.x = e),
-        (this.touchStart.y = n),
-        (this.lastDelta = { x: 0, y: 0 }),
-        this.emitter.emit("scroll", { deltaX: 0, deltaY: 0, event: t });
-    };
-    onTouchMove = (t) => {
-      const { clientX: e, clientY: n } = t.targetTouches
-          ? t.targetTouches[0]
-          : t,
-        i = -(e - this.touchStart.x) * this.touchMultiplier,
-        r = -(n - this.touchStart.y) * this.touchMultiplier;
-      (this.touchStart.x = e),
-        (this.touchStart.y = n),
-        (this.lastDelta = { x: i, y: r }),
-        this.emitter.emit("scroll", { deltaX: i, deltaY: r, event: t });
-    };
-    onTouchEnd = (t) => {
-      this.emitter.emit("scroll", {
-        deltaX: this.lastDelta.x,
-        deltaY: this.lastDelta.y,
-        event: t,
-      });
-    };
-    onWheel = (t) => {
-      let { deltaX: e, deltaY: n, deltaMode: i } = t;
-      (e *= 1 === i ? Lo : 2 === i ? this.windowWidth : 1),
-        (n *= 1 === i ? Lo : 2 === i ? this.windowHeight : 1),
-        (e *= this.wheelMultiplier),
-        (n *= this.wheelMultiplier),
-        this.emitter.emit("scroll", { deltaX: e, deltaY: n, event: t });
-    };
+
+
+
     onWindowResize = () => {
       (this.windowWidth = window.innerWidth),
         (this.windowHeight = window.innerHeight);
     };
   }
   class Uo {
-    constructor({
-      wrapper: t = window,
-      content: e = document.documentElement,
-      wheelEventsTarget: n = t,
-      eventsTarget: i = n,
-      smoothWheel: r = !0,
-      syncTouch: s = !1,
-      syncTouchLerp: a = 0.075,
-      touchInertiaMultiplier: o = 35,
-      duration: l,
-      easing: c = (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      lerp: u = !l && 0.1,
-      infinite: h = !1,
-      orientation: d = "vertical",
-      gestureOrientation: p = "vertical",
-      touchMultiplier: f = 1,
-      wheelMultiplier: m = 1,
-      autoResize: g = !0,
-      __experimental__naiveDimensions: v = !1,
-    } = {}) {
-      (this.__isSmooth = !1),
-        (this.__isScrolling = !1),
-        (this.__isStopped = !1),
-        (this.__isLocked = !1),
-        (this.onVirtualScroll = ({ deltaX: t, deltaY: e, event: n }) => {
-          if (n.ctrlKey) return;
-          const i = n.type.includes("touch"),
-            r = n.type.includes("wheel");
-          if (
-            this.options.syncTouch &&
-            i &&
-            "touchstart" === n.type &&
-            !this.isStopped &&
-            !this.isLocked
-          )
-            return void this.reset();
-          const s = 0 === t && 0 === e,
-            a =
-              ("vertical" === this.options.gestureOrientation && 0 === e) ||
-              ("horizontal" === this.options.gestureOrientation && 0 === t);
-          if (s || a) return;
-          let o = n.composedPath();
-          if (
-            ((o = o.slice(0, o.indexOf(this.rootElement))),
-            o.find((t) => {
-              var e, n, s, a, o;
-              return (
-                (null === (e = t.hasAttribute) || void 0 === e
-                  ? void 0
-                  : e.call(t, "data-lenis-prevent")) ||
-                (i &&
-                  (null === (n = t.hasAttribute) || void 0 === n
-                    ? void 0
-                    : n.call(t, "data-lenis-prevent-touch"))) ||
-                (r &&
-                  (null === (s = t.hasAttribute) || void 0 === s
-                    ? void 0
-                    : s.call(t, "data-lenis-prevent-wheel"))) ||
-                ((null === (a = t.classList) || void 0 === a
-                  ? void 0
-                  : a.contains("lenis")) &&
-                  !(null === (o = t.classList) || void 0 === o
-                    ? void 0
-                    : o.contains("lenis-stopped")))
-              );
-            }))
-          )
-            return;
-          if (this.isStopped || this.isLocked) return void n.preventDefault();
-          if (
-            ((this.isSmooth =
-              (this.options.syncTouch && i) || (this.options.smoothWheel && r)),
-            !this.isSmooth)
-          )
-            return (this.isScrolling = !1), void this.animate.stop();
-          n.preventDefault();
-          let l = e;
-          "both" === this.options.gestureOrientation
-            ? (l = Math.abs(e) > Math.abs(t) ? e : t)
-            : "horizontal" === this.options.gestureOrientation && (l = t);
-          const c = i && this.options.syncTouch,
-            u = i && "touchend" === n.type && Math.abs(l) > 5;
-          u && (l = this.velocity * this.options.touchInertiaMultiplier),
-            this.scrollTo(
-              this.targetScroll + l,
-              Object.assign(
-                { programmatic: !1 },
-                c
-                  ? { lerp: u ? this.options.syncTouchLerp : 1 }
-                  : {
-                      lerp: this.options.lerp,
-                      duration: this.options.duration,
-                      easing: this.options.easing,
-                    }
-              )
-            );
-        }),
-        (this.onNativeScroll = () => {
-          if (!this.__preventNextScrollEvent && !this.isScrolling) {
-            const t = this.animatedScroll;
-            (this.animatedScroll = this.targetScroll = this.actualScroll),
-              (this.velocity = 0),
-              (this.direction = Math.sign(this.animatedScroll - t)),
-              this.emit();
-          }
-        }),
-        (window.lenisVersion = "1.0.42"),
-        (this.options = {
-          wrapper: t,
-          content: e,
-          wheelEventsTarget: n,
-          eventsTarget: i,
-          smoothWheel: r,
-          syncTouch: s,
-          syncTouchLerp: a,
-          touchInertiaMultiplier: o,
-          duration: l,
-          easing: c,
-          lerp: u,
-          infinite: h,
-          gestureOrientation: p,
-          orientation: d,
-          touchMultiplier: f,
-          wheelMultiplier: m,
-          autoResize: g,
-          __experimental__naiveDimensions: v,
-        }),
-        (this.animate = new Ao()),
-        (this.emitter = new Po()),
-        (this.dimensions = new Ro({ wrapper: t, content: e, autoResize: g })),
-        this.toggleClassName("lenis", !0),
-        (this.velocity = 0),
-        (this.isLocked = !1),
-        (this.isStopped = !1),
-        (this.isSmooth = s || r),
-        (this.isScrolling = !1),
-        (this.targetScroll = this.animatedScroll = this.actualScroll),
-        this.options.wrapper.addEventListener(
-          "scroll",
-          this.onNativeScroll,
-          !1
-        ),
-        (this.virtualScroll = new Io(i, {
-          touchMultiplier: f,
-          wheelMultiplier: m,
-        })),
-        this.virtualScroll.on("scroll", this.onVirtualScroll);
-    }
-    destroy() {
-      this.emitter.destroy(),
-        this.options.wrapper.removeEventListener(
-          "scroll",
-          this.onNativeScroll,
-          !1
-        ),
-        this.virtualScroll.destroy(),
-        this.dimensions.destroy(),
-        this.toggleClassName("lenis", !1),
-        this.toggleClassName("lenis-smooth", !1),
-        this.toggleClassName("lenis-scrolling", !1),
-        this.toggleClassName("lenis-stopped", !1),
-        this.toggleClassName("lenis-locked", !1);
-    }
+
+ 
     on(t, e) {
       return this.emitter.on(t, e);
     }
     off(t, e) {
       return this.emitter.off(t, e);
     }
-    setScroll(t) {
-      this.isHorizontal
-        ? (this.rootElement.scrollLeft = t)
-        : (this.rootElement.scrollTop = t);
-    }
+  
     resize() {
       this.dimensions.resize();
     }
-    emit() {
-      this.emitter.emit("scroll", this);
-    }
-    reset() {
-      (this.isLocked = !1),
-        (this.isScrolling = !1),
-        (this.animatedScroll = this.targetScroll = this.actualScroll),
-        (this.velocity = 0),
-        this.animate.stop();
-    }
+ 
     start() {
       this.isStopped && ((this.isStopped = !1), this.reset());
     }
@@ -8155,112 +7534,18 @@
       const e = t - (this.time || t);
       (this.time = t), this.animate.advance(0.001 * e);
     }
-    scrollTo(
-      t,
-      {
-        offset: e = 0,
-        immediate: n = !1,
-        lock: i = !1,
-        duration: r = this.options.duration,
-        easing: s = this.options.easing,
-        lerp: a = !r && this.options.lerp,
-        onComplete: o,
-        force: l = !1,
-        programmatic: c = !0,
-      } = {}
-    ) {
-      if ((!this.isStopped && !this.isLocked) || l) {
-        if (["top", "left", "start"].includes(t)) t = 0;
-        else if (["bottom", "right", "end"].includes(t)) t = this.limit;
-        else {
-          let n;
-          if (
-            ("string" == typeof t
-              ? (n = document.querySelector(t))
-              : (null == t ? void 0 : t.nodeType) && (n = t),
-            n)
-          ) {
-            if (this.options.wrapper !== window) {
-              const t = this.options.wrapper.getBoundingClientRect();
-              e -= this.isHorizontal ? t.left : t.top;
-            }
-            const i = n.getBoundingClientRect();
-            t = (this.isHorizontal ? i.left : i.top) + this.animatedScroll;
-          }
-        }
-        if ("number" == typeof t) {
-          if (
-            ((t += e),
-            (t = Math.round(t)),
-            this.options.infinite
-              ? c && (this.targetScroll = this.animatedScroll = this.scroll)
-              : (t = Co(0, t, this.limit)),
-            n)
-          )
-            return (
-              (this.animatedScroll = this.targetScroll = t),
-              this.setScroll(this.scroll),
-              this.reset(),
-              void (null == o || o(this))
-            );
-          if (!c) {
-            if (t === this.targetScroll) return;
-            this.targetScroll = t;
-          }
-          this.animate.fromTo(this.animatedScroll, t, {
-            duration: r,
-            easing: s,
-            lerp: a,
-            onStart: () => {
-              i && (this.isLocked = !0), (this.isScrolling = !0);
-            },
-            onUpdate: (t, e) => {
-              (this.isScrolling = !0),
-                (this.velocity = t - this.animatedScroll),
-                (this.direction = Math.sign(this.velocity)),
-                (this.animatedScroll = t),
-                this.setScroll(this.scroll),
-                c && (this.targetScroll = t),
-                e || this.emit(),
-                e &&
-                  (this.reset(),
-                  this.emit(),
-                  null == o || o(this),
-                  (this.__preventNextScrollEvent = !0),
-                  requestAnimationFrame(() => {
-                    delete this.__preventNextScrollEvent;
-                  }));
-            },
-          });
-        }
-      }
-    }
+ 
     get rootElement() {
       return this.options.wrapper === window
         ? document.documentElement
         : this.options.wrapper;
     }
-    get limit() {
-      return this.options.__experimental__naiveDimensions
-        ? this.isHorizontal
-          ? this.rootElement.scrollWidth - this.rootElement.clientWidth
-          : this.rootElement.scrollHeight - this.rootElement.clientHeight
-        : this.dimensions.limit[this.isHorizontal ? "x" : "y"];
-    }
+ 
     get isHorizontal() {
       return "horizontal" === this.options.orientation;
     }
-    get actualScroll() {
-      return this.isHorizontal
-        ? this.rootElement.scrollLeft
-        : this.rootElement.scrollTop;
-    }
-    get scroll() {
-      return this.options.infinite
-        ? ((this.animatedScroll % (t = this.limit)) + t) % t
-        : this.animatedScroll;
-      var t;
-    }
+
+
     get progress() {
       return 0 === this.limit ? 1 : this.scroll / this.limit;
     }
@@ -8271,13 +7556,8 @@
       this.__isSmooth !== t &&
         ((this.__isSmooth = t), this.toggleClassName("lenis-smooth", t));
     }
-    get isScrolling() {
-      return this.__isScrolling;
-    }
-    set isScrolling(t) {
-      this.__isScrolling !== t &&
-        ((this.__isScrolling = t), this.toggleClassName("lenis-scrolling", t));
-    }
+  
+ 
     get isStopped() {
       return this.__isStopped;
     }
@@ -8291,16 +7571,6 @@
     set isLocked(t) {
       this.__isLocked !== t &&
         ((this.__isLocked = t), this.toggleClassName("lenis-locked", t));
-    }
-    get className() {
-      let t = "lenis";
-      return (
-        this.isStopped && (t += " lenis-stopped"),
-        this.isLocked && (t += " lenis-locked"),
-        this.isScrolling && (t += " lenis-scrolling"),
-        this.isSmooth && (t += " lenis-smooth"),
-        t
-      );
     }
     toggleClassName(t, e) {
       this.rootElement.classList.toggle(t, e),
@@ -8322,9 +7592,6 @@
       No.apply(this, arguments)
     );
   }
-  (history.scrollRestoration = "manual"),
-    Yi.registerPlugin(to, wo),
-    window.addEventListener("pagehide", () => window.scrollTo(0, 0));
   var Fo = (function () {
     function t(e) {
       void 0 === e && (e = {}),
@@ -9746,9 +9013,7 @@
       }),
       (e.use = function () {
         [].slice.call(arguments).forEach(function (t) {
-          var n = t.pluginName;
           if ("string" != typeof n)
-            throw new TypeError("Invalid plugin. Name is required.");
           e.plugins[n] = t;
         });
       });
@@ -9900,79 +9165,9 @@
         this.init();
     }
     var e = t.prototype;
-    return (
-      (e.getScrollPos = function () {
-        return this.options.scrollProxy
-          ? this.options.scrollProxy()
-          : window.pageYOffset;
-      }),
-      (e.init = function () {
-        var t = this,
-          e = this.getScrollPos(),
-          n = 1,
-          i = !0;
-        (this.tickerFn = function () {
-          var r = t.getScrollPos(),
-            s = r - e;
-          if (
-            (t.options.bothDirection || (s = Math.abs(s)),
-            t.options.reversed && (s *= -1),
-            t.reeller.paused)
-          )
-            return (
-              (n = Math.sign(s)),
-              (e = r),
-              i || (t.gsap.killTweensOf(t.tl), (i = !0)),
-              void t.tl.timeScale(n * t.options.threshold)
-            );
-          if (s) {
-            var a = s * t.options.multiplier,
-              o =
-                a > 0
-                  ? Math.max(t.options.threshold, a)
-                  : Math.min(-t.options.threshold, a);
-            (t.tween = t.gsap.to(t.tl, {
-              timeScale: o,
-              duration: t.options.speed,
-              ease: t.options.ease,
-              overwrite: t.options.overwrite,
-            })),
-              (i = !1);
-          } else if (!i) {
-            var l = t.options.stopOnEnd ? 0 : n * t.options.threshold;
-            t.gsap.killTweensOf(t.tl),
-              (t.tween = t.gsap.to(t.tl, {
-                timeScale: l,
-                duration: t.options.speed,
-                overwrite: t.options.overwrite,
-                ease: t.options.ease,
-              })),
-              (i = !0);
-          }
-          (n = Math.sign(s)), (e = r);
-        }),
-          this.gsap.ticker.add(this.tickerFn);
-      }),
-      (e.destroy = function () {
-        this.tickerFn &&
-          (this.gsap.ticker.remove(this.tickerFn), (this.tickerFn = null)),
-          this.tween && this.tween.kill();
-      }),
-      t
-    );
+   
   })();
-  (ql.pluginName = "scroller"),
-    (ql.defaultOptions = {
-      speed: 1,
-      multiplier: 0.5,
-      threshold: 1,
-      ease: "expo.out",
-      overwrite: !0,
-      bothDirection: !0,
-      reversed: !1,
-      stopOnEnd: !1,
-      scrollProxy: null,
-    }),
+ 
     Xl.registerGSAP(Yi),
     Xl.use(ql);
   const jl = "164",
