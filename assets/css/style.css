@@ -1,0 +1,3429 @@
+@font-face {
+    font-family: Matter;
+    src: url(assets/fonts/matter/matter-light.woff2) format("woff2"),
+      url(assets/fonts/matter/matter-light.woff) format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: Matter;
+    src: url(assets/fonts/matter/matter-regular.woff2) format("woff2"),
+      url(assets/fonts/matter/matter-regular.woff) format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Gallery Modern";
+    src: url(assets/fonts/gallery-modern/gallery-modern-regular.woff2)
+        format("woff2"),
+      url(assets/fonts/gallery-modern/gallery-modern-regular.woff)
+        format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  } /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+  
+  main {
+    display: block;
+  }
+  h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+  }
+  hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+  }
+  pre {
+    font-family: monospace, monospace;
+    font-size: 1em;
+  }
+  a {
+    background-color: transparent;
+  }
+  abbr[title] {
+    border-bottom: none;
+    text-decoration: underline;
+    -webkit-text-decoration: underline dotted;
+    text-decoration: underline dotted;
+  }
+  b,
+  strong {
+    font-weight: bolder;
+  }
+  code,
+  kbd,
+  samp {
+    font-family: monospace, monospace;
+    font-size: 1em;
+  }
+  small {
+    font-size: 80%;
+  }
+  sub,
+  sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+  sub {
+    bottom: -0.25em;
+  }
+  sup {
+    top: -0.5em;
+  }
+  img {
+    border-style: none;
+  }
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+  }
+  button,
+  input {
+    overflow: visible;
+  }
+  button,
+  select {
+    text-transform: none;
+  }
+  [type="button"],
+  [type="reset"],
+  [type="submit"],
+  button {
+    -webkit-appearance: button;
+  }
+  [type="button"]::-moz-focus-inner,
+  [type="reset"]::-moz-focus-inner,
+  [type="submit"]::-moz-focus-inner,
+  button::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+  }
+  [type="button"]:-moz-focusring,
+  [type="reset"]:-moz-focusring,
+  [type="submit"]:-moz-focusring,
+  button:-moz-focusring {
+    outline: 1px dotted ButtonText;
+  }
+  fieldset {
+    padding: 0.35em 0.75em 0.625em;
+  }
+  legend {
+    box-sizing: border-box;
+    color: inherit;
+    display: table;
+    max-width: 100%;
+    padding: 0;
+    white-space: normal;
+  }
+  progress {
+    vertical-align: baseline;
+  }
+  textarea {
+    overflow: auto;
+  }
+  [type="checkbox"],
+  [type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+  }
+  [type="number"]::-webkit-inner-spin-button,
+  [type="number"]::-webkit-outer-spin-button {
+    height: auto;
+  }
+  [type="search"] {
+    -webkit-appearance: textfield;
+    outline-offset: -2px;
+  }
+  [type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+  ::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit;
+  }
+  details {
+    display: block;
+  }
+  summary {
+    display: list-item;
+  }
+  template {
+    display: none;
+  }
+  [hidden] {
+    display: none;
+  }
+  html {
+    scrollbar-width: thin;
+    font-family: Matter, sans-serif;
+    font-size: 2.66vw;
+    text-align: left;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    html {
+      font-size: 0.625vw;
+    }
+  }
+  @media (min-width: 1920px) {
+    html {
+      font-size: 12px;
+    }
+  }
+
+
+  :after,
+  :before {
+    box-sizing: border-box;
+  }
+  ::-moz-selection {
+    color: #fff;
+    background: #454545;
+  }
+  ::selection {
+    color: #fff;
+    background: #454545;
+  }
+  a {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: underline;
+    -webkit-tap-highlight-color: initial;
+  }
+  a:hover {
+    color: inherit;
+    text-decoration: none;
+  }
+  button {
+    cursor: pointer;
+    -webkit-tap-highlight-color: initial;
+  }
+  audio,
+  canvas,
+  iframe,
+  img,
+  svg,
+  video {
+    vertical-align: middle;
+  }
+  figure {
+    margin: 0;
+  }
+  address,
+  blockquote,
+  em,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin: 0;
+    padding: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    text-align: inherit;
+    letter-spacing: inherit;
+  }
+  @media print {
+    address,
+    blockquote,
+    em,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+      page-break-after: avoid;
+      orphans: 3;
+      widows: 3;
+    }
+  }
+  .cw-achievement-container-craftwaves,
+  .cw-brandreel-container-craftwaves,
+  .cw-container-craftwaves,
+  .cw-focused-container-craftwaves,
+  .cw-footer-container-craftwaves,
+  .cw-greeting-container-craftwaves,
+  .cw-intro-container-craftwaves,
+  .cw-outro-container-craftwaves,
+  .cw-overview-container-craftwaves,
+  .cw-postcard-container-craftwaves,
+  .cw-showcase-container-craftwaves {
+    padding: 0 6.6666666667vw;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-achievement-container-craftwaves,
+    .cw-brandreel-container-craftwaves,
+    .cw-container-craftwaves,
+    .cw-focused-container-craftwaves,
+    .cw-footer-container-craftwaves,
+    .cw-greeting-container-craftwaves,
+    .cw-intro-container-craftwaves,
+    .cw-outro-container-craftwaves,
+    .cw-overview-container-craftwaves,
+    .cw-postcard-container-craftwaves,
+    .cw-showcase-container-craftwaves {
+      padding: 0 3.125vw;
+    }
+  }
+  @media (min-width: 1920px) {
+    .cw-brandreel-container-craftwaves,
+    .cw-achievement-container-craftwaves,
+    .cw-container-craftwaves,
+    .cw-focused-container-craftwaves,
+    .cw-footer-container-craftwaves,
+    .cw-greeting-container-craftwaves,
+    .cw-intro-container-craftwaves,
+    .cw-outro-container-craftwaves,
+    .cw-overview-container-craftwaves,
+    .cw-postcard-container-craftwaves,
+    .cw-showcase-container-craftwaves {
+      max-width: 1920px;
+      margin: 0 auto;
+    }
+  }
+  .-xs.cw-achievement-container,
+  .-xs.cw-brandreel-container,
+  .-xs.cw-focused-container,
+  .-xs.cw-footer-container,
+  .-xs.cw-greeting-container,
+  .-xs.cw-intro-container,
+  .-xs.cw-outro-container,
+  .-xs.cw-overview-container,
+  .-xs.cw-postcard-container,
+  .-xs.cw-showcase-container,
+  .cw-container.-xs {
+    padding: 0;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .-xs.cw-achievement-container-craftwaves,
+    .-xs.cw-brandreel-container-craftwaves,
+    .-xs.cw-focused-container-craftwaves,
+    .-xs.cw-footer-container-craftwaves,
+    .-xs.cw-greeting-container-craftwaves,
+    .-xs.cw-intro-container-craftwaves,
+    .-xs.cw-outro-container-craftwaves,
+    .-xs.cw-overview-container-craftwaves,
+    .-xs.cw-postcard-container-craftwaves,
+    .-xs.cw-showcase-container-craftwaves,
+    .cw-container-craftwaves.-xs {
+      padding: 0 1.25vw;
+    }
+  }
+  .-sm.cw-achievement-container-craftwaves,
+  .-sm.cw-brandreel-container-craftwaves,
+  .-sm.cw-focused-container-craftwaves,
+  .-sm.cw-footer-container-craftwaves,
+  .-sm.cw-greeting-container-craftwaves,
+  .-sm.cw-intro-container-craftwaves,
+  .-sm.cw-outro-container-craftwaves,
+  .-sm.cw-overview-container-craftwaves,
+  .-sm.cw-postcard-container-craftwaves,
+  .-sm.cw-showcase-container-craftwaves,
+  .cw-container.-sm {
+    padding: 0 4vw;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .-sm.cw-achievement-container,
+    .-sm.cw-brandreel-container,
+    .-sm.cw-focused-container,
+    .-sm.cw-footer-container,
+    .-sm.cw-greeting-container,
+    .-sm.cw-intro-container,
+    .-sm.cw-outro-container,
+    .-sm.cw-overview-container,
+    .-sm.cw-postcard-container,
+    .-sm.cw-showcase-container,
+    .cw-container.-sm {
+      padding: 0 6.25vw;
+    }
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .-lsm {
+      display: none;
+    }
+  }
+  @media (min-width: 1024px) {
+    .-lmd {
+      display: none;
+    }
+  }
+  @media (min-width: 1200px) {
+    .-llg {
+      display: none;
+    }
+  }
+  @media (min-width: 1600px) {
+    .-lxl {
+      display: none;
+    }
+  }
+  @media (max-width: 767px) {
+    .-gxs {
+      display: none;
+    }
+  }
+  @media (max-width: 1023px) {
+    .-gsm {
+      display: none;
+    }
+  }
+  @media (max-width: 1199px) {
+    .-gmd {
+      display: none;
+    }
+  }
+  @media (max-width: 1349px) {
+    .-glg {
+      display: none;
+    }
+  }
+  @media (max-width: 1919px) {
+    .-gxl {
+      display: none;
+    }
+  }
+  @keyframes cb-fx-blink {
+    0%,
+    100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+  @keyframes cb-fx-rotating-360 {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  .cw-svgsprite-craftwaves {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    fill: currentColor;
+  }
+  .cw-menu-logo-craftwaves {
+    position: fixed;
+    top: 2.5rem;
+    left: 2.5rem;
+    z-index: 251;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-menu-logo-craftwaves {
+      top: 3.9rem;
+      left: 5rem;
+      color: #fff;
+      transition: opacity 0.8s;
+    }
+  }
+  .cw-menu-craftwaves.-open .cw-menu-logo-craftwaves {
+    transition-duration: 0.8s;
+  }
+  @media (min-height: 450px), (min-width: 768px) {
+    .cw-menu-craftwaves.-open .cw-menu-logo-craftwaves {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+  .cw-menu-logo-craftwaves svg {
+    width: 88px;
+    height: 19px;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-menu-logo-craftwaves svg {
+      width: 94px;
+      height: 20px;
+    }
+  }
+  .cw-menu-logo-craftwaves.-visible {
+    opacity: 1;
+  }
+  .cw-menu-toggle-craftwaves {
+    position: fixed;
+    top: 2.25rem;
+    right: 2.5rem;
+    z-index: 251;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-menu-toggle-craftwaves {
+      top: 3.9rem;
+      right: 5rem;
+    }
+  }
+  @media (pointer: fine) {
+    .cw-menu-toggle-craftwaves:hover {
+      color: #fff;
+    }
+  }
+  .cw-menu-craftwaves.-inverse .cw-menu-toggle-craftwaves {
+    color: #fff;
+  }
+  @media (pointer: fine) {
+    .cw-menu-craftwaves.-inverse .cw-menu-toggle-craftwaves:hover {
+      color: #000;
+    }
+  }
+  .cw-menu-craftwaves.-open .cw-menu-toggle-craftwaves {
+    color: #000;
+  }
+  @media (pointer: fine) {
+    .cw-menu-craftwaves.-open .cw-menu-toggle-craftwaves:hover {
+      color: #fff;
+    }
+  }
+  .cw-menu-box-craftwaves {
+    display: none;
+  }
+  .cw-menu-backdrop-craftwaves {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 197;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  .cw-menu-fill-craftwaves {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 199;
+    height: 100vh;
+    transform-origin: right center;
+    background: #fff;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-menu-fill-craftwaves {
+      width: 689px;
+      left: auto;
+    }
+  }
+  @media (min-width: 1600px) and (min-height: 700px) {
+    .cw-menu-fill-craftwaves {
+      width: 880px;
+    }
+  }
+  .cw-menu-content-craftwaves {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
+    height: 100vh;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 100px 0 90px 0;
+  }
+  @media (min-height: 550px) {
+    .cw-menu-content-craftwaves {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0;
+    }
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-menu-content-craftwaves {
+      width: 689px;
+      left: auto;
+    }
+  }
+  @media (min-width: 768px) and (min-height: 550px) {
+    .cw-menu-content-craftwaves {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 20px 0 0 0;
+    }
+  }
+  @media (min-width: 768px) and (min-height: 600px) {
+    .cw-menu-content-craftwaves {
+      padding: 40px 0 0 0;
+    }
+  }
+  @media (min-width: 1600px) and (min-height: 700px) {
+    .cw-menu-content-craftwaves {
+      width: 880px;
+      padding: 50px 0 0 0;
+    }
+  }
+  .cw-menu-container-craftwaves {
+    width: 100%;
+    padding: 0 30px 0 45px;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-menu-container-craftwaves {
+      padding: 0 98px;
+    }
+  }
+  @media (min-width: 768px) and (min-height: 550px) {
+    .cw-menu-body-craftwaves {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .cw-menu-footer-craftwaves {
+    padding: 50px 0 0 0;
+  }
+  @media (min-width: 768px) and (min-height: 550px) {
+    .cw-menu-footer-craftwaves {
+      padding: 0 0 50px 0;
+    }
+  }
+  @media (min-width: 1600px) and (min-height: 700px) {
+    .cw-menu-footer-craftwaves {
+      padding: 0 0 84px 0;
+    }
+  }
+  @media (min-width: 768px) and (min-height: 550px) {
+    .cw-menu-grid-craftwaves {
+      display: flex;
+      width: 100%;
+    }
+  }
+  @media (min-width: 768px) and (min-height: 550px) {
+    .cw-menu-grid-col-craftwaves {
+      flex: 1.2;
+    }
+  }
+  .cw-menu-grid-col-craftwaves.-left {
+    display: none;
+  }
+  @media (min-width: 768px) and (min-height: 550px) {
+    .cw-menu-grid-col-craftwaves.-left {
+      display: block;
+      flex: 0.8;
+    }
+  }
+  .cw-menu-title-craftwaves{
+    display: none;
+    padding: 0 0 30px 0;
+    color: rgba(0, 0, 0, 0.3);
+    font-size: 16px;
+    line-height: 100%;
+  }
+  @media (min-height: 550px) {
+    .cw-menu-title-craftwaves{
+      display: block;
+    }
+  }
+  @media (min-width: 1600px) and (min-height: 700px) {
+    .cw-menu-title-craftwaves{
+      padding: 0 0 50px 0;
+    }
+  }
+  .cw-menu-title-craftwaves.-sm {
+    padding: 0 0 12px 0;
+  }
+  @media (min-width: 1600px) and (min-height: 700px) {
+    .cw-menu-title-craftwaves.-sm {
+      padding: 0 0 20px 0;
+    }
+  }
+  .cw-menu-navs-craftwaves {
+    margin: -4px 0;
+  }
+  @media (min-width: 1600px) and (min-height: 700px) {
+    .cw-menu-navs-craftwaves {
+      margin: -9px 0;
+    }
+  }
+  .cw-menu-nav-craftwaves {
+    position: relative;
+    display: block;
+    padding: 4px 0;
+  }
+  @media (min-width: 1600px) and (min-height: 700px) {
+    .cw-menu-nav-craftwaves {
+      padding: 9px 0;
+    }
+  }
+  .cw-menu-nav-craftwaves a {
+    display: inline-block;
+    position: relative;
+    font-size: 38px;
+    font-weight: 400;
+    letter-spacing: -0.05em;
+    line-height: 100%;
+    text-decoration: none;
+  }
+  @media (min-width: 360px) {
+    .cw-menu-nav-craftwaves a {
+      font-size: 42px;
+    }
+  }
+  @media (min-width: 768px) and (min-height: 550px) {
+    .cw-menu-nav-craftwaves a {
+      font-size: 56px;
+    }
+  }
+  @media (min-width: 1600px) and (min-height: 700px) {
+    .cw-menu-nav-craftwaves a {
+      font-size: 60px;
+    }
+  }
+  .cw-menu-nav-craftwaves a:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    height: 1px;
+    transform: scaleX(0);
+    transform-origin: right center;
+    background: currentColor;
+    transition: transform 0.5s, transform-origin 0s;
+  }
+  .cw-menu-nav-craftwaves a em {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    padding: 0 0.01em 0.04em 0;
+  }
+  .cw-menu-nav-craftwaves a span {
+    display: inline-block;
+    color: transparent;
+    transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  .cw-menu-nav a span:after,
+  .cw-menu-nav a span:before {
+    content: attr(data-text);
+    display: block;
+    position: absolute;
+    color: #000;
+  }
+  .cw-menu-nav-craftwaves a span:before {
+    top: 0;
+    transform: skewY(0);
+    transform-origin: right bottom;
+    transition: transform 2s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  .cw-menu-nav-craftwaves a span:after {
+    top: 105%;
+    transform: skewY(7deg);
+    transform-origin: left top;
+    transition: transform 2s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  .cw-menu-nav-craftwaves a:focus span,
+  .cw-menu-nav-craftwaves a:hover span {
+    transform: translateY(-105%);
+  }
+  @media (pointer: coarse) {
+    .cw-menu-nav-craftwaves a:focus span,
+    .cw-menu-nav-craftwaves a:hover span {
+      transform: none;
+    }
+  }
+  .cw-menu-nav-craftwaves a:focus span:before,
+  .cw-menu-nav-craftwaves a:hover span:before {
+    transform: skewY(7deg);
+  }
+  @media (pointer: coarse) {
+    .cw-menu-nav-craftwaves a:focus span:before,
+    .cw-menu-nav-craftwaves a:hover span:before {
+      transform: none;
+    }
+  }
+  .cw-menu-nav-craftwaves a:focus span:after,
+  .cw-menu-nav-craftwaves a:hover span:after {
+    transform: skewY(0);
+  }
+  @media (pointer: coarse) {
+    .cw-menu-nav-craftwaves a:focus span:after,
+    .cw-menu-nav-craftwaves a:hover span:after {
+      transform: none;
+    }
+  }
+  .cw-menu-nav-craftwaves.-active a:before,
+  .cw-menu-craftwaves.-open .cw-menu-toggle-craftwaves button.cw-menu-nav-craftwaves a:before {
+    transform: scaleX(1);
+    transform-origin: left center;
+  }
+  .cw-menu-socials-craftwaves {
+    display: inline-block;
+    margin: -6px 0;
+  }
+  @media (min-width: 1600px) and (min-height: 700px) {
+    .cw-menu-socials-craftwaves {
+      margin: -6.5px 0;
+    }
+  }
+  .cw-menu-social-craftwaves {
+    position: relative;
+    display: block;
+    padding: 12px 0;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0.00464286em;
+    text-transform: capitalize;
+    text-decoration: none;
+  }
+  @media (min-width: 1600px) and (min-height: 700px) {
+    .cw-menu-social-craftwaves  {
+      padding: 13px 0;
+    }
+  }
+  .cw-menu-social-craftwaves  em {
+    display: block;
+    position: relative;
+    overflow: hidden;
+  }
+  .cw-menu-social-craftwaves  em span {
+    display: block;
+    transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+    transform-origin: left center;
+  }
+  .cw-menu-social-craftwaves  em span:after {
+    content: attr(data-text);
+    display: block;
+    position: absolute;
+    top: 130%;
+    transform: skewY(10deg);
+    transform-origin: left center;
+    transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  .cw-menu-social-craftwaves :focus em span,
+  .cw-menu-social-craftwaves :hover em span {
+    transform: translateY(-130%) skewY(5deg);
+  }
+  @media (pointer: coarse) {
+    .cw-menu-social-craftwaves :focus em span,
+    .cw-menu-social-craftwaves :hover em span {
+      transform: none;
+    }
+  }
+  .cw-menu-social-craftwaves :focus em span:after,
+  .cw-menu-social-craftwaves :hover em span:after {
+    transform: skewY(-5deg);
+  }
+  @media (pointer: coarse) {
+    .cw-menu-social-craftwaves :focus em span:after,
+    .cw-menu-social-craftwaves :hover em span:after {
+      transform: none;
+    }
+  }
+  .cw-menu-mail-craftwaves {
+    display: block;
+  }
+  .cw-menu-mail-craftwaves a {
+    position: relative;
+    display: inline-block;
+    padding: 0 0 5px 0;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.00464286em;
+    text-decoration: none;
+  }
+  @media (min-width: 1600px) and (min-height: 700px) {
+    .cw-menu-mail-craftwaves a {
+      padding: 0 0 6px 0;
+      font-size: 20px;
+      line-height: 25px;
+    }
+  }
+  .cw-menu-mail-craftwaves a:after,
+  .cw-menu-mail-craftwaves a:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.3);
+  }
+  .cw-menu-mail-craftwaves a:after {
+    background: #000;
+    transform: scaleX(0);
+    transition: transform 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  .cw-menu-mail-craftwaves a:focus:after,
+  .cw-menu-mail-craftwaves a:hover:after {
+    transform: scaleX(1);
+  }
+  .cw-navbar-craftwaves.-inverse {
+    color: #fff;
+  }
+  .cw-navbar-strip-craftwaves {
+    position: absolute;
+    top: 2.5rem;
+    left: 2.5rem;
+    right: 2.5rem;
+    z-index: 99;
+    pointer-events: none;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-navbar-strip-craftwaves {
+      top: 3.9rem;
+      left: 5rem;
+      right: 5rem;
+    }
+  }
+  .cw-navbar-grid-craftwaves {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .cw-navbar-grid-col-craftwaves {
+    pointer-events: auto;
+  }
+  .cw-navbar-logo-craftwaves {
+    position: relative;
+    top: -1px;
+    transition: opacity 0.8s;
+  }
+  .menu-open-craftwaves .cw-navbar-logo-craftwaves {
+    opacity: 0;
+  }
+  .cw-navbar-logo-craftwaves a {
+    color: currentColor;
+  }
+  .cw-navbar-logo-craftwaves svg {
+    width: 88px;
+    height: 19px;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-navbar-logo-craftwaves svg {
+      width: 94px;
+      height: 20px;
+    }
+  }
+  .cw-navbar-links-craftwaves {
+    display: inline-block;
+    margin: 0 50px 0 0;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-navbar-links-craftwaves {
+      margin: 0 60px 0 0;
+    }
+  }
+  .cw-navbar-link-craftwaves{
+    font-size: 18px;
+    letter-spacing: -0.03em;
+    text-transform: lowercase;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-navbar-link-craftwaves {
+      font-size: 20px;
+      letter-spacing: -0.03em;
+    }
+  }
+  .cw-navbar-toggle-craftwaves {
+    display: none;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-navbar-toggle-craftwaves {
+      display: inline-block;
+      margin: 0 50px 0 0;
+      font-size: 20px;
+      letter-spacing: -0.03em;
+      text-transform: lowercase;
+    }
+  }
+  .cw-loader-craftwaves {
+    display: inline;
+  }
+  .cw-loader_overlay-craftwaves {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    color: #fff;
+  }
+  .cw-loader_overlay-fill-craftwaves {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #121212;
+  }
+  .cw-loader_overlay-box-craftwaves {
+    padding: 0 1.5rem;
+    font-size: 4.2rem;
+    line-height: 90%;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+  }
+  @media (orientation: landscape) {
+    .cw-loader_overlay-box-craftwaves {
+      padding: 0 10rem;
+      font-size: 14rem;
+    }
+  }
+  @media (min-width: 768px) {
+    .cw-loader_overlay-box-craftwaves {
+      padding: 0 10rem;
+      font-size: 17.2rem;
+    }
+  }
+  .cw-loader_overlay-word-craftwaves {
+    overflow: hidden;
+    color: #e0fd60;
+  }
+  .cw-loader_overlay-word-craftwaves.-v1 {
+    transform: translateX(17%);
+  }
+  .cw-loader_overlay-word-craftwaves.-v2 {
+    transform: translateX(5%);
+  }
+  .cw-loader_overlay-word-craftwaves.-v3 {
+    transform: translateX(31%);
+  }
+  .cw-loader_overlay-word-craftwaves.-v4 {
+    display: inline-block;
+  }
+  .cw-loader_overlay-word-craftwaves span {
+    display: inline-block;
+    transform: translateY(100%);
+  }
+  .cw-loader_overlay-word-craftwaves span.-blink {
+    animation: cb-fx-blink backwards 1s steps(1) infinite;
+  }
+  .cw-loader_overlay-percent-craftwaves {
+    display: inline-block;
+    float: right;
+    overflow: hidden;
+    font-size: 90%;
+  }
+  .cw-loader_overlay-percent-craftwaves span {
+    display: inline-block;
+    transform: translateY(100%);
+  }
+  .cw-btn-craftwaves {
+    display: inline;
+  }
+  .cw-btn_cta-craftwaves,
+  .cw-btn_dummy-craftwaves,
+  .cw-btn_menu-craftwaves {
+    position: relative;
+    display: inline-block;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    color: inherit;
+    background: 0 0;
+    border: 0;
+    border-radius: 0;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    letter-spacing: inherit;
+    line-height: inherit;
+    text-align: inherit;
+    text-transform: inherit;
+    text-indent: inherit;
+    text-decoration: none;
+  }
+  .cw-btn_cta-craftwaves:focus,
+  .cw-btn_cta-craftwaves:hover,
+  .cw-btn_dummy-craftwaves:focus,
+  .cw-btn_dummy-craftwaves:hover,
+  .cw-btn_menu-craftwaves:focus,
+  .cw-btn_menu-craftwaves:hover {
+    text-decoration: none;
+  }
+  .cw-btn_cta-craftwaves {
+    overflow: hidden;
+    padding: 1.4rem 2rem;
+    border-radius: 1000px;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 110%;
+    text-transform: uppercase;
+    transition: transform 0.3s;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-btn_cta-craftwaves {
+      font-size: 2.4rem;
+    }
+  }
+  .cw-btn_cta-craftwaves.-intro {
+    padding: 0 1.5rem;
+    font-family: "Gallery Modern", sans-serif;
+    font-weight: 400;
+    font-size: 105%;
+    line-height: 0.92;
+    height: 6rem;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-btn_cta-craftwaves.-intro {
+      margin: 0 0 0 0.2em;
+      padding: 0 4.8rem;
+      height: 15.3rem;
+    }
+  }
+  .cw-btn_cta-craftwaves.-sm {
+    padding: 0.5rem 1.4rem;
+    font-size: 1.7rem;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-btn_cta-craftwaves.-sm {
+      padding: 0.8rem 1.5rem;
+      font-size: 1.8rem;
+    }
+  }
+  .cw-btn_cta-craftwaves.-md {
+    font-size: 2.2rem;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-btn_cta-craftwaves.-md {
+      font-size: 2.8rem;
+    }
+  }
+  .cw-btn_cta-craftwaves.-xl {
+    padding: 0 1.9rem;
+    font-weight: 400;
+    font-size: 6.9rem;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-btn_cta-craftwaves.-xl {
+      padding: 0 3.4rem;
+      font-size: 13rem;
+    }
+  }
+  .cw-btn_cta-craftwaves.-tertiary {
+    color: #e0fd60;
+  }
+  @media (pointer: fine) {
+    .cw-btn_cta-craftwaves:focus,
+    .cw-btn_cta-craftwaves:hover {
+      transform: scaleX(1.02);
+      transition: transform 0.6s cubic-bezier(0.34, 5.56, 0.64, 1);
+    }
+  }
+  .cw-btn_cta-craftwaves-border {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    border: 1px solid;
+    border-radius: 1000px;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-btn_cta-craftwaves.-intro .cw-btn_cta-craftwaves-border {
+      border-width: 2px;
+    }
+  }
+  .cw-btn_cta-ripple-craftwaves {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    overflow: hidden;
+    transform: translateZ(0);
+    border-radius: inherit;
+  }
+  .cw-btn_cta-ripple-craftwaves span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transform: translateY(101%);
+    background: currentColor;
+    border-radius: 50% 50% 0 0;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0, 1),
+      border-radius 0.5s cubic-bezier(0.4, 0, 0, 1);
+  }
+  @media (pointer: fine) {
+    .cw-btn_cta-craftwaves:hover .cw-btn_cta-ripple-craftwaves span {
+      border-radius: 0;
+      transform: translateY(0);
+      transition-duration: 0.5s, 0.9s;
+    }
+  }
+  .cw-btn_cta-title-craftwaves {
+    position: relative;
+    display: block;
+    padding: 0 0.16em 0 0;
+    overflow: hidden;
+    z-index: 2;
+  }
+  .cw-btn_cta-title-craftwaves span {
+    display: block;
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .cw-btn_cta-title-craftwaves span:after {
+    content: attr(data-text);
+    display: block;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    color: #fff;
+  }
+  .cw-btn_cta-craftwaves.-inverse .cw-btn_cta-title-craftwaves span:after,
+  .cw-btn_cta-craftwaves.-tertiary .cw-btn_cta-title-craftwaves span:after {
+    color: #000;
+  }
+  @media (pointer: fine) {
+    .cw-btn_cta-craftwaves:hover .cw-btn_cta-title-craftwaves span {
+      transform: translateY(-110%);
+    }
+  }
+  .cw-btn_menu-craftwaves {
+    top: 1px;
+    width: 25px;
+    height: 25px;
+    transform: translateZ(0);
+    -webkit-tap-highlight-color: transparent;
+    transition: color 0.2s;
+  }
+  .cw-btn_menu-craftwaves:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    left: -20px;
+    bottom: -20px;
+  }
+  @media (pointer: fine) {
+    .cw-btn_menu-craftwaves:before {
+      left: -80px;
+    }
+    .cw-btn_menu-craftwaves:hover:before {
+      top: -80px;
+      right: -80px;
+      left: -80px;
+      bottom: -80px;
+    }
+  }
+  .cw-btn_menu-craftwaves span {
+    display: block;
+    position: relative;
+    top: 0;
+    height: 2px;
+    margin: 5px 0;
+    transform: translateZ(0);
+    color: inherit;
+    background: currentColor;
+    transition: top 0.3s 0.3s, transform 0.3s;
+  }
+  .cw-btn_menu-craftwaves.-active span:first-child,
+  .cw-menu-craftwaves.-open .cw-menu-toggle button.cw-btn_menu-craftwaves span:first-child {
+    animation: cb-btn_menu-open-top 0.75s;
+    top: 4px;
+    transform: rotate(45deg) scaleX(1);
+    transition-duration: 0s, 0s;
+  }
+  .cw-btn_menu-craftwaves.-active span:last-child,
+  .cw-menu-craftwaves.-open .cw-menu-toggle-craftwaves button.cw-btn_menu-craftwaves span:last-child {
+    animation: cb-btn_menu-open-bottom 0.75s;
+    top: -3px;
+    transform: rotate(-45deg) scaleX(1);
+    transition-duration: 0s, 0s;
+  }
+  @keyframes cb-btn_menu-open-top {
+    0% {
+      opacity: 1;
+      top: 0;
+      left: 0;
+      transform: rotate(0) scaleX(1);
+      transform-origin: left center;
+    }
+    30% {
+      opacity: 1;
+      top: 0;
+      left: 0;
+      transform: rotate(0) scaleX(0);
+    }
+    30.1% {
+      opacity: 0;
+      top: 0;
+      left: 0;
+      transform: rotate(0) scaleX(0);
+    }
+    31% {
+      opacity: 1;
+      top: -5px;
+      left: 3px;
+      transform: rotate(45deg) scaleX(0);
+    }
+    100%,
+    80% {
+      opacity: 1;
+      top: -5px;
+      left: 3px;
+      transform: rotate(45deg) scaleX(1);
+      transform-origin: left center;
+    }
+  }
+  @keyframes cb-btn_menu-open-bottom {
+    0% {
+      opacity: 1;
+      top: 0;
+      left: 0;
+      transform: rotate(0) scaleX(1);
+      transform-origin: right center;
+    }
+    50% {
+      opacity: 1;
+      top: 0;
+      left: 0;
+      transform: rotate(0) scaleX(0);
+    }
+    50.1% {
+      opacity: 0;
+      top: 0;
+      left: 0;
+      transform: rotate(0) scaleX(0);
+    }
+    51%,
+    55% {
+      opacity: 1;
+      top: -12px;
+      left: -4px;
+      transform: rotate(-45deg) scaleX(0);
+    }
+    100% {
+      opacity: 1;
+      top: -12px;
+      left: -4px;
+      transform: rotate(-45deg) scaleX(1);
+      transform-origin: right center;
+    }
+  }
+  .cw-cursor-craftwaves {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 250;
+    contain: layout style size;
+    pointer-events: none;
+    transition: opacity 0.3s, color 0.4s;
+  }
+  .cw-cursor-craftwaves:before {
+    content: "";
+    position: absolute;
+    top: -24px;
+    left: -24px;
+    display: block;
+    width: 48px;
+    height: 48px;
+    transform: scale(0.2);
+    background: currentColor;
+    border-radius: 50%;
+    transition: transform 0.3s, opacity 0.1s;
+  }
+  .cw-cursor-craftwaves.-inverse {
+    color: #fff;
+  }
+  .cw-cursor-craftwaves.-active:before,
+  .cw-menu-craftwaves.-open .cw-menu-toggle-craftwaves button.cw-cursor-craftwaves:before {
+    transform: scale(0.25);
+  }
+  @supports (mix-blend-mode: exclusion) {
+    .cw-cursor-craftwaves.-exclusion,
+    .cw-cursor-craftwaves.-media.-media-blend,
+    .cw-cursor-craftwaves.-opaque {
+      mix-blend-mode: exclusion;
+    }
+    .cw-cursor-craftwaves.-exclusion:before,
+    .cw-cursor-craftwaves.-media.-media-blend:before,
+    .cw-cursor-craftwaves.-opaque:before {
+      background: #fff;
+    }
+  }
+  .cw-cursor-craftwaves.-pointer:before {
+    transform: scale(0.15);
+  }
+  .cw-cursor-craftwaves.-pointer.-active:before,
+  .cw-menu-craftwaves.-open .cw-menu-toggle-craftwaves button.cw-cursor-craftwaves.-pointer:before {
+    transform: scale(0.1);
+  }
+  .cw-cursor-craftwaves.-opaque:before {
+    transform: scale(1.32);
+  }
+  .cw-cursor-craftwaves.-opaque.-active:before,
+  .cw-menu-craftwaves.-open .cw-menu-toggle-craftwaves button.cw-cursor-craftwaves.-opaque:before {
+    transform: scale(1.2);
+  }
+  .cw-cursor-craftwaves.-lg:before {
+    transform: scale(1.05);
+  }
+  .cw-cursor-craftwaves.-lg.-active:before,
+  .cw-menu-craftwaves.-open .cw-menu-toggle button.cw-cursor-craftwaves.-lg:before {
+    transform: scale(1.15);
+  }
+  .cw-cursor-craftwaves.-text:before {
+    opacity: 0.85;
+    transform: scale(1.7);
+  }
+  .cw-cursor-craftwaves.-text.-active:before,
+  .cw-menu-craftwaves.-open .cw-menu-toggle-craftwaves button.cw-cursor-craftwaves.-text:before {
+    transform: scale(1.6);
+    transition-duration: 0.2s;
+  }
+  .cw-cursor-craftwaves.-icon:before {
+    transform: scale(1.5);
+  }
+  .cw-cursor-craftwaves.-icon.-active:before,
+  .cw-menu-craftwaves.-open .cw-menu-toggle-craftwaves button.cw-cursor-craftwaves.-icon:before {
+    transform: scale(1.4);
+  }
+  .cw-cursor-craftwaves.-menu:before {
+    transform: scale(1.32);
+  }
+  .cw-cursor-craftwaves.-menu.-active:before,
+  .cw-menu-craftwaves.-open .cw-menu-toggle-craftwaves button.cw-cursor-craftwaves.-menu:before {
+    transform: scale(1.2);
+  }
+  .cw-cursor-craftwaves.-hidden:before {
+    transform: scale(0);
+  }
+  .cw-cursor-text-craftwaves {
+    position: absolute;
+    top: -18px;
+    left: -18px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0) rotate(10deg);
+    opacity: 0;
+    color: #fff;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    transition: opacity 0.4s, transform 0.3s;
+  }
+  .cw-cursor-craftwaves.-icon .cw-cursor-text-craftwaves,
+  .cw-cursor-craftwaves.-text .cw-cursor-text-craftwaves {
+    opacity: 1;
+    transform: scale(1);
+  }
+  .cw-cursor-media-craftwaves {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    margin: -200px 0 0 -200px;
+  }
+  .cw-cursor-media-craftwaves img,
+  .cw-cursor-media-craftwaves video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+  }
+  @supports (object-fit: cover) {
+    .cw-cursor-media-craftwaves img,
+    .cw-cursor-media-craftwaves video {
+      position: static;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: translateZ(0);
+    }
+  }
+  .cw-cursor-media-box-craftwaves {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transform: scale(0) translateZ(0);
+    padding: 1px;
+    opacity: 0;
+    border-radius: 50%;
+    transition: transform 0.35s, opacity 0.2s 0.2s;
+  }
+  .cw-cursor.-media-craftwaves .cw-cursor-media-box-craftwaves {
+    opacity: 1;
+    transform: scale(0.696);
+    transition-duration: 0.4s, 0.4s;
+    transition-delay: 0s, 0s;
+  }
+  .cw-cursor-craftwaves.-media {
+    z-index: 0;
+  }-craftwaves
+  .cw-cursor-craftwaves.-media .cw-cursor-media-box-craftwaves {
+    opacity: 1;
+    transform: scale(0.696);
+    transition-duration: 0.4s, 0.4s;
+    transition-delay: 0s, 0s;
+  }
+  .cw-cursor-craftwaves.-media.-media-lg .cw-cursor-media-box-craftwaves {
+    transform: scale(1) !important;
+  }
+  @supports (mix-blend-mode: exclusion) {
+    .cw-cursor-craftwaves.-media.-media-blend {
+      z-index: 150;
+    }
+  }
+  @supports (mix-blend-mode: exclusion) {
+    .cw-cursor-craftwaves.-media.-media-blend .cw-cursor-media-box-craftwaves {
+      filter: invert(1);
+    }
+  }
+  .cw-divider-craftwaves {
+    position: relative;
+    height: 1px;
+  }
+  .cw-divider-craftwaves:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -20px;
+    left: 0;
+    right: 0;
+    height: 40px;
+  }
+  .cw-divider-craftwaves:hover:before {
+    top: -50px;
+    height: 100px;
+  }
+  .cw-divider-craftwaves svg {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 200px;
+    pointer-events: none;
+  }
+  .cw-divider-craftwaves svg path {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1;
+  }
+  .cw-coin-craftwaves {
+    position: relative;
+    display: inline-block;
+    height: 0.8em;
+    width: 0.8em;
+    margin: -0.15em 0 0 0.04em;
+    vertical-align: middle;
+  }
+  .cw-coin-craftwaves.-sm {
+    height: 0.75em;
+    width: 0.75em;
+  }
+  .cw-coin-svg-craftwaves {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    background-image: url(assets/coin/1.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    animation: cb-fx-rotating-360 10s infinite linear;
+  }
+  .cw-coin-svg-craftwaves.-v2 {
+    background-image: url(assets/coin/2.svg);
+  }
+  .cw-coin-ico-craftwaves {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #000;
+    font-size: 0.15em;
+    line-height: 0;
+  }
+  .cw-coin-ico-craftwaves svg {
+    margin: -0.1em 0 0 0;
+  }
+  .cw-coin-stars-craftwaves {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 0.37em;
+    width: 0.37em;
+    transform: translate(-50%, -50%);
+    background-image: url(assets/coin/stars.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .cw-coin-video-craftwaves {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 0.37em;
+    width: 0.37em;
+    transform: translate(-50%, -50%);
+  }
+  .cw-coin-video-craftwaves video {
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+    object-fit: cover;
+  }
+  .cw-coin-letter-craftwaves {
+    position: absolute;
+    opacity: 0;
+  }
+  .cw-intouch-craftwaves {
+    display: none;
+  }
+  @media (min-width: 1200px) {
+    .cw-intouch-craftwaves {
+      display: block;
+      position: fixed;
+      width: min(150px, 15rem);
+      height: min(150px, 15rem);
+      right: 5rem;
+      bottom: 4rem;
+      z-index: 80;
+    }
+    .cw-intouch-craftwaves:hover:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: -140px;
+      left: -140px;
+      right: -40px;
+      bottom: -140px;
+    }
+  }
+  .cw-intouch-border-craftwaves {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: transform 0.4s;
+  }
+  @media (pointer: fine) {
+    .cw-intouch-craftwaves:hover .cw-intouch-border-craftwaves {
+      transform: scale(1.1);
+    }
+  }
+  .cw-intouch-text-craftwaves {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: cb-fx-rotating-360 15s infinite linear;
+  }
+  .cw-intouch-video-craftwaves {
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    right: 15%;
+    bottom: 15%;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+  .cw-intouch-video-craftwaves video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.4s;
+  }
+  .cw-intouch-craftwaves:hover .cw-intouch-video-craftwaves video {
+    transform: scale(1.05);
+  }
+  .cw-intro-craftwaves {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    background: #121212;
+  }
+  .cw-intro-content-craftwaves {
+    padding: 13rem 0 0 0;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-intro-content-craftwaves {
+      padding: 0;
+    }
+  }
+  .cw-intro-body-craftwaves {
+    position: relative;
+    z-index: 1;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-intro-body-craftwaves {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100vh;
+      min-height: 80rem;
+    }
+  }
+  .cw-intro-bottom-craftwaves {
+    position: relative;
+    contain: layout;
+    transform: translateY(-8%);
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-intro-bottom-craftwaves {
+      max-width: 85%;
+      margin-left: 5rem;
+      transform: translateY(-50%);
+    }
+  }
+  .cw-intro-container-craftwaves {
+    width: 100%;
+  }
+  .cw-intro-header-craftwaves h1 {
+    font-weight: 400;
+    font-size: 6.8rem;
+    line-height: 90%;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    transform: translateZ(0);
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-intro-header-craftwaves h1 {
+      font-size: 17.1rem;
+    }
+  }
+  .cw-intro-header-craftwaves h1 em {
+    display: inline-block;
+    overflow: hidden;
+    padding: 0.1em 0;
+    margin: -0.1em 0;
+    transform: translateZ(0);
+  }
+  .cw-intro-header-craftwaves h1 span.-word {
+    display: inline-block;
+  }
+  .cw-intro-header-craftwaves h1 span.-blink {
+    animation: cb-fx-blink backwards 1s steps(1) infinite;
+  }
+  .cw-intro-figure-craftwaves {
+    margin: 0 auto;
+    width: 345px;
+    height: 487px;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-intro-figure-craftwaves {
+      width: auto;
+      height: 53.2rem;
+      max-width: 48.1rem;
+      margin: 0 0 0 auto;
+    }
+  }
+  .cw-intro-figure-media-craftwaves {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transform: translateZ(0);
+    border-radius: 1000px;
+  }
+  .cw-intro-figure-media-craftwaves video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .cw-intro-details-craftwaves {
+    position: absolute;
+    top: 65vh;
+    left: 1.5rem;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-intro-details-craftwaves {
+      top: auto;
+      left: 5rem;
+      bottom: 4rem;
+    }
+  }
+  .cw-intro-detail-craftwaves {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 110%;
+    text-transform: uppercase;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-intro-detail-craftwaves {
+      font-size: 1.6rem;
+    }
+  }
+  .cw-intro-detail-craftwaves:last-child {
+    display: none;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-intro-detail-craftwaves:last-child {
+      display: inline-block;
+      margin-left: 41rem;
+    }
+  }
+  .cw-focused-craftwaves {
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    background: #121212;
+  }
+  .cw-focused-content-craftwaves {
+    position: relative;
+    padding: 10rem 0 11.3rem 0;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-focused-content-craftwaves {
+      padding: 5rem 0 20rem 0;
+    }
+  }
+  .cw-focused-text-craftwaves {
+    position: relative;
+    font-weight: 500;
+    font-size: 3.2rem;
+    line-height: 100%;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-focused-text-craftwaves {
+      max-width: 120rem;
+      font-weight: 400;
+      font-size: 6.8rem;
+    }
+  }
+  .cw-overview-craftwaves {
+    position: relative;
+    overflow: hidden;
+  }
+  .cw-overview-craftwaves.-inverse {
+    color: #fff;
+    background: #000;
+  }
+  .cw-overview-craftwaves.-fill {
+    background: #8f8f8f;
+  }
+  .cw-overview-craftwaves.-gray {
+    background: #8f8f8f;
+  }
+  .cw-overview-craftwaves.-above {
+    z-index: 10;
+  }
+  .cw-overview-content-craftwaves {
+    position: relative;
+    padding: 8rem 0;
+    z-index: 1;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-overview-content-craftwaves {
+      padding: 20rem 0;
+    }
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-overview-content-craftwaves.-rt {
+      padding-top: 18rem;
+    }
+  }
+  .cw-overview-bg-craftwaves {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .cw-overview-bg-craftwaves-media {
+    width: 100%;
+    height: 100%;
+  }
+  .cw-overview-bg-media-craftwaves video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom center;
+  }
+  .cw-overview-figure-craftwaves {
+    position: relative;
+    margin: 0 auto;
+    max-width: 375px;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-overview-figure-craftwaves {
+      margin: 0 -5rem;
+      max-width: none;
+      padding-bottom: 43.286%;
+    }
+  }
+  .cw-overview-figure-bg-craftwaves {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    border-radius: 50%;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-overview-figure-bg-craftwaves {
+      border-radius: 1000px;
+    }
+  }
+  .cw-overview-figure-bg-craftwaves.-v1 {
+    background: #1b1b1b;
+  }
+  .cw-overview-figure-bg-craftwaves.-v2 {
+    background: #f1f1f1;
+  }
+  .cw-overview-figure-craftwaves.-offsetable .cw-overview-figure-bg-craftwaves {
+    will-change: transform;
+    transition: border-radius 1.5s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-overview-figure-craftwaves.-offsetted .cw-overview-figure-bg-craftwaves {
+      transform: scaleX(0.404) scale(0.7);
+      border-radius: 50%;
+    }
+  }
+  .cw-overview-figure-media-craftwaves {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 100%;
+    transform: translateZ(0);
+    border-radius: 50%;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-overview-figure-media-craftwaves {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 60.6rem;
+      height: 60.6rem;
+      margin: -30.3rem 0 0 -30.3rem;
+      padding-bottom: 0;
+    }
+  }
+  .cw-overview-figure-media-craftwaves.-sm {
+    transform: scale(0.85);
+  }
+  .cw-overview-figure-craftwaves.-offsetable .cw-overview-figure-media-craftwaves {
+    will-change: transform;
+    transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .cw-overview-figure-craftwaves.-offsetable-opaque .cw-overview-figure-media-craftwaves {
+    transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s;
+  }
+  .cw-overview-figure-craftwaves.-offsetted .cw-overview-figure-media-craftwaves {
+    transform: scale(0.7) scale(0.7);
+  }
+  .cw-overview-figure-craftwaves.-offsetted.-offsetable-opaque
+    .cw-overview-figure-media-craftwaves {
+    opacity: 0.7;
+  }
+  .cw-overview-figure-media-craftwaves video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .cw-overview-reel-craftwaves {
+    margin: 3.7rem 0 0 0;
+    overflow: hidden;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-overview-reel-craftwaves {
+      margin: 0;
+    }
+  }
+  .cw-overview-reel-wrap-craftwaves {
+    display: flex;
+    align-items: center;
+  }
+  .cw-overview-reel-item-craftwaves {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    margin: 0 3rem;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-overview-reel-item-craftwaves {
+      margin: 0 4rem;
+    }
+  }
+  .cw-overview-reel-item-figure-craftwaves {
+    display: none;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-overview-reel-item-figure-craftwaves {
+      display: block;
+      margin-right: 8rem;
+      width: 50rem;
+      flex-shrink: 0;
+    }
+  }
+  .cw-overview-reel-item-figure-media-craftwaves {
+    position: relative;
+    padding-bottom: 64%;
+    overflow: hidden;
+    transform: translateZ(0);
+    border-radius: 1000px;
+  }
+  .cw-overview-reel-item-figure-media-craftwaves video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    transform: scale(1.01);
+    object-fit: cover;
+  }
+  .cw-overview-reel-item-title-craftwaves {
+    font-weight: 400;
+    font-size: 6.8rem;
+    line-height: 85%;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-overview-reel-item-title-craftwaves {
+      font-size: 17.5rem;
+    }
+  }
+  .cw-overview-reel-item-title-craftwaves em {
+    font-family: "Gallery Modern", sans-serif;
+    font-size: 110%;
+    letter-spacing: normal;
+  }
+  .cw-overview-header-craftwaves {
+    margin: 0 0 4rem 0;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-overview-header-craftwaves {
+      margin: 0 0 10rem 0;
+    }
+  }
+  .cw-overview-header-craftwaves h2 {
+    font-weight: 400;
+    font-size: 5.2rem;
+    line-height: 85%;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-overview-header-craftwaves h2 {
+      font-size: 17.5rem;
+    }
+  }
+  .cw-overview-header-craftwaves h2 em {
+    font-family: "Gallery Modern", sans-serif;
+    font-size: 110%;
+    letter-spacing: normal;
+  }
+  .cw-overview-header-craftwaves h2 span.-blink {
+    animation: cb-fx-blink backwards 1s steps(1) infinite;
+  }
+  .cw-overview-divider-craftwaves {
+    margin: 3.8rem 0 2.5rem 0;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-overview-divider-craftwaves {
+      margin: 10rem 0 4.5rem 0;
+    }
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-overview-grid-craftwaves {
+      display: flex;
+    }
+  }
+  .cw-overview-grid-craftwaves.-equal {
+    display: block;
+  }
+  @media (min-width: 1024px), (orientation: landscape) {
+    .cw-overview-grid-craftwaves.-equal {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-overview-grid-col-craftwaves {
+      flex-basis: 50%;
+      min-width: 50%;
+    }
+  }
+  @media (min-width: 1024px) {
+    .cw-overview-grid-craftwaves.-equal .cw-overview-grid-col-craftwaves {
+      flex-basis: 50%;
+      min-width: 50%;
+    }
+  }
+  .cw-overview-grid-col-craftwaves.-left {
+    margin: 0 0 3.5rem 0;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-overview-grid-col-craftwaves.-left {
+      flex-basis: 40%;
+      min-width: 40%;
+      margin: 0 0 5rem 0;
+    }
+  }
+  @media (min-width: 1024px) {
+    .cw-overview-grid-col-craftwaves.-left {
+      flex-basis: 50%;
+      min-width: 50%;
+      padding: 0 6rem 0 0;
+      margin: 0;
+    }
+  }
+  .cw-overview-icon-craftwaves {
+    position: relative;
+    display: inline-block;
+    margin: 2.5rem 0 0 0;
+    z-index: -1;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-overview-icon-craftwaves {
+      margin: 5rem 0 0 0;
+    }
+  }
+  .cw-overview-icon-craftwaves:first-of-type {
+    margin: 0;
+  }
+  .cw-overview-icon-craftwaves img,
+  .cw-overview-icon-craftwaves svg,
+  .cw-overview-icon-craftwaves video {
+    width: 6rem;
+    height: 6rem;
+    object-fit: cover;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-overview-icon-craftwaves img,
+    .cw-overview-icon-craftwaves svg,
+    .cw-overview-icon-craftwaves video {
+      width: 6.4rem;
+      height: 6.4rem;
+    }
+  }
+  .cw-overview-icon-craftwaves.-rotating img,
+  .cw-overview-icon-craftwaves.-rotating svg,
+  .cw-overview-icon-craftwaves.-rotating video {
+    animation: cb-fx-rotating-360 5s infinite linear;
+  }
+  .cw-overview-icon-craftwaves.-stroka svg > * {
+    stroke-dasharray: 148 10;
+    animation: cb-overview-icon-stroka 5s infinite linear;
+  }
+  .cw-overview-icon-craftwaves.-stroka svg > :last-child {
+    animation-delay: 0.1s;
+    animation-direction: reverse;
+  }
+  @keyframes cb-overview-icon-stroka {
+    0% {
+      stroke-dashoffset: 0;
+      stroke-dasharray: 148 10;
+    }
+    50% {
+      stroke-dasharray: 135 30;
+    }
+    100% {
+      stroke-dashoffset: 157;
+      stroke-dasharray: 148 10;
+    }
+  }
+  .cw-overview-info-craftwaves {
+    position: relative;
+    margin: 6rem 0 0 0;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-overview-info-craftwaves {
+      margin: 8rem 0 0 0;
+    }
+  }
+  .cw-overview-info-craftwaves:first-of-type {
+    margin-top: 0;
+  }
+  .cw-overview-caption-craftwaves {
+    margin: 0 0 2.4rem 0;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-overview-caption-craftwaves {
+      margin: 0 0 4.5rem 0;
+    }
+  }
+  .cw-overview-caption-craftwaves h2,
+  .cw-overview-caption-craftwaves h3 {
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 110%;
+    text-transform: uppercase;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-overview-caption-craftwaves h2,
+    .cw-overview-caption-craftwaves h3 {
+      font-size: 1.6rem;
+    }
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-overview-caption-craftwaves.-offset {
+      display: inline-block;
+      position: absolute;
+      top: 0.4rem;
+      left: -2.5rem;
+      margin: 0;
+    }
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-overview-caption-craftwaves.-offset {
+      top: 1.2rem;
+      left: -4rem;
+    }
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-overview-caption-craftwaves.-offset h2,
+    .cw-overview-caption-craftwaves.-offset h3 {
+      position: relative;
+      left: -100%;
+    }
+  }
+  .cw-overview-text-craftwaves {
+    opacity: 0.95;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 120%;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-overview-text-craftwaves {
+      font-size: 3.2rem;
+    }
+  }
+  .cw-overview-text-craftwaves p {
+    margin-bottom: 1em;
+  }
+  .cw-overview-text-craftwaves p:last-of-type {
+    margin-bottom: 0;
+  }
+  .cw-overview-tags-craftwaves {
+    margin: -0.4rem;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-overview-tags-craftwaves {
+      max-width: 70%;
+      margin: -0.7rem;
+    }
+  }
+  .cw-overview-grid-craftwaves.-equal .cw-overview-tags-craftwaves {
+    max-width: none;
+  }
+  .cw-overview-tag-craftwaves {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    margin: 0.4rem;
+    border: 1px solid;
+    border-radius: 49px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 110%;
+    text-transform: uppercase;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-overview-tag-craftwaves {
+      padding: 0.8rem 1.5rem;
+      margin: 0.7rem;
+      font-size: 2.1rem;
+    }
+  }
+  .cw-overview-spacer-craftwaves {
+    padding-bottom: 70%;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-overview-spacer-craftwaves {
+      padding-bottom: 20%;
+    }
+  }
+  .cw-greeting-craftwaves {
+    position: relative;
+    overflow: hidden;
+    background: #e0fd60;
+  }
+  .cw-greeting-craftwaves.-above {
+    z-index: 10;
+  }
+  .cw-greeting-bg-craftwaves {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .cw-greeting-bg-media-craftwaves {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .cw-greeting-bg-media-craftwaves img {
+    height: 100%;
+  }
+  .cw-greeting-content-craftwaves {
+    padding: 8rem 0;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-greeting-content-craftwaves {
+      padding: 20rem 0;
+    }
+  }
+  .cw-greeting-header-craftwaves h2 {
+    font-weight: 400;
+    font-size: 5.8rem;
+    line-height: 89%;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-greeting-header-craftwaves h2 {
+      font-size: 19rem;
+    }
+  }
+  .cw-greeting-text-craftwaves {
+    margin: 3.8rem 0 0 0;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 120%;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-greeting-text-craftwaves {
+      max-width: 66.2rem;
+      margin-top: 12rem;
+      margin-left: auto;
+      font-size: 3.2rem;
+    }
+  }
+  .cw-showcase-craftwaves {
+    overflow: hidden;
+    color: #fff;
+    background: #000;
+  }
+  .cw-showcase-content-craftwaves {
+    padding: 14rem 0;
+  }
+  @media (min-width: 1024px) {
+    .cw-showcase-content-craftwaves {
+      padding: 25rem 0;
+    }
+  }
+  .cw-showcase-content-craftwaves.-cb {
+    padding-bottom: 0;
+  }
+  .cw-showcase-header-craftwaves h2 {
+    font-size: 5.4rem;
+    line-height: 110%;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-showcase-header-craftwaves h2 {
+      font-size: 17.5rem;
+    }
+  }
+  .cw-showcase-header-craftwaves h2 em {
+    font-family: "Gallery Modern", sans-serif;
+    font-size: 105%;
+    letter-spacing: normal;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-showcase-header-craftwaves h2 em {
+      font-size: 110%;
+    }
+  }
+  .cw-showcase-header-craftwaves h2 video {
+    position: relative;
+    top: -0.5vw;
+    width: 7.56rem;
+    height: 5.58rem;
+    overflow: hidden;
+    transform: translateZ(0);
+    border-radius: 1000px;
+    object-fit: cover;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-showcase-header-craftwaves h2 video {
+      width: 28.1rem;
+      height: 20.7rem;
+    }
+  }
+  .cw-showcase-items-craftwaves {
+    margin: -0.3rem 0;
+    padding: 14rem 0 0 0;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-showcase-items-craftwaves {
+      padding: 29.6rem 0 0 0;
+      margin: -1rem 0;
+    }
+  }
+  .cw-showcase-item-craftwaves {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 37.5rem;
+    margin: 0.3rem 0;
+    overflow: hidden;
+    transform: translateZ(0);
+    border-radius: 3rem;
+    text-decoration: none;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-showcase-item-craftwaves {
+      margin: 1rem 0;
+      height: 72.3rem;
+      border-radius: 6rem;
+    }
+  }
+  .cw-showcase-item-bg-craftwaves {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    transform: translateZ(0);
+    border-radius: inherit;
+  }
+  .cw-showcase-item-bg-media-craftwaves {
+    height: 100%;
+    width: 100%;
+  }
+  .cw-showcase-item-bg-media-craftwaves video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .cw-showcase-item-ico-craftwaves,
+  .cw-showcase-item-title-craftwaves {
+    display: inline-block;
+    font-size: 7.2rem;
+    line-height: 110%;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-showcase-item-ico-craftwaves,
+    .cw-showcase-item-title-craftwaves {
+      font-size: 19rem;
+    }
+  }
+  .cw-showcase-item-ico-craftwaves {
+    padding-left: 1rem;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-showcase-item-ico-craftwaves {
+      padding-left: 5rem;
+    }
+  }
+  .cw-showcase-item-reel-craftwaves {
+    position: relative;
+  }
+  .cw-showcase-item-reel-wrap-craftwaves {
+    display: flex;
+  }
+  .cw-showcase-item-reel-item-craftwaves {
+    margin: 0 1rem;
+    flex-shrink: 0;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-showcase-item-reel-item-craftwaves {
+      margin: 0 3rem;
+    }
+  }
+  .cw-brandreel-craftwaves {
+    color: #fff;
+    background: #000;
+  }
+  .cw-brandreel-content-craftwaves {
+    padding: 8rem 0 10rem 0;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-brandreel-content-craftwaves {
+      padding: 20rem 0;
+    }
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-brandreel-grid-craftwaves {
+      display: flex;
+    }
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-brandreel-grid-col-craftwaves {
+      flex: 1;
+    }
+  }
+  .cw-brandreel-grid-col-craftwaves.-left {
+    padding: 0 5rem 0 0;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-brandreel-grid-col-craftwaves.-left {
+      padding: 0;
+      text-align: right;
+    }
+  }
+  .cw-brandreel-figure-craftwaves {
+    display: inline-block;
+    width: 13.5rem;
+    height: 13.5rem;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-brandreel-figure-craftwaves {
+      width: 19.1rem;
+      height: 19.1rem;
+      margin-top: -9rem;
+      margin-right: 4.2rem;
+    }
+  }
+  .cw-brandreel-figure-media-craftwaves {
+    height: 100%;
+    width: 100%;
+  }
+  .cw-brandreel-figure-media-craftwaves video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .cw-brandreel-text-craftwaves {
+    font-size: 3rem;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-brandreel-text-craftwaves {
+      font-weight: 500;
+      font-size: 4.6rem;
+    }
+  }
+  .cw-brandreel-text-craftwaves em {
+    color: #e0fd60;
+  }
+  .cw-brandreel-divider-craftwaves {
+    margin: 3.8rem 0 2.5rem 0;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-brandreel-divider-craftwaves {
+      margin: 10rem 0 4.5rem 0;
+    }
+  }
+  .cw-brandreel-reels-craftwaves {
+    margin: -4.5rem 0;
+    padding: 4.5rem 0 0 0;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-brandreel-reels-craftwaves {
+      margin: -6.5rem 0;
+      padding: 8.8rem 0 0 0;
+    }
+  }
+  .cw-brandreel-reel-craftwaves {
+    margin: 4.5rem 0;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-brandreel-reel-craftwaves {
+      margin: 6.5rem 0;
+    }
+  }
+  .cw-brandreel-reel-wrap-craftwaves {
+    display: flex;
+    align-items: center;
+  }
+  .cw-brandreel-reel-item-craftwaves {
+    padding: 0 4rem;
+    flex-shrink: 0;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-brandreel-reel-item-craftwaves {
+      padding: 0 7.7rem;
+    }
+  }
+  .cw-brandreel-reel-item-craftwaves.-mobile img {
+    width: 6.5rem;
+    height: 2.34rem;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-brandreel-reel-item-craftwaves.-mobile img {
+      width: 10rem;
+      height: 3.6rem;
+    }
+  }
+  .cw-brandreel-reel-item-craftwaves.-swift img {
+    width: 7.995rem;
+    height: 2.47rem;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-brandreel-reel-item-craftwaves.-swift img {
+      width: 12.3rem;
+      height: 3.8rem;
+    }
+  }
+  .cw-brandreel-reel-item-craftwaves.-kotlin img {
+    width: 7.475rem;
+    height: 1.625rem;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-brandreel-reel-item-craftwaves.-kotlin img {
+      width: 11.5rem;
+      height: 2.5rem;
+    }
+  }
+  .cw-brandreel-reel-item-craftwaves.-react img {
+    width: 3.835rem;
+    height: 3.445rem;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-brandreel-reel-item-craftwaves.-react img {
+      width: 5.9rem;
+      height: 5.3rem;
+    }
+  }
+  .cw-brandreel-reel-item-craftwaves.-java img {
+    width: 7.15rem;
+    height: 3.835rem;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-brandreel-reel-item-craftwaves.-java img {
+      width: 11rem;
+      height: 5.9rem;
+    }
+  }
+  .cw-brandreel-reel-item-craftwaves.-web img {
+    width: 5.005rem;
+    height: 2.405rem;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-brandreel-reel-item-craftwaves.-web img {
+      width: 7.7rem;
+      height: 3.7rem;
+    }
+  }
+  .cw-brandreel-reel-item-craftwaves.-js img {
+    width: 3.64rem;
+    height: 3.64rem;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-brandreel-reel-item-craftwaves.-js img {
+      width: 5.6rem;
+      height: 5.6rem;
+    }
+  }
+  .cw-brandreel-reel-item-craftwaves.-nodejs img {
+    width: 6.305rem;
+    height: 3.835rem;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-brandreel-reel-item-craftwaves.-nodejs img {
+      width: 9.7rem;
+      height: 5.9rem;
+    }
+  }
+  .cw-brandreel-reel-item-craftwaves.-html img {
+    width: 3.64rem;
+    height: 3.64rem;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-brandreel-reel-item-craftwaves.-html img {
+      width: 5.6rem;
+      height: 5.6rem;
+    }
+  }
+  .cw-brandreel-reel-item-craftwaves.-redis img {
+    width: 7.93rem;
+    height: 2.535rem;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-brandreel-reel-item-craftwaves.-redis img {
+      width: 12.2rem;
+      height: 3.9rem;
+    }
+  }
+  .cw-postcard-craftwaves {
+    position: relative;
+    color: #fff;
+  }
+  .cw-postcard-bg-craftwaves {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 5rem;
+    background: #00000000;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-postcard-bg-craftwaves {
+      bottom: 0;
+    }
+  }
+  .cw-postcard-content-craftwaves {
+    position: relative;
+    padding: 8rem 0 0 0;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-postcard-content-craftwaves {
+      padding: 20rem 0;
+    }
+  }
+  .cw-postcard-content-craftwaves.-ct {
+    padding-top: 0;
+  }
+  .cw-postcard-container-craftwaves {
+    text-align: center;
+  }
+  .cw-postcard-items-craftwaves {
+    margin: -0.3rem 0;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-postcard-items-craftwaves {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-gap: 2rem;
+      justify-content: center;
+    }
+  }
+  .cw-postcard-item-craftwaves {
+    position: relative;
+    height: 52rem;
+    margin: 0.3rem 0;
+    text-align: left;
+    perspective: 4000px;
+    cursor: pointer;
+    color: #000;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-postcard-item-craftwaves {
+      display: inline-block;
+      width: 56rem;
+      height: 68.5rem;
+    }
+  }
+  .cw-postcard-item-craftwaves.-open {
+    z-index: 10;
+  }
+  .cw-postcard-item-craftwaves.-inverse {
+    color: #fff;
+  }
+  .cw-postcard-item-back-craftwaves,
+  .cw-postcard-item-front-craftwaves {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 4.5rem 2.5rem;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 30px;
+    transition: transform 1.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-postcard-item-back-craftwaves,
+    .cw-postcard-item-front-craftwaves {
+      padding: 5.5rem 4rem;
+    }
+  }
+  .cw-postcard-item-back-craftwaves {
+    transform: rotateY(180deg);
+    color: #fff;
+    background: #232325;
+  }
+  .cw-postcard-item-craftwaves.-open .cw-postcard-item-back-craftwaves {
+    transform: rotateY(0);
+  }
+  .cw-postcard-item-craftwaves.-open .cw-postcard-item-front-craftwaves {
+    transform: rotateY(-180deg);
+  }
+  .cw-postcard-item-bg-craftwaves {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+  }
+  .cw-postcard-item-bg-craftwaves img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .cw-postcard-item-title-craftwaves {
+    position: relative;
+    font-weight: 400;
+    font-size: 3.2rem;
+    line-height: 110%;
+    text-transform: uppercase;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-postcard-item-title-craftwaves {
+      font-weight: 500;
+      font-size: 4rem;
+    }
+  }
+  .cw-postcard-item-tags-craftwaves {
+    position: relative;
+    margin: 0 -0.3rem;
+    padding-top: 1.5rem;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-postcard-item-tags-craftwaves {
+      margin: 0 -0.5rem;
+      padding-top: 2rem;
+    }
+  }
+  .cw-postcard-item-tag-craftwaves {
+    display: inline-block;
+    margin: 0 0.3rem;
+    padding: 0.3rem 0.8rem;
+    border: 1px solid;
+    border-radius: 1000px;
+    font-weight: 500;
+    font-size: 1.7rem;
+    line-height: 110%;
+    text-transform: uppercase;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-postcard-item-tag-craftwaves {
+      margin: 0 0.5rem;
+      font-size: 2rem;
+    }
+  }
+  .cw-postcard-item-arr-craftwaves {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 6.7rem;
+    height: 6.7rem;
+    margin: 3.5rem 0 0 0;
+    border-radius: 50%;
+    border: 1px solid;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-postcard-item-arr-craftwaves {
+      height: 10rem;
+      width: 10rem;
+      margin: 4.8rem 0 0 0;
+    }
+  }
+  @media (pointer: fine) {
+    .cw-postcard-item-arr-craftwaves {
+      display: none;
+    }
+  }
+  .cw-postcard-item-back-craftwaves .cw-postcard-item-arr-craftwaves {
+    transform: rotate(-90deg);
+  }
+  .cw-postcard-item-arr-craftwaves svg {
+    font-size: 1.2rem;
+    line-height: 0;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-postcard-item-arr-craftwaves svg {
+      font-size: 1.8rem;
+    }
+  }
+  .cw-postcard-item-text-craftwaves {
+    margin: 5rem 0 0 0;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 120%;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-postcard-item-text-craftwaves {
+      font-size: 2.8rem;
+    }
+  }
+  .cw-achievement-craftwaves {
+    overflow: hidden;
+  }
+  .cw-achievement-content-craftwaves {
+    padding: 8rem 0;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-achievement-content-craftwaves {
+      padding: 20rem 0;
+    }
+  }
+  @media (max-width: 1023px) {
+    .cw-achievement-container-craftwaves.-xs {
+      padding: 0 1.5rem;
+    }
+  }
+  .cw-achievement-text-craftwaves {
+    font-weight: 500;
+    font-size: 3.2rem;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-achievement-text-craftwaves {
+      max-width: 74.2rem;
+      margin: 0 auto;
+      font-size: 5rem;
+      text-align: center;
+    }
+  }
+  .cw-achievement-text-craftwaves em {
+    opacity: 0.3;
+  }
+  .cw-achievement-items {
+    margin: -8rem 0;
+    padding: 8rem 0 0 0;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-achievement-items {
+      margin: -2rem 0;
+      padding: 12rem 0 0 0;
+    }
+  }
+  .cw-achievement-item {
+    position: relative;
+    margin: 8rem 0;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-achievement-item-craftwaves {
+      display: flex;
+      align-items: center;
+      margin: 2rem auto;
+      height: 63.4rem;
+      transform: translateZ(0);
+    }
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-achievement-item-craftwaves.-inverse {
+      color: #fff;
+    }
+  }
+  .cw-achievement-item-bg-craftwaves {
+    position: relative;
+    padding-bottom: 100%;
+    overflow: hidden;
+    transform: translateZ(0);
+    border-radius: 10000px;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-achievement-item-bg-craftwaves {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: 0 auto;
+      padding: 0;
+    }
+  }
+  .cw-achievement-item-craftwaves.-inverse .cw-achievement-item-bg-craftwaves {
+    background: #000;
+  }
+  .cw-achievement-item-craftwaves.-tertiary .cw-achievement-item-bg-craftwaves {
+    background: #e0fd60;
+  }
+  .cw-achievement-item-craftwaves.-opaque .cw-achievement-item-bg-craftwaves {
+    background: #f1f1f1;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-achievement-item-info-craftwaves {
+      position: relative;
+      margin-left: 22.7rem;
+    }
+  }
+  .cw-achievement-item-title-craftwaves {
+    display: none;
+    font-size: 10.2rem;
+    line-height: 110%;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-achievement-item-title-craftwaves {
+      display: block;
+      font-size: 19rem;
+    }
+  }
+  .cw-achievement-item-text-craftwaves {
+    margin: 3.2rem 0 0 0;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 120%;
+    letter-spacing: -0.03em;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-achievement-item-text-craftwaves {
+      max-width: 57.6rem;
+      margin: 3.2rem 0 0 0;
+      font-size: 3.2rem;
+      letter-spacing: normal;
+    }
+  }
+  .cw-achievement-item-text-craftwaves p {
+    margin-bottom: 1em;
+  }
+  .cw-achievement-item-text-craftwaves p:last-of-type {
+    margin-bottom: 0;
+  }
+  .cw-achievement-item-figure-craftwaves {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateZ(0);
+    border-radius: 50%;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-achievement-item-figure-craftwaves {
+      top: 0;
+      right: 12rem;
+      left: auto;
+      bottom: 0;
+      width: 63.4rem;
+      border-radius: 0;
+    }
+  }
+  .cw-achievement-item-craftwaves.-inverse .cw-achievement-item-figure-craftwaves {
+    background: #000;
+  }
+  .cw-achievement-item-craftwaves.-tertiary .cw-achievement-item-figure-craftwaves {
+    background: #e0fd60;
+  }
+  .cw-achievement-item-craftwaves.-opaque .cw-achievement-item-figure-craftwaves {
+    background: #f1f1f1;
+  }
+  .cw-achievement-item-figure-media-craftwaves {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .cw-achievement-item-figure-media-craftwaves video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+  .cw-outro-craftwaves {
+    overflow: hidden;
+    color: #fff;
+    background: #000;
+  }
+  .cw-outro-content-craftwaves {
+    padding: 8rem 0;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-outro-content-craftwaves {
+      padding: 20rem 0;
+    }
+  }
+  .cw-outro-content-craftwaves.-cb {
+    padding-bottom: 0;
+  }
+  .cw-outro-header-craftwaves {
+    margin-bottom: 5rem;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-outro-header-craftwaves {
+      margin-bottom: 12rem;
+    }
+  }
+  .cw-outro-header-craftwaves h2 {
+    font-weight: 400;
+    font-size: 6.8rem;
+    line-height: 77%;
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-outro-header-craftwaves h2 {
+      font-size: 20.8rem;
+    }
+  }
+  .cw-outro-header-craftwaves h2 em {
+    font-family: "Gallery Modern", sans-serif;
+    font-size: 105%;
+    letter-spacing: normal;
+  }
+  .cw-outro-caption-craftwaves {
+    margin: 0 0 2.6rem 0;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-outro-caption-craftwaves {
+      margin: 0 0 4.5rem 0;
+    }
+  }
+  .cw-outro-caption-craftwaves h3 {
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 110%;
+    text-transform: uppercase;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-outro-caption-craftwaves h3 {
+      font-size: 1.6rem;
+    }
+  }
+  .cw-outro-social-craftwaves {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    text-decoration: none;
+  }
+  .cw-outro-social-divider-craftwaves {
+    opacity: 0.2;
+    border-bottom: 1px #ededed solid;
+  }
+  .cw-outro-social-info-craftwaves {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem 0;
+  }
+  @media (min-width: 768px), (orientation: l-craftwavesandscape) {
+    .cw-outro-social-info-craftwaves {
+      padding: 4.5rem 0;
+    }
+  }
+  .cw-outro-social-title-craftwaves {
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 110%;
+    text-transform: uppercase;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-outro-social-title-craftwaves {
+      font-size: 3.2rem;
+      letter-spacing: -0.03em;
+    }
+  }
+  .cw-outro-social-arr-craftwaves {
+    font-size: 2rem;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-outro-social-arr-craftwaves {
+      font-size: 2.7rem;
+    }
+  }
+  .cw-outro-social-reel-craftwaves {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #000;
+    pointer-events: none;
+    touch-action: none;
+  }
+  @media (pointer: coarse) {
+    .cw-outro-social-reel-craftwaves {
+      display: none;
+    }
+  }
+  .cw-outro-social-reel-craftwaves:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: scaleY(0);
+    background: #e0fd60;
+    transition: transform 0.5s;
+  }
+  .cw-outro-social-craftwaves:hover .cw-outro-social-reel-craftwaves:before {
+    transform: scaleY(1);
+    transition-duration: 0.4s;
+  }
+  .cw-outro-social-reel-wrap-craftwaves {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .cw-outro-social-craftwaves:hover .cw-outro-social-reel-wrap-craftwaves {
+    opacity: 1;
+  }
+  .cw-outro-social-reel-item-craftwaves {
+    margin: 0 2rem;
+    flex-shrink: 0;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-outro-social-reel-item-craftwaves {
+      margin: 0 3.4rem;
+    }
+  }
+  .cw-outro-locations-craftwaves {
+    padding: 7.4rem 0 0 0;
+    margin: -5.5rem 0;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-outro-locations-craftwaves {
+      display: flex;
+      padding: 10.6rem 0 0 0;
+    }
+  }
+  .cw-outro-location-craftwaves {
+    padding: 5.5rem 0;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-outro-location-craftwaves {
+      flex: 1;
+    }
+  }
+  .cw-outro-location-caption-craftwaves {
+    display: inline;
+    position: relative;
+    top: -0.3rem;
+    margin: 0 2.8rem 0 0;
+    font-size: 1.4rem;
+    line-height: 110%;
+    text-transform: uppercase;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-outro-location-caption-craftwaves {
+      top: -0.5rem;
+      margin-right: max(2rem, 20px);
+      font-size: max(1.4rem, 12px);
+    }
+  }
+  .cw-outro-location-address-craftwaves {
+    display: inline;
+    font-size: 2.2rem;
+    line-height: 110%;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-outro-location-address-craftwaves {
+      font-size: max(2.8rem, 17px);
+    }
+  }
+  .cw-outro-location-action-craftwaves {
+    margin: 2.4rem 0 0 0;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-outro-location-action-craftwaves {
+      margin-top: 4rem;
+    }
+  }
+  .cw-footer-craftwaves {
+    position: relative;
+    color: #fff;
+    background: #000;
+  }
+  .cw-footer-bg-craftwaves {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .cw-footer-bg-media-craftwaves {
+    width: 100%;
+    height: 100%;
+  }
+  .cw-footer-bg-media-craftwaves video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+  .cw-footer-bg-media-craftwaves canvas {
+    width: 100%;
+    height: 100%;
+  }
+  .cw-footer-content-craftwaves {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    min-height: 60rem;
+    z-index: 2;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-footer-content-craftwaves {
+      min-height: 80rem;
+    }
+  }
+  .cw-footer-top-craftwaves {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+  }
+  .cw-footer-bottom-craftwaves {
+    width: 100%;
+  }
+  .cw-footer-content-craftwaves {
+    padding: 4.5rem 0;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-footer-content-craftwaves {
+      padding: 5rem 0;
+    }
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-footer-grid-craftwaves {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-footer-grid-col-craftwaves {
+      flex: 1;
+    }
+  }
+  .cw-footer-grid-col-craftwaves.-center {
+    margin: 2rem 0 0 0;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-footer-grid-col-craftwaves.-center {
+      margin: 0;
+      text-align: center;
+    }
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-footer-grid-col-craftwaves.-right {
+      text-align: right;
+    }
+  }
+  .cw-footer-header-craftwaves h2 {
+    font-weight: 400;
+    font-size: 8.1rem;
+    line-height: 77%;
+    text-transform: uppercase;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-footer-header-craftwaves h2 {
+      font-size: 16.4rem;
+    }
+  }
+  .cw-footer-header-craftwaves h2 em {
+    font-family: "Gallery Modern", sans-serif;
+    font-size: 110%;
+    letter-spacing: normal;
+  }
+  .cw-footer-action-craftwaves {
+    margin: 2.6rem 0 0 0;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-footer-action-craftwaves {
+      margin-top: 3rem;
+    }
+  }
+  .cw-footer-tags-craftwaves {
+    margin: -0.4rem;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-footer-tags-craftwaves {
+      margin: -0.7rem;
+    }
+  }
+  .cw-footer-tag-craftwaves {
+    display: block;
+    margin: 0.4rem;
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-footer-tag-craftwaves {
+      display: inline-block;
+      margin: 0.7rem;
+    }
+  }
+  .cw-footer-link-craftwaves {
+    position: relative;
+    opacity: 0.3;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 110%;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  @media (pointer: coarse) {
+    .cw-footer-link-craftwaves:after {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: 0;
+      right: 0;
+      bottom: -20px;
+    }
+  }
+  .cw-footer-link-craftwaves:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -4px;
+    height: 4px;
+    transform: scaleX(0);
+    border-bottom: 1px solid;
+    transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  @media (min-width: 768px), (orientation: landscape) {
+    .cw-footer-link-craftwaves {
+      opacity: 1;
+      font-size: 1.6rem;
+    }
+  }
+  @media (pointer: fine) {
+    .cw-footer-link-craftwaves:focus:before,
+    .cw-footer-link-craftwaves:hover:before {
+      transform: scaleX(1);
+    }
+  }
