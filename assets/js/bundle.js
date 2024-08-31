@@ -29793,31 +29793,44 @@
         assign: ".cw-postcard-craftwaves",
         component: class extends n {
           constructor() {
-            super(...arguments),
-              (this.item = this.el.querySelectorAll(".cw-postcard-item-craftwaves")),
-              this.bindOpen();
+            super(...arguments);
+            this.item = this.el.querySelectorAll(".cw-postcard-item-craftwaves");
+            this.bindOpen();
           }
+      
           bindOpen() {
-            const t = to.isTouch;
-            this.item.forEach((e) => {
-              if (t)
+            const isTouch = to.isTouch;
+            if (isTouch) {
+              this.item.forEach((e) => {
                 e.addEventListener("click", () => {
                   e.classList.toggle("-open");
                 });
-              else {
-                let t;
-                e.addEventListener("mouseenter", () => {
-                  clearInterval(t), e.classList.add("-open");
-                }),
-                  e.addEventListener("mouseleave", () => {
-                    clearInterval(t),
-                      (t = setTimeout(() => e.classList.remove("-open"), 1e3));
-                  });
-              }
-            });
+              });
+            } else {
+              // Observer for non-touch devices
+              const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                  const element = entry.target;
+                  if (entry.isIntersecting) {
+                    // Element is in the viewport
+                    element.classList.add("-open");
+                  } else {
+                    // Element is out of the viewport, remove the class after a delay
+                    setTimeout(() => element.classList.remove("-open"), 1000);
+                  }
+                });
+              }, {
+                threshold: 0.1 // Adjust threshold as needed
+              });
+      
+              this.item.forEach((e) => {
+                observer.observe(e);
+              });
+            }
           }
         },
       },
+      
       {
         namespace: "achievement",
         assign: ".cw-achievement-craftwaves",
