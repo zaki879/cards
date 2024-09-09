@@ -28320,7 +28320,6 @@
     waitInstance(t, e) {
       void 0 === e && (e = "init");
       try {
-        return Promise.resolve(t._executors[e]);
       } catch (t) {
         return Promise.reject(t);
       }
