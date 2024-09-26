@@ -2473,11 +2473,11 @@
   }
   .cw-postcard-content-craftwaves {
     position: relative;
-    padding: 8rem 0 0 0;
+    padding: 0rem 0 0 0;
   }
   @media (min-width: 768px), (orientation: landscape) {
     .cw-postcard-content-craftwaves {
-      padding: 20rem 0;
+      padding: 0rem 0;
     }
   }
   .cw-postcard-content-craftwaves.-ct {
