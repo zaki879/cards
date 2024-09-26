@@ -1125,7 +1125,7 @@
   .cw-btn_cta-title-craftwaves span {
     display: block;
     transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-    font-size: 1rem;
+    font-size: inherit !important;
   }
   .cw-btn_cta-title-craftwaves span:after {
     content: attr(data-text);
