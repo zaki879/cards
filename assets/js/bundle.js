@@ -28689,7 +28689,7 @@
               t.fromTo(
                 [this.wordSpan, this.percentSpan],
                 { y: "105%" },
-                { y: "0%", duration: 1.8, stagger: 0.15, ease: "expo.out" }
+                { y: "0%", duration: 0.5, stagger: 0.1, ease: "expo.out" }
               ),
               t.add(() => {
                 this.loaded
@@ -28708,7 +28708,7 @@
                 { y: "-105%", duration: 0.8, stagger: 0.07, ease: "expo.inOut" }
               ),
               t.to(this.fill, { opacity: 0 }, 0.7),
-              t.add(() => this.enterResolver(), 1.1),
+              t.add(() => this.enterResolver(), 0.8),
               t.set(this.el, { pointerEvents: "none" }, 1),
               t.set(this.el, { display: "none" }),
               t
