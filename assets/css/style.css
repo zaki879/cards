@@ -957,7 +957,7 @@
     animation: cb-fx-blink backwards 1s steps(1) infinite;
   }
   .cw-loader_overlay-percent-craftwaves {
-    color: #8031bf;
+    color: #757575;
     display: inline-block;
     float: right;
     overflow: hidden;
