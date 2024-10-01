@@ -28705,7 +28705,7 @@
               t.fromTo(
                 [this.wordSpan, this.percentSpan],
                 { y: "0%" },
-                { y: "-105%", duration: 1.8, stagger: 0.07, ease: "expo.inOut" }
+                { y: "-105%", duration: 0.8, stagger: 0.07, ease: "expo.inOut" }
               ),
               t.to(this.fill, { opacity: 0 }, 0.7),
               t.add(() => this.enterResolver(), 1.1),
