@@ -3020,12 +3020,12 @@
     }
   }
   .cw-outro-location-action-craftwaves {
-    margin: 2.4rem 0 0 0;
+    margin: 1rem 0 0 0;
   }
   @media (min-width: 768px), (orientation: landscape) {
     .cw-outro-location-action-craftwaves {
 
-      margin-top: 4rem;
+      margin-top: 0rem;
     }
   }
   .cw-footer-craftwaves {
