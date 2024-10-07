@@ -4,255 +4,2362 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
-  <body>
-    <div class="cw-loader-craftwaves cw-loader_overlay-craftwaves -visible">
-      <div class="cw-loader_overlay-fill-craftwaves"></div>
-      <div class="cw-loader_overlay-box-craftwaves">
-        <div class="cw-loader_overlay-word-craftwaves -v1">
-          <span>We </span>
-        </div>
-        <div class="cw-loader_overlay-word-craftwaves -v2">
-          <span>Craft</span>
-        </div>
-        <div class="cw-loader_overlay-word-craftwaves -v3">
-          <span>Enjoyable</span>
-        </div>
-        <div class="cw-loader_overlay-word-craftwaves -v4">
-          <span>Experiences<span class="-blink">_</span></span>
-        </div>
-        <div class="cw-loader_overlay-percent-craftwaves"><span>0%</span></div>
-      </div>
+  <body style="">
+    <div class="cw-loader" style="pointer-events: none; display: none">
+      <div class="cw-loader-backdrop" style="opacity: 0"></div>
+      <div
+        class="cw-loader-fill"
+        style="
+          opacity: 0;
+          translate: none;
+          rotate: none;
+          scale: none;
+          transform-origin: 100% 100%;
+          transform: translate(0px, 0px);
+        "
+      ></div>
     </div>
 
-    <main id="view-main-craftwaves">
-      <section
-        class="cw-postcard-craftwaves"
-        data-menu-inverse
-        data-cursor="-inverse"
-      >
-        <div class="cw-postcard-content-craftwaves -ct-craftwaves">
-          <div class="cw-postcard-items-craftwaves">
-            <div class="cw-postcard-item-craftwaves">
-              <div class="cw-postcard-item-back-craftwaves">
-                <div class="cw-postcard-item-title-craftwaves">
-                  Mobile<br />
-                  development
-                </div>
-                <div class="cw-postcard-item-tags-craftwaves">
-                  <div class="cw-postcard-item-tag-craftwaves">iOS</div>
-                  <div class="cw-postcard-item-tag-craftwaves">Android</div>
-                </div>
-                <div class="cw-postcard-item-arr-craftwaves">
-                  <svg class="cw-svgsprite-craftwaves -chevron-right-o">
-                    <use
-                      xlink:href="/assets/sprites/svgsprites.svg#chevron-right-o"
-                    ></use>
-                  </svg>
-                </div>
-                <div class="cw-postcard-item-text-craftwaves">
-                  <p>
-                    Many years of expertise in mobile development allow us to
-                    design architecture and create bespoke native applications
-                    for Apple iOS and Google Android.
-                  </p>
-                </div>
+
+    <main id="view-main">
+      <section class="cw-work">
+        <div class="cw-work-content">
+          <div class="cw-work-container -lg">
+            <div class="cw-work-filter">
+              <div
+                class="cw-work-filter-title"
+                style="
+                  translate: none;
+                  rotate: none;
+                  scale: none;
+                  transform: translate(0px, 0px);
+                  opacity: 1;
+                  will-change: auto;
+                "
+              >
+                Filter
               </div>
-              <div class="cw-postcard-item-front-craftwaves">
-                <div class="cw-postcard-item-bg-craftwaves">
-                  <img
-                    src="https://cdn.cuberto.com/cb/hello/postcard/1.jpg"
-                    srcset="
-                      https://cdn.cuberto.com/cb/hello/postcard/1@2x.jpg 2x
-                    "
-                    loading="lazy"
-                    alt
-                  />
-                </div>
-                <div class="cw-postcard-item-title-craftwaves">
-                  Mobile<br />
-                  development
-                </div>
-                <div class="cw-postcard-item-tags-craftwaves">
-                  <div class="cw-postcard-item-tag-craftwaves">iOS</div>
-                  <div class="cw-postcard-item-tag-craftwaves">Android</div>
-                </div>
-                <div class="cw-postcard-item-arr-craftwaves">
-                  <svg class="cw-svgsprite-craftwaves -chevron-right-o">
-                    <use
-                      xlink:href="/assets/sprites/svgsprites.svg#chevron-right-o"
-                    ></use>
-                  </svg>
-                </div>
+              <div
+                class="cw-work-filter-active"
+                style="
+                  translate: none;
+                  rotate: none;
+                  scale: none;
+                  transform: translate(0px, 0px);
+                  opacity: 1;
+                  will-change: auto;
+                "
+              >
+                <span>All Projects</span
+                ><svg class="cw-svgsprite -arrow-down">
+                  <use
+                    xlink:href="https://cuberto.com/assets/sprites/svgsprites.svg?2#arrow-down"
+                  ></use>
+                </svg>
               </div>
             </div>
-            <div class="cw-postcard-item-craftwaves">
-              <div class="cw-postcard-item-back-craftwaves">
-                <div class="cw-postcard-item-title-craftwaves">
-                  Frontend<br />
-                  development
-                </div>
-                <div class="cw-postcard-item-tags-craftwaves">
-                  <div class="cw-postcard-item-tag-craftwaves">Web</div>
-                  <div class="cw-postcard-item-tag-craftwaves">Platforms</div>
-                </div>
-                <div class="cw-postcard-item-arr-craftwaves">
-                  <svg class="cw-svgsprite-craftwaves -chevron-right-o">
-                    <use
-                      xlink:href="/assets/sprites/svgsprites.svg#chevron-right-o"
-                    ></use>
-                  </svg>
-                </div>
-                <div class="cw-postcard-item-text-craftwaves">
-                  <p>
-                    Our adaptive design components are built using perfectly
-                    structured and readable code. We develop web services based
-                    on React.js, Next.js, Angular and Vue.js.
-                  </p>
-                </div>
-              </div>
-              <div class="cw-postcard-item-front-craftwaves">
-                <div class="cw-postcard-item-bg-craftwaves">
-                  <img
-                    src="https://cdn.cuberto.com/cb/hello/postcard/2.jpg"
-                    srcset="
-                      https://cdn.cuberto.com/cb/hello/postcard/2@2x.jpg 2x
-                    "
-                    loading="lazy"
-                    alt
-                  />
-                </div>
-                <div class="cw-postcard-item-title-craftwaves">
-                  Frontend<br />
-                  development
-                </div>
-                <div class="cw-postcard-item-tags-craftwaves">
-                  <div class="cw-postcard-item-tag-craftwaves">Web</div>
-                  <div class="cw-postcard-item-tag-craftwaves">Platforms</div>
-                </div>
-                <div class="cw-postcard-item-arr-craftwaves">
-                  <svg class="cw-svgsprite-craftwaves -chevron-right-o">
-                    <use
-                      xlink:href="/assets/sprites/svgsprites.svg#chevron-right-o"
-                    ></use>
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div class="cw-postcard-item-craftwaves">
-              <div class="cw-postcard-item-back-craftwaves">
-                <div class="cw-postcard-item-title-craftwaves">
-                  Quality<br />
-                  Assurance
-                </div>
-                <div class="cw-postcard-item-tags-craftwaves">
-                  <div class="cw-postcard-item-tag-craftwaves">A/B testing</div>
-                  <div class="cw-postcard-item-tag-craftwaves">Checklist</div>
-                </div>
-                <div class="cw-postcard-item-arr-craftwaves">
-                  <svg class="cw-svgsprite-craftwaves -chevron-right-o">
-                    <use
-                      xlink:href="/assets/sprites/svgsprites.svg#chevron-right-o"
-                    ></use>
-                  </svg>
-                </div>
-                <div class="cw-postcard-item-text-craftwaves">
-                  <p>
-                    We control the quality of products at all stages of
-                    development. We cover the code with tests, conduct
-                    functional and acceptance testing.
-                  </p>
-                </div>
-              </div>
-              <div class="cw-postcard-item-front-craftwaves">
-                <div class="cw-postcard-item-bg-craftwaves">
-                  <img
-                    src="https://cdn.cuberto.com/cb/hello/postcard/3.jpg"
-                    srcset="
-                      https://cdn.cuberto.com/cb/hello/postcard/3@2x.jpg 2x
-                    "
-                    loading="lazy"
-                    alt
-                  />
-                </div>
-                <div class="cw-postcard-item-title-craftwaves">
-                  Quality<br />
-                  Assurance
-                </div>
-                <div class="cw-postcard-item-tags-craftwaves">
-                  <div class="cw-postcard-item-tag-craftwaves">A/B testing</div>
-                  <div class="cw-postcard-item-tag-craftwaves">Checklist</div>
-                </div>
-                <div class="cw-postcard-item-arr-craftwaves">
-                  <svg class="cw-svgsprite-craftwaves -chevron-right-o">
-                    <use
-                      xlink:href="/assets/sprites/svgsprites.svg#chevron-right-o"
-                    ></use>
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div class="cw-postcard-item-craftwaves -inverse-craftwaves">
-              <div class="cw-postcard-item-back-craftwaves">
-                <div class="cw-postcard-item-title-craftwaves">
-                  Backend<br />
-                  development
-                </div>
-                <div class="cw-postcard-item-tags-craftwaves">
-                  <div class="cw-postcard-item-tag-craftwaves">
-                    Architecture
+            <div class="cw-work-items">
+              <div class="cw-work-col -left">
+                <a
+                  class="cw-work-item"
+                  href="/projects/puntopago/"
+                  data-cursor-text="Explore"
+                  aria-label="Punto Pago"
+                  data-cat='["app","branding"]'
+                  style="
+                    opacity: 1;
+                    translate: none;
+                    rotate: none;
+                    scale: none;
+                    transform: translate(0px, 0px);
+                    will-change: auto;
+                  "
+                  ><div class="cw-work-preview -sm">
+                    <div class="cw-work-preview-media">
+                      <picture
+                        ><img
+                          src="https://cuberto.com/assets/projects/puntopago/cover.jpg"
+                          srcset="https://cuberto.com/assets/projects/puntopago/cover@2x.jpg 2x"
+                          alt="The First Super-App in Latin America"
+                      /></picture>
+                    </div>
                   </div>
-                  <div class="cw-postcard-item-tag-craftwaves">Database</div>
-                </div>
-                <div class="cw-postcard-item-arr-craftwaves">
-                  <svg class="cw-svgsprite-craftwaves -chevron-right-o">
-                    <use
-                      xlink:href="/assets/sprites/svgsprites.svg#chevron-right-o"
-                    ></use>
-                  </svg>
-                </div>
-                <div class="cw-postcard-item-text-craftwaves">
-                  <p>
-                    We create architecture and thought-over business logic of
-                    online services. Our team helps you select the best internal
-                    and external integration solutions.
-                  </p>
+                  <div class="cw-work-caption">
+                    <b>Punto Pago</b> – The First Super-App in Latin America
+                  </div></a
+                ><a
+                  class="cw-work-item"
+                  href="/projects/flipaclip/"
+                  data-cursor-text="Explore"
+                  aria-label="FlipaClip"
+                  data-cat='["web"]'
+                  style="
+                    opacity: 1;
+                    translate: none;
+                    rotate: none;
+                    scale: none;
+                    transform: translate(0px, 0px);
+                    will-change: auto;
+                  "
+                  ><div class="cw-work-preview -sm">
+                    <div class="cw-work-preview-media">
+                      <picture
+                        ><img
+                          src="https://cuberto.com/assets/projects/flipaclip/cover.jpg"
+                          srcset="https://cuberto.com/assets/projects/flipaclip/cover@2x.jpg 2x"
+                          alt="The best tool for stop-motion animation"
+                      /></picture>
+                    </div>
+                  </div>
+                  <div class="cw-work-caption">
+                    <b>FlipaClip</b> – The best tool for stop-motion animation
+                  </div></a
+                ><a
+                  class="cw-work-item"
+                  href="/projects/zelt/"
+                  data-cursor-text="Explore"
+                  aria-label="Zelt"
+                  data-cat='["web","branding"]'
+                  style="opacity: 0"
+                  ><div class="cw-work-preview -sm">
+                    <div class="cw-work-preview-media">
+                      <picture
+                        ><img
+                          src="https://cuberto.com/assets/projects/zelt/cover.jpg"
+                          srcset="https://cuberto.com/assets/projects/zelt/cover@2x.jpg 2x"
+                          alt="Run HR, IT &amp; Finance in one place"
+                      /></picture>
+                    </div>
+                  </div>
+                  <div class="cw-work-caption">
+                    <b>Zelt</b> – Run HR, IT &amp; Finance in one place
+                  </div></a
+                ><a
+                  class="cw-work-item"
+                  href="/projects/magma/"
+                  data-cursor-text="Explore"
+                  aria-label="Magma"
+                  data-cat='["web"]'
+                  style="opacity: 0"
+                  ><div class="cw-work-preview -sm">
+                    <div class="cw-work-preview-media">
+                      <picture
+                        ><img
+                          src="https://cuberto.com/assets/projects/magma/cover.jpg"
+                          srcset="https://cuberto.com/assets/projects/magma/cover@2x.jpg 2x"
+                          alt="The ultimate tool for building in the Web3 era"
+                      /></picture>
+                    </div>
+                  </div>
+                  <div class="cw-work-caption">
+                    <b>Magma</b> – The ultimate tool for building in the Web3
+                    era
+                  </div></a
+                ><a
+                  class="cw-work-item"
+                  href="/projects/qvino/"
+                  data-cursor-text="Explore"
+                  aria-label="Qvino"
+                  data-cat='["app"]'
+                  style="opacity: 0"
+                  ><div class="cw-work-preview -sm">
+                    <div class="cw-work-preview-media">
+                      <picture
+                        ><img
+                          src="https://cuberto.com/assets/projects/qvino/cover.jpg"
+                          srcset="https://cuberto.com/assets/projects/qvino/cover@2x.jpg 2x"
+                          alt="Wine marketplace with interactive learning"
+                      /></picture>
+                    </div>
+                  </div>
+                  <div class="cw-work-caption">
+                    <b>Qvino</b> – Wine marketplace with interactive learning
+                  </div></a
+                ><a
+                  class="cw-work-item"
+                  href="/projects/ulesson/"
+                  data-cursor-text="Explore"
+                  aria-label="uLesson"
+                  data-cat='["web","app"]'
+                  style="opacity: 0"
+                  ><div class="cw-work-preview -sm">
+                    <div class="cw-work-preview-media">
+                      <picture
+                        ><img
+                          src="https://cuberto.com/assets/projects/ulesson/cover.jpg"
+                          srcset="https://cuberto.com/assets/projects/ulesson/cover@2x.jpg 2x"
+                          alt="Online platform for distance learning"
+                      /></picture>
+                    </div>
+                  </div>
+                  <div class="cw-work-caption">
+                    <b>uLesson</b> – Online platform for distance learning
+                  </div></a
+                ><a
+                  class="cw-work-item"
+                  href="/projects/euroauto/"
+                  data-cursor-text="Explore"
+                  aria-label="EuroAuto"
+                  data-cat='["app"]'
+                  style="opacity: 0"
+                  ><div class="cw-work-preview -sm">
+                    <div class="cw-work-preview-media">
+                      <picture
+                        ><img
+                          src="https://cuberto.com/assets/projects/euroauto/cover.jpg"
+                          srcset="https://cuberto.com/assets/projects/euroauto/cover@2x.jpg 2x"
+                          alt="Largest auto parts supplier in Russia"
+                      /></picture>
+                    </div>
+                  </div>
+                  <div class="cw-work-caption">
+                    <b>EuroAuto</b> – Largest auto parts supplier in Russia
+                  </div></a
+                ><a
+                  class="cw-work-item"
+                  href="/projects/wickret/"
+                  data-cursor-text="Explore"
+                  aria-label="Wickret"
+                  data-cat='["web"]'
+                  style="opacity: 0"
+                  ><div class="cw-work-preview -sm">
+                    <div class="cw-work-preview-media">
+                      <picture
+                        ><img
+                          src="https://cuberto.com/assets/projects/wickret/cover.jpg"
+                          srcset="https://cuberto.com/assets/projects/wickret/cover@2x.jpg 2x"
+                          alt="A new way to think about money"
+                      /></picture>
+                    </div>
+                  </div>
+                  <div class="cw-work-caption">
+                    <b>Wickret</b> – A new way to think about money
+                  </div></a
+                ><a
+                  class="cw-work-item"
+                  href="/projects/consumervoice/"
+                  data-cursor-text="Explore"
+                  aria-label="ConsumerVoice"
+                  data-cat='["branding"]'
+                  style="opacity: 0"
+                  ><div class="cw-work-preview -sm">
+                    <div class="cw-work-preview-media">
+                      <picture
+                        ><img
+                          src="https://cuberto.com/assets/projects/consumervoice/cover.jpg"
+                          srcset="
+                            https://cuberto.com/assets/projects/consumervoice/cover@2x.jpg 2x
+                          "
+                          alt="A service that helps find verified products"
+                      /></picture>
+                    </div>
+                  </div>
+                  <div class="cw-work-caption">
+                    <b>ConsumerVoice</b> – A service that helps find verified
+                    products
+                  </div></a
+                ><a
+                  class="cw-work-item"
+                  href="/projects/datalight/"
+                  data-cursor-text="Explore"
+                  aria-label="DataLight"
+                  data-cat='["branding"]'
+                  style="opacity: 0"
+                  ><div class="cw-work-preview -sm">
+                    <div class="cw-work-preview-media">
+                      <picture
+                        ><img
+                          src="https://cuberto.com/assets/projects/datalight/cover.jpg"
+                          srcset="https://cuberto.com/assets/projects/datalight/cover@2x.jpg 2x"
+                          alt="Instrument for detailed cryptocurrency market analysis"
+                      /></picture>
+                    </div>
+                  </div>
+                  <div class="cw-work-caption">
+                    <b>DataLight</b> – Instrument for detailed cryptocurrency
+                    market analysis
+                  </div></a
+                >
+              </div>
+              <div class="cw-work-col -right">
+                <a
+                  class="cw-work-item"
+                  href="/projects/kzero/"
+                  data-cursor-text="Explore"
+                  aria-label="Kelvin Zero"
+                  data-cat='["web"]'
+                  style="
+                    opacity: 1;
+                    translate: none;
+                    rotate: none;
+                    scale: none;
+                    transform: translate(0px, 0px);
+                    will-change: auto;
+                  "
+                  ><div class="cw-work-preview -sm">
+                    <div class="cw-work-preview-media">
+                      <picture
+                        ><img
+                          src="https://cuberto.com/assets/projects/kzero/cover.jpg"
+                          srcset="https://cuberto.com/assets/projects/kzero/cover@2x.jpg 2x"
+                          style="object-position: top center"
+                          alt="A digital product for passwordless authentication"
+                      /></picture>
+                    </div>
+                  </div>
+                  <div class="cw-work-caption">
+                    <b>Kelvin Zero</b> – A digital product for passwordless
+                    authentication
+                  </div></a
+                ><a
+                  class="cw-work-item"
+                  href="/projects/riyadh/"
+                  data-cursor-text="Explore"
+                  aria-label="Riyadh"
+                  data-cat='["web","app"]'
+                  style="
+                    opacity: 1;
+                    translate: none;
+                    rotate: none;
+                    scale: none;
+                    transform: translate(0px, 0px);
+                    will-change: auto;
+                  "
+                  ><div class="cw-work-preview -sm">
+                    <div class="cw-work-preview-media">
+                      <picture
+                        ><img
+                          src="https://cuberto.com/assets/projects/riyadh/cover.jpg"
+                          srcset="https://cuberto.com/assets/projects/riyadh/cover@2x.jpg 2x"
+                          alt="Official website of Riyadh, Saudi Arabia's capital"
+                      /></picture>
+                    </div>
+                  </div>
+                  <div class="cw-work-caption">
+                    <b>Riyadh</b> – Official website of Riyadh, Saudi Arabia's
+                    capital
+                  </div></a
+                ><a
+                  class="cw-work-item"
+                  href="/projects/potion/"
+                  data-cursor-text="Explore"
+                  aria-label="Potion"
+                  data-cat='["web"]'
+                  style="opacity: 0"
+                  ><div class="cw-work-preview -sm">
+                    <div class="cw-work-preview-media">
+                      <picture
+                        ><img
+                          src="https://cuberto.com/assets/projects/potion/cover.jpg"
+                          srcset="https://cuberto.com/assets/projects/potion/cover@2x.jpg 2x"
+                          alt="Sales tool for increasing conversions"
+                      /></picture>
+                    </div>
+                  </div>
+                  <div class="cw-work-caption">
+                    <b>Potion</b> – Sales tool for increasing conversions
+                  </div></a
+                ><a
+                  class="cw-work-item"
+                  href="/projects/cisco/"
+                  data-cursor-text="Explore"
+                  aria-label="Cisco"
+                  data-cat='["branding"]'
+                  style="opacity: 0"
+                  ><div class="cw-work-preview -sm">
+                    <div class="cw-work-preview-media">
+                      <picture
+                        ><img
+                          src="https://cuberto.com/assets/projects/cisco/cover.jpg"
+                          srcset="https://cuberto.com/assets/projects/cisco/cover@2x.jpg 2x"
+                          alt="Cloud based network management"
+                      /></picture>
+                    </div>
+                  </div>
+                  <div class="cw-work-caption">
+                    <b>Cisco</b> – Cloud based network management
+                  </div></a
+                ><a
+                  class="cw-work-item"
+                  href="/projects/ferrumpipe/"
+                  data-cursor-text="Explore"
+                  aria-label="Ferrumpipe"
+                  data-cat='["web"]'
+                  style="opacity: 0"
+                  ><div class="cw-work-preview -sm">
+                    <div class="cw-work-preview-media">
+                      <picture
+                        ><img
+                          src="https://cuberto.com/assets/projects/ferrumpipe/cover.jpg"
+                          srcset="https://cuberto.com/assets/projects/ferrumpipe/cover@2x.jpg 2x"
+                          alt="Galvanized steel metal frame manufacturer"
+                      /></picture>
+                    </div>
+                  </div>
+                  <div class="cw-work-caption">
+                    <b>Ferrumpipe</b> – Galvanized steel metal frame
+                    manufacturer
+                  </div></a
+                ><a
+                  class="cw-work-item"
+                  href="/projects/sleepiest/"
+                  data-cursor-text="Explore"
+                  aria-label="Sleepiest"
+                  data-cat='["app"]'
+                  style="opacity: 0"
+                  ><div class="cw-work-preview -sm">
+                    <div class="cw-work-preview-media">
+                      <picture
+                        ><img
+                          src="https://cuberto.com/assets/projects/sleepiest/cover.jpg"
+                          srcset="https://cuberto.com/assets/projects/sleepiest/cover@2x.jpg 2x"
+                          alt="Sleep app helps millions fall asleep every night"
+                      /></picture>
+                    </div>
+                  </div>
+                  <div class="cw-work-caption">
+                    <b>Sleepiest</b> – Sleep app helps millions fall asleep
+                    every night
+                  </div></a
+                ><a
+                  class="cw-work-item"
+                  href="/projects/genesis/"
+                  data-cursor-text="Explore"
+                  aria-label="Genesis Vision"
+                  data-cat='["app"]'
+                  style="opacity: 0"
+                  ><div class="cw-work-preview -sm">
+                    <div class="cw-work-preview-media">
+                      <picture
+                        ><img
+                          src="https://cuberto.com/assets/projects/genesis/cover.jpg"
+                          srcset="https://cuberto.com/assets/projects/genesis/cover@2x.jpg 2x"
+                          alt="Private trust management and trading platform"
+                      /></picture>
+                    </div>
+                  </div>
+                  <div class="cw-work-caption">
+                    <b>Genesis Vision</b> – Private trust management and trading
+                    platform
+                  </div></a
+                ><a
+                  class="cw-work-item"
+                  href="/projects/rallyreader/"
+                  data-cursor-text="Explore"
+                  aria-label="Rally Reader"
+                  data-cat='["web","app"]'
+                  style="opacity: 0"
+                  ><div class="cw-work-preview -sm">
+                    <div class="cw-work-preview-media">
+                      <picture
+                        ><img
+                          src="https://cuberto.com/assets/projects/rallyreader/cover.jpg"
+                          srcset="https://cuberto.com/assets/projects/rallyreader/cover@2x.jpg 2x"
+                          alt="Private reading coach that hears you read"
+                      /></picture>
+                    </div>
+                  </div>
+                  <div class="cw-work-caption">
+                    <b>Rally Reader</b> – Private reading coach that hears you
+                    read
+                  </div></a
+                ><a
+                  class="cw-work-item"
+                  href="/projects/monmarche/"
+                  data-cursor-text="Explore"
+                  aria-label="Mon Marché"
+                  data-cat='["app"]'
+                  style="opacity: 0"
+                  ><div class="cw-work-preview -sm">
+                    <div class="cw-work-preview-media">
+                      <picture
+                        ><img
+                          src="https://cuberto.com/assets/projects/monmarche/cover.jpg"
+                          srcset="https://cuberto.com/assets/projects/monmarche/cover@2x.jpg 2x"
+                          alt="Home delivery of fresh fruit and vegetables"
+                      /></picture>
+                    </div>
+                  </div>
+                  <div class="cw-work-caption">
+                    <b>Mon Marché</b> – Home delivery of fresh fruit and
+                    vegetables
+                  </div></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="cw-modal cw-modal_box" id="modal-work-filters">
+        <div
+          class="cw-modal_box-backdrop"
+          data-modal-close=""
+          data-cursor-icon="times"
+        ></div>
+        <div class="cw-modal_box-dialog" data-modal-dialog="">
+          <div class="cw-modal_box-container -lg">
+            <div class="cw-modal_box-nav">
+              <div class="cw-modal_box-nav-item">
+                <a data-filter-target="all"
+                  ><span class="cw-modal_box-nav-item-title"
+                    ><span data-text="All Projects">All Projects</span></span
+                  ></a
+                >
+              </div>
+              <div class="cw-modal_box-nav-item">
+                <a data-filter-target="web"
+                  ><span class="cw-modal_box-nav-item-title"
+                    ><span data-text="Websites">Websites</span></span
+                  ></a
+                >
+              </div>
+              <div class="cw-modal_box-nav-item">
+                <a data-filter-target="app"
+                  ><span class="cw-modal_box-nav-item-title"
+                    ><span data-text="Applications">Applications</span></span
+                  ></a
+                >
+              </div>
+              <div class="cw-modal_box-nav-item">
+                <a data-filter-target="branding"
+                  ><span class="cw-modal_box-nav-item-title"
+                    ><span data-text="Branding">Branding</span></span
+                  ></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="cw-outro" data-cursor="-inverse">
+        <div class="cw-outro-content">
+          <div class="cw-outro-reel" style="overflow: hidden">
+            <div
+              class="cw-outro-reel-wrap"
+              style="
+                translate: none;
+                rotate: none;
+                scale: none;
+                transform: translate(0px, 0px);
+                will-change: auto;
+              "
+            >
+              <div class="cw-outro-reel-item">
+                <div class="cw-outro-header">
+                  <h2>Follow Us</h2>
+                  <span class="cw-coin"
+                    ><span class="cw-coin-svg -v1"></span
+                    ><span class="cw-coin-circles"
+                      ><span class="cw-coin-circle"></span
+                      ><span class="cw-coin-circle"></span
+                      ><span class="cw-coin-circle"></span
+                      ><span class="cw-coin-circle"></span
+                      ><span class="cw-coin-circle"></span></span
+                  ></span>
                 </div>
               </div>
-              <div class="cw-postcard-item-front-craftwaves">
-                <div class="cw-postcard-item-bg-craftwaves">
-                  <img
-                    src="https://cdn.cuberto.com/cb/hello/postcard/4.jpg"
-                    srcset="
-                      https://cdn.cuberto.com/cb/hello/postcard/4@2x.jpg 2x
+              <div class="cw-outro-reel-item -clone">
+                <div class="cw-outro-header">
+                  <h2>Follow Us</h2>
+                  <span class="cw-coin"
+                    ><span class="cw-coin-svg -v1"></span
+                    ><span class="cw-coin-circles"
+                      ><span class="cw-coin-circle"></span
+                      ><span class="cw-coin-circle"></span
+                      ><span class="cw-coin-circle"></span
+                      ><span class="cw-coin-circle"></span
+                      ><span class="cw-coin-circle"></span></span
+                  ></span>
+                </div>
+              </div>
+              <div class="cw-outro-reel-item -clone">
+                <div class="cw-outro-header">
+                  <h2>Follow Us</h2>
+                  <span class="cw-coin"
+                    ><span class="cw-coin-svg -v1"></span
+                    ><span class="cw-coin-circles"
+                      ><span class="cw-coin-circle"></span
+                      ><span class="cw-coin-circle"></span
+                      ><span class="cw-coin-circle"></span
+                      ><span class="cw-coin-circle"></span
+                      ><span class="cw-coin-circle"></span></span
+                  ></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cw-outro-container -sm">
+            <div class="cw-outro-caption">
+              <h3>
+                <div
+                  style="
+                    position: relative;
+                    display: inline-block;
+                    margin: -0.2em;
+                    padding: 0.2em;
+                    vertical-align: top;
+                    overflow: hidden;
+                  "
+                >
+                  <div
+                    style="
+                      position: relative;
+                      display: inline-block;
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      transform: translate(0px, 120%);
+                      will-change: transform;
                     "
-                    loading="lazy"
-                    alt
-                  />
-                </div>
-                <div class="cw-postcard-item-title-craftwaves">
-                  Backend<br />
-                  development
-                </div>
-                <div class="cw-postcard-item-tags-craftwaves">
-                  <div class="cw-postcard-item-tag-craftwaves">
-                    Architecture
+                  >
+                    Social
                   </div>
-                  <div class="cw-postcard-item-tag-craftwaves">Database</div>
                 </div>
-                <div class="cw-postcard-item-arr-craftwaves">
-                  <svg class="cw-svgsprite-craftwaves -chevron-right-o">
-                    <use
-                      xlink:href="/assets/sprites/svgsprites.svg#chevron-right-o"
-                    ></use>
-                  </svg>
+                <div
+                  style="
+                    position: relative;
+                    display: inline-block;
+                    margin: -0.2em;
+                    padding: 0.2em;
+                    vertical-align: top;
+                    overflow: hidden;
+                  "
+                >
+                  <div
+                    style="
+                      position: relative;
+                      display: inline-block;
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      transform: translate(0px, 120%);
+                      will-change: transform;
+                    "
+                  >
+                    Media
+                  </div>
+                </div>
+                <div
+                  style="
+                    position: relative;
+                    display: inline-block;
+                    margin: -0.2em;
+                    padding: 0.2em;
+                    vertical-align: top;
+                    overflow: hidden;
+                  "
+                >
+                  <div
+                    style="
+                      position: relative;
+                      display: inline-block;
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      transform: translate(0px, 120%);
+                      will-change: transform;
+                    "
+                  >
+                    and
+                  </div>
+                </div>
+                <div
+                  style="
+                    position: relative;
+                    display: inline-block;
+                    margin: -0.2em;
+                    padding: 0.2em;
+                    vertical-align: top;
+                    overflow: hidden;
+                  "
+                >
+                  <div
+                    style="
+                      position: relative;
+                      display: inline-block;
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      transform: translate(0px, 120%);
+                      will-change: transform;
+                    "
+                  >
+                    contacts
+                  </div>
+                </div>
+              </h3>
+            </div>
+          </div>
+          <div class="cw-outro-socials">
+            <a
+              class="cw-outro-social"
+              href="https://www.instagram.com/cubertodesign/"
+              rel="noopener"
+              target="_blank"
+              ><div
+                class="cw-outro-social-divider"
+                style="
+                  translate: none;
+                  rotate: none;
+                  scale: none;
+                  transform-origin: 0% 50%;
+                  transform: scale(0, 1);
+                "
+              ></div>
+              <div class="cw-outro-container -sm">
+                <div class="cw-outro-social-info">
+                  <div class="cw-outro-social-title">
+                    <div
+                      style="
+                        position: relative;
+                        display: inline-block;
+                        margin: -0.2em;
+                        padding: 0.2em;
+                        vertical-align: top;
+                        overflow: hidden;
+                      "
+                    >
+                      <div
+                        style="
+                          position: relative;
+                          display: inline-block;
+                          translate: none;
+                          rotate: none;
+                          scale: none;
+                          transform: translate(0px, 120%);
+                          will-change: transform;
+                        "
+                      >
+                        Instagram
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="cw-outro-social-arr"
+                    style="
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      opacity: 1;
+                      transform: scale(0, 0);
+                    "
+                  >
+                    <svg class="cw-svgsprite -arrow-up-right">
+                      <use
+                        xlink:href="https://cuberto.com/assets/sprites/svgsprites.svg?2#arrow-up-right"
+                      ></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="cw-outro-social-reel" style="overflow: hidden">
+                <div
+                  class="cw-outro-social-reel-wrap"
+                  style="
+                    translate: none;
+                    rotate: none;
+                    scale: none;
+                    transform: translate(0px, 0px);
+                  "
+                >
+                  <div class="cw-outro-social-reel-item">
+                    <div class="cw-outro-social-title">Instagram</div>
+                  </div>
+                  <div class="cw-outro-social-reel-item">
+                    <div class="cw-outro-social-arr">
+                      <svg class="cw-svgsprite -arrow-up-right">
+                        <use
+                          xlink:href="https://cuberto.com/assets/sprites/svgsprites.svg?2#arrow-up-right"
+                        ></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-title">Instagram</div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-arr">
+                      <svg class="cw-svgsprite -arrow-up-right">
+                        <use
+                          xlink:href="https://cuberto.com/assets/sprites/svgsprites.svg?2#arrow-up-right"
+                        ></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-title">Instagram</div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-arr">
+                      <svg class="cw-svgsprite -arrow-up-right">
+                        <use
+                          xlink:href="https://cuberto.com/assets/sprites/svgsprites.svg?2#arrow-up-right"
+                        ></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-title">Instagram</div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-arr">
+                      <svg class="cw-svgsprite -arrow-up-right">
+                        <use
+                          xlink:href="https://cuberto.com/assets/sprites/svgsprites.svg?2#arrow-up-right"
+                        ></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-title">Instagram</div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-arr">
+                      <svg class="cw-svgsprite -arrow-up-right">
+                        <use
+                          xlink:href="https://cuberto.com/assets/sprites/svgsprites.svg?2#arrow-up-right"
+                        ></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-title">Instagram</div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-arr">
+                      <svg class="cw-svgsprite -arrow-up-right">
+                        <use
+                          xlink:href="https://cuberto.com/assets/sprites/svgsprites.svg?2#arrow-up-right"
+                        ></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-title">Instagram</div>
+                  </div>
+                </div>
+              </div>
+              <div class="cw-outro-social-divider"></div></a
+            ><a
+              class="cw-outro-social"
+              href="https://www.linkedin.com/company/cuberto"
+              rel="noopener"
+              target="_blank"
+              ><div
+                class="cw-outro-social-divider"
+                style="
+                  translate: none;
+                  rotate: none;
+                  scale: none;
+                  transform-origin: 0% 50%;
+                  transform: scale(0, 1);
+                "
+              ></div>
+              <div class="cw-outro-container -sm">
+                <div class="cw-outro-social-info">
+                  <div class="cw-outro-social-title">
+                    <div
+                      style="
+                        position: relative;
+                        display: inline-block;
+                        margin: -0.2em;
+                        padding: 0.2em;
+                        vertical-align: top;
+                        overflow: hidden;
+                      "
+                    >
+                      <div
+                        style="
+                          position: relative;
+                          display: inline-block;
+                          translate: none;
+                          rotate: none;
+                          scale: none;
+                          transform: translate(0px, 120%);
+                          will-change: transform;
+                        "
+                      >
+                        LinkedIn
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="cw-outro-social-arr"
+                    style="
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      opacity: 1;
+                      transform: scale(0, 0);
+                    "
+                  >
+                    <svg class="cw-svgsprite -arrow-up-right">
+                      <use
+                        xlink:href="https://cuberto.com/assets/sprites/svgsprites.svg?2#arrow-up-right"
+                      ></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="cw-outro-social-reel" style="overflow: hidden">
+                <div
+                  class="cw-outro-social-reel-wrap"
+                  style="
+                    translate: none;
+                    rotate: none;
+                    scale: none;
+                    transform: translate(0px, 0px);
+                  "
+                >
+                  <div class="cw-outro-social-reel-item">
+                    <div class="cw-outro-social-title">LinkedIn</div>
+                  </div>
+                  <div class="cw-outro-social-reel-item">
+                    <div class="cw-outro-social-arr">
+                      <svg class="cw-svgsprite -arrow-up-right">
+                        <use
+                          xlink:href="https://cuberto.com/assets/sprites/svgsprites.svg?2#arrow-up-right"
+                        ></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-title">LinkedIn</div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-arr">
+                      <svg class="cw-svgsprite -arrow-up-right">
+                        <use
+                          xlink:href="https://cuberto.com/assets/sprites/svgsprites.svg?2#arrow-up-right"
+                        ></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-title">LinkedIn</div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-arr">
+                      <svg class="cw-svgsprite -arrow-up-right">
+                        <use
+                          xlink:href="https://cuberto.com/assets/sprites/svgsprites.svg?2#arrow-up-right"
+                        ></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-title">LinkedIn</div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-arr">
+                      <svg class="cw-svgsprite -arrow-up-right">
+                        <use
+                          xlink:href="https://cuberto.com/assets/sprites/svgsprites.svg?2#arrow-up-right"
+                        ></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-title">LinkedIn</div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-arr">
+                      <svg class="cw-svgsprite -arrow-up-right">
+                        <use
+                          xlink:href="https://cuberto.com/assets/sprites/svgsprites.svg?2#arrow-up-right"
+                        ></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-title">LinkedIn</div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-arr">
+                      <svg class="cw-svgsprite -arrow-up-right">
+                        <use
+                          xlink:href="https://cuberto.com/assets/sprites/svgsprites.svg?2#arrow-up-right"
+                        ></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-title">LinkedIn</div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-arr">
+                      <svg class="cw-svgsprite -arrow-up-right">
+                        <use
+                          xlink:href="https://cuberto.com/assets/sprites/svgsprites.svg?2#arrow-up-right"
+                        ></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="cw-outro-social-divider"></div></a
+            ><a
+              class="cw-outro-social"
+              href="https://dribbble.com/cuberto"
+              rel="noopener"
+              target="_blank"
+              ><div
+                class="cw-outro-social-divider"
+                style="
+                  translate: none;
+                  rotate: none;
+                  scale: none;
+                  transform-origin: 0% 50%;
+                  transform: scale(0, 1);
+                "
+              ></div>
+              <div class="cw-outro-container -sm">
+                <div class="cw-outro-social-info">
+                  <div class="cw-outro-social-title">
+                    <div
+                      style="
+                        position: relative;
+                        display: inline-block;
+                        margin: -0.2em;
+                        padding: 0.2em;
+                        vertical-align: top;
+                        overflow: hidden;
+                      "
+                    >
+                      <div
+                        style="
+                          position: relative;
+                          display: inline-block;
+                          translate: none;
+                          rotate: none;
+                          scale: none;
+                          transform: translate(0px, 120%);
+                          will-change: transform;
+                        "
+                      >
+                        Dribbble
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="cw-outro-social-arr"
+                    style="
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      opacity: 1;
+                      transform: scale(0, 0);
+                    "
+                  >
+                    <svg class="cw-svgsprite -arrow-up-right">
+                      <use
+                        xlink:href="https://cuberto.com/assets/sprites/svgsprites.svg?2#arrow-up-right"
+                      ></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="cw-outro-social-reel" style="overflow: hidden">
+                <div
+                  class="cw-outro-social-reel-wrap"
+                  style="
+                    translate: none;
+                    rotate: none;
+                    scale: none;
+                    transform: translate(0px, 0px);
+                  "
+                >
+                  <div class="cw-outro-social-reel-item">
+                    <div class="cw-outro-social-title">Dribbble</div>
+                  </div>
+                  <div class="cw-outro-social-reel-item">
+                    <div class="cw-outro-social-arr">
+                      <svg class="cw-svgsprite -arrow-up-right">
+                        <use
+                          xlink:href="https://cuberto.com/assets/sprites/svgsprites.svg?2#arrow-up-right"
+                        ></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-title">Dribbble</div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-arr">
+                      <svg class="cw-svgsprite -arrow-up-right">
+                        <use
+                          xlink:href="https://cuberto.com/assets/sprites/svgsprites.svg?2#arrow-up-right"
+                        ></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-title">Dribbble</div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-arr">
+                      <svg class="cw-svgsprite -arrow-up-right">
+                        <use
+                          xlink:href="https://cuberto.com/assets/sprites/svgsprites.svg?2#arrow-up-right"
+                        ></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-title">Dribbble</div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-arr">
+                      <svg class="cw-svgsprite -arrow-up-right">
+                        <use
+                          xlink:href="https://cuberto.com/assets/sprites/svgsprites.svg?2#arrow-up-right"
+                        ></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-title">Dribbble</div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-arr">
+                      <svg class="cw-svgsprite -arrow-up-right">
+                        <use
+                          xlink:href="https://cuberto.com/assets/sprites/svgsprites.svg?2#arrow-up-right"
+                        ></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-title">Dribbble</div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-arr">
+                      <svg class="cw-svgsprite -arrow-up-right">
+                        <use
+                          xlink:href="https://cuberto.com/assets/sprites/svgsprites.svg?2#arrow-up-right"
+                        ></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-title">Dribbble</div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-arr">
+                      <svg class="cw-svgsprite -arrow-up-right">
+                        <use
+                          xlink:href="https://cuberto.com/assets/sprites/svgsprites.svg?2#arrow-up-right"
+                        ></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="cw-outro-social-divider"></div></a
+            ><a
+              class="cw-outro-social"
+              href="https://github.com/Cuberto"
+              rel="noopener"
+              target="_blank"
+              ><div
+                class="cw-outro-social-divider"
+                style="
+                  translate: none;
+                  rotate: none;
+                  scale: none;
+                  transform-origin: 0% 50%;
+                  transform: scale(0, 1);
+                "
+              ></div>
+              <div class="cw-outro-container -sm">
+                <div class="cw-outro-social-info">
+                  <div class="cw-outro-social-title">
+                    <div
+                      style="
+                        position: relative;
+                        display: inline-block;
+                        margin: -0.2em;
+                        padding: 0.2em;
+                        vertical-align: top;
+                        overflow: hidden;
+                      "
+                    >
+                      <div
+                        style="
+                          position: relative;
+                          display: inline-block;
+                          translate: none;
+                          rotate: none;
+                          scale: none;
+                          transform: translate(0px, 120%);
+                          will-change: transform;
+                        "
+                      >
+                        GitHub
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="cw-outro-social-arr"
+                    style="
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      opacity: 1;
+                      transform: scale(0, 0);
+                    "
+                  >
+                    <svg class="cw-svgsprite -arrow-up-right">
+                      <use
+                        xlink:href="https://cuberto.com/assets/sprites/svgsprites.svg?2#arrow-up-right"
+                      ></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="cw-outro-social-reel" style="overflow: hidden">
+                <div
+                  class="cw-outro-social-reel-wrap"
+                  style="
+                    translate: none;
+                    rotate: none;
+                    scale: none;
+                    transform: translate(0px, 0px);
+                  "
+                >
+                  <div class="cw-outro-social-reel-item">
+                    <div class="cw-outro-social-title">GitHub</div>
+                  </div>
+                  <div class="cw-outro-social-reel-item">
+                    <div class="cw-outro-social-arr">
+                      <svg class="cw-svgsprite -arrow-up-right">
+                        <use
+                          xlink:href="https://cuberto.com/assets/sprites/svgsprites.svg?2#arrow-up-right"
+                        ></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-title">GitHub</div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-arr">
+                      <svg class="cw-svgsprite -arrow-up-right">
+                        <use
+                          xlink:href="https://cuberto.com/assets/sprites/svgsprites.svg?2#arrow-up-right"
+                        ></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-title">GitHub</div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-arr">
+                      <svg class="cw-svgsprite -arrow-up-right">
+                        <use
+                          xlink:href="https://cuberto.com/assets/sprites/svgsprites.svg?2#arrow-up-right"
+                        ></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-title">GitHub</div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-arr">
+                      <svg class="cw-svgsprite -arrow-up-right">
+                        <use
+                          xlink:href="https://cuberto.com/assets/sprites/svgsprites.svg?2#arrow-up-right"
+                        ></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-title">GitHub</div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-arr">
+                      <svg class="cw-svgsprite -arrow-up-right">
+                        <use
+                          xlink:href="https://cuberto.com/assets/sprites/svgsprites.svg?2#arrow-up-right"
+                        ></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-title">GitHub</div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-arr">
+                      <svg class="cw-svgsprite -arrow-up-right">
+                        <use
+                          xlink:href="https://cuberto.com/assets/sprites/svgsprites.svg?2#arrow-up-right"
+                        ></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-title">GitHub</div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-arr">
+                      <svg class="cw-svgsprite -arrow-up-right">
+                        <use
+                          xlink:href="https://cuberto.com/assets/sprites/svgsprites.svg?2#arrow-up-right"
+                        ></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-title">GitHub</div>
+                  </div>
+                </div>
+              </div>
+              <div class="cw-outro-social-divider"></div></a
+            ><a
+              class="cw-outro-social"
+              href="https://www.youtube.com/channel/UCzestFrXpwSGCfcbO2pObwQ"
+              rel="noopener"
+              target="_blank"
+              ><div
+                class="cw-outro-social-divider"
+                style="
+                  translate: none;
+                  rotate: none;
+                  scale: none;
+                  transform-origin: 0% 50%;
+                  transform: scale(0, 1);
+                "
+              ></div>
+              <div class="cw-outro-container -sm">
+                <div class="cw-outro-social-info">
+                  <div class="cw-outro-social-title">
+                    <div
+                      style="
+                        position: relative;
+                        display: inline-block;
+                        margin: -0.2em;
+                        padding: 0.2em;
+                        vertical-align: top;
+                        overflow: hidden;
+                      "
+                    >
+                      <div
+                        style="
+                          position: relative;
+                          display: inline-block;
+                          translate: none;
+                          rotate: none;
+                          scale: none;
+                          transform: translate(0px, 120%);
+                          will-change: transform;
+                        "
+                      >
+                        YouTube
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="cw-outro-social-arr"
+                    style="
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      opacity: 1;
+                      transform: scale(0, 0);
+                    "
+                  >
+                    <svg class="cw-svgsprite -arrow-up-right">
+                      <use
+                        xlink:href="https://cuberto.com/assets/sprites/svgsprites.svg?2#arrow-up-right"
+                      ></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="cw-outro-social-reel" style="overflow: hidden">
+                <div
+                  class="cw-outro-social-reel-wrap"
+                  style="
+                    translate: none;
+                    rotate: none;
+                    scale: none;
+                    transform: translate(0px, 0px);
+                  "
+                >
+                  <div class="cw-outro-social-reel-item">
+                    <div class="cw-outro-social-title">YouTube</div>
+                  </div>
+                  <div class="cw-outro-social-reel-item">
+                    <div class="cw-outro-social-arr">
+                      <svg class="cw-svgsprite -arrow-up-right">
+                        <use
+                          xlink:href="https://cuberto.com/assets/sprites/svgsprites.svg?2#arrow-up-right"
+                        ></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-title">YouTube</div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-arr">
+                      <svg class="cw-svgsprite -arrow-up-right">
+                        <use
+                          xlink:href="https://cuberto.com/assets/sprites/svgsprites.svg?2#arrow-up-right"
+                        ></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-title">YouTube</div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-arr">
+                      <svg class="cw-svgsprite -arrow-up-right">
+                        <use
+                          xlink:href="https://cuberto.com/assets/sprites/svgsprites.svg?2#arrow-up-right"
+                        ></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-title">YouTube</div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-arr">
+                      <svg class="cw-svgsprite -arrow-up-right">
+                        <use
+                          xlink:href="https://cuberto.com/assets/sprites/svgsprites.svg?2#arrow-up-right"
+                        ></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-title">YouTube</div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-arr">
+                      <svg class="cw-svgsprite -arrow-up-right">
+                        <use
+                          xlink:href="https://cuberto.com/assets/sprites/svgsprites.svg?2#arrow-up-right"
+                        ></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-title">YouTube</div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-arr">
+                      <svg class="cw-svgsprite -arrow-up-right">
+                        <use
+                          xlink:href="https://cuberto.com/assets/sprites/svgsprites.svg?2#arrow-up-right"
+                        ></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-title">YouTube</div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-arr">
+                      <svg class="cw-svgsprite -arrow-up-right">
+                        <use
+                          xlink:href="https://cuberto.com/assets/sprites/svgsprites.svg?2#arrow-up-right"
+                        ></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="cw-outro-social-divider"></div></a
+            ><a
+              class="cw-outro-social"
+              href="https://www.behance.net/cuberto"
+              rel="noopener"
+              target="_blank"
+              ><div
+                class="cw-outro-social-divider"
+                style="
+                  translate: none;
+                  rotate: none;
+                  scale: none;
+                  transform-origin: 0% 50%;
+                  transform: scale(0, 1);
+                "
+              ></div>
+              <div class="cw-outro-container -sm">
+                <div class="cw-outro-social-info">
+                  <div class="cw-outro-social-title">
+                    <div
+                      style="
+                        position: relative;
+                        display: inline-block;
+                        margin: -0.2em;
+                        padding: 0.2em;
+                        vertical-align: top;
+                        overflow: hidden;
+                      "
+                    >
+                      <div
+                        style="
+                          position: relative;
+                          display: inline-block;
+                          translate: none;
+                          rotate: none;
+                          scale: none;
+                          transform: translate(0px, 120%);
+                          will-change: transform;
+                        "
+                      >
+                        Behance
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="cw-outro-social-arr"
+                    style="
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      opacity: 1;
+                      transform: scale(0, 0);
+                    "
+                  >
+                    <svg class="cw-svgsprite -arrow-up-right">
+                      <use
+                        xlink:href="https://cuberto.com/assets/sprites/svgsprites.svg?2#arrow-up-right"
+                      ></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="cw-outro-social-reel" style="overflow: hidden">
+                <div
+                  class="cw-outro-social-reel-wrap"
+                  style="
+                    translate: none;
+                    rotate: none;
+                    scale: none;
+                    transform: translate(0px, 0px);
+                  "
+                >
+                  <div class="cw-outro-social-reel-item">
+                    <div class="cw-outro-social-title">Behance</div>
+                  </div>
+                  <div class="cw-outro-social-reel-item">
+                    <div class="cw-outro-social-arr">
+                      <svg class="cw-svgsprite -arrow-up-right">
+                        <use
+                          xlink:href="https://cuberto.com/assets/sprites/svgsprites.svg?2#arrow-up-right"
+                        ></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-title">Behance</div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-arr">
+                      <svg class="cw-svgsprite -arrow-up-right">
+                        <use
+                          xlink:href="https://cuberto.com/assets/sprites/svgsprites.svg?2#arrow-up-right"
+                        ></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-title">Behance</div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-arr">
+                      <svg class="cw-svgsprite -arrow-up-right">
+                        <use
+                          xlink:href="https://cuberto.com/assets/sprites/svgsprites.svg?2#arrow-up-right"
+                        ></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-title">Behance</div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-arr">
+                      <svg class="cw-svgsprite -arrow-up-right">
+                        <use
+                          xlink:href="https://cuberto.com/assets/sprites/svgsprites.svg?2#arrow-up-right"
+                        ></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-title">Behance</div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-arr">
+                      <svg class="cw-svgsprite -arrow-up-right">
+                        <use
+                          xlink:href="https://cuberto.com/assets/sprites/svgsprites.svg?2#arrow-up-right"
+                        ></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-title">Behance</div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-arr">
+                      <svg class="cw-svgsprite -arrow-up-right">
+                        <use
+                          xlink:href="https://cuberto.com/assets/sprites/svgsprites.svg?2#arrow-up-right"
+                        ></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-title">Behance</div>
+                  </div>
+                </div>
+              </div>
+              <div class="cw-outro-social-divider"></div></a
+            ><a
+              class="cw-outro-social"
+              href="https://twitter.com/cuberto"
+              rel="noopener"
+              target="_blank"
+              ><div
+                class="cw-outro-social-divider"
+                style="
+                  translate: none;
+                  rotate: none;
+                  scale: none;
+                  transform-origin: 0% 50%;
+                  transform: scale(0, 1);
+                "
+              ></div>
+              <div class="cw-outro-container -sm">
+                <div class="cw-outro-social-info">
+                  <div class="cw-outro-social-title">
+                    <div
+                      style="
+                        position: relative;
+                        display: inline-block;
+                        margin: -0.2em;
+                        padding: 0.2em;
+                        vertical-align: top;
+                        overflow: hidden;
+                      "
+                    >
+                      <div
+                        style="
+                          position: relative;
+                          display: inline-block;
+                          translate: none;
+                          rotate: none;
+                          scale: none;
+                          transform: translate(0px, 120%);
+                          will-change: transform;
+                        "
+                      >
+                        Twitter
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="cw-outro-social-arr"
+                    style="
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      opacity: 1;
+                      transform: scale(0, 0);
+                    "
+                  >
+                    <svg class="cw-svgsprite -arrow-up-right">
+                      <use
+                        xlink:href="https://cuberto.com/assets/sprites/svgsprites.svg?2#arrow-up-right"
+                      ></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="cw-outro-social-reel" style="overflow: hidden">
+                <div
+                  class="cw-outro-social-reel-wrap"
+                  style="
+                    translate: none;
+                    rotate: none;
+                    scale: none;
+                    transform: translate(0px, 0px);
+                  "
+                >
+                  <div class="cw-outro-social-reel-item">
+                    <div class="cw-outro-social-title">Twitter</div>
+                  </div>
+                  <div class="cw-outro-social-reel-item">
+                    <div class="cw-outro-social-arr">
+                      <svg class="cw-svgsprite -arrow-up-right">
+                        <use
+                          xlink:href="https://cuberto.com/assets/sprites/svgsprites.svg?2#arrow-up-right"
+                        ></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-title">Twitter</div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-arr">
+                      <svg class="cw-svgsprite -arrow-up-right">
+                        <use
+                          xlink:href="https://cuberto.com/assets/sprites/svgsprites.svg?2#arrow-up-right"
+                        ></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-title">Twitter</div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-arr">
+                      <svg class="cw-svgsprite -arrow-up-right">
+                        <use
+                          xlink:href="https://cuberto.com/assets/sprites/svgsprites.svg?2#arrow-up-right"
+                        ></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-title">Twitter</div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-arr">
+                      <svg class="cw-svgsprite -arrow-up-right">
+                        <use
+                          xlink:href="https://cuberto.com/assets/sprites/svgsprites.svg?2#arrow-up-right"
+                        ></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-title">Twitter</div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-arr">
+                      <svg class="cw-svgsprite -arrow-up-right">
+                        <use
+                          xlink:href="https://cuberto.com/assets/sprites/svgsprites.svg?2#arrow-up-right"
+                        ></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-title">Twitter</div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-arr">
+                      <svg class="cw-svgsprite -arrow-up-right">
+                        <use
+                          xlink:href="https://cuberto.com/assets/sprites/svgsprites.svg?2#arrow-up-right"
+                        ></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-title">Twitter</div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-arr">
+                      <svg class="cw-svgsprite -arrow-up-right">
+                        <use
+                          xlink:href="https://cuberto.com/assets/sprites/svgsprites.svg?2#arrow-up-right"
+                        ></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cw-outro-social-reel-item -clone">
+                    <div class="cw-outro-social-title">Twitter</div>
+                  </div>
+                </div>
+              </div>
+              <div class="cw-outro-social-divider"></div
+            ></a>
+          </div>
+          <div class="cw-outro-container -sm">
+            <div class="cw-outro-locations">
+              <div class="cw-outro-location">
+                <div class="cw-outro-location-caption" style="opacity: 0">
+                  Main office
+                </div>
+                <div class="cw-outro-location-address">
+                  <div
+                    style="
+                      position: relative;
+                      display: inline-block;
+                      margin: -0.2em;
+                      padding: 0.2em;
+                      vertical-align: top;
+                      overflow: hidden;
+                    "
+                  >
+                    <div
+                      style="
+                        position: relative;
+                        display: inline-block;
+                        translate: none;
+                        rotate: none;
+                        scale: none;
+                        transform: translate(0px, 120%);
+                      "
+                    >
+                      901
+                    </div>
+                  </div>
+                  <div
+                    style="
+                      position: relative;
+                      display: inline-block;
+                      margin: -0.2em;
+                      padding: 0.2em;
+                      vertical-align: top;
+                      overflow: hidden;
+                    "
+                  >
+                    <div
+                      style="
+                        position: relative;
+                        display: inline-block;
+                        translate: none;
+                        rotate: none;
+                        scale: none;
+                        transform: translate(0px, 120%);
+                      "
+                    >
+                      N
+                    </div>
+                  </div>
+                  <div
+                    style="
+                      position: relative;
+                      display: inline-block;
+                      margin: -0.2em;
+                      padding: 0.2em;
+                      vertical-align: top;
+                      overflow: hidden;
+                    "
+                  >
+                    <div
+                      style="
+                        position: relative;
+                        display: inline-block;
+                        translate: none;
+                        rotate: none;
+                        scale: none;
+                        transform: translate(0px, 120%);
+                      "
+                    >
+                      Pitt
+                    </div>
+                  </div>
+                  <div
+                    style="
+                      position: relative;
+                      display: inline-block;
+                      margin: -0.2em;
+                      padding: 0.2em;
+                      vertical-align: top;
+                      overflow: hidden;
+                    "
+                  >
+                    <div
+                      style="
+                        position: relative;
+                        display: inline-block;
+                        translate: none;
+                        rotate: none;
+                        scale: none;
+                        transform: translate(0px, 120%);
+                      "
+                    >
+                      Street
+                    </div>
+                  </div>
+                  <br />
+                  <div
+                    style="
+                      position: relative;
+                      display: inline-block;
+                      margin: -0.2em;
+                      padding: 0.2em;
+                      vertical-align: top;
+                      overflow: hidden;
+                    "
+                  >
+                    <div
+                      style="
+                        position: relative;
+                        display: inline-block;
+                        translate: none;
+                        rotate: none;
+                        scale: none;
+                        transform: translate(0px, 120%);
+                      "
+                    >
+                      Alexandria
+                    </div>
+                  </div>
+                  <div
+                    style="
+                      position: relative;
+                      display: inline-block;
+                      margin: -0.2em;
+                      padding: 0.2em;
+                      vertical-align: top;
+                      overflow: hidden;
+                    "
+                  >
+                    <div
+                      style="
+                        position: relative;
+                        display: inline-block;
+                        translate: none;
+                        rotate: none;
+                        scale: none;
+                        transform: translate(0px, 120%);
+                      "
+                    >
+                      VA,
+                    </div>
+                  </div>
+                  <div
+                    style="
+                      position: relative;
+                      display: inline-block;
+                      margin: -0.2em;
+                      padding: 0.2em;
+                      vertical-align: top;
+                      overflow: hidden;
+                    "
+                  >
+                    <div
+                      style="
+                        position: relative;
+                        display: inline-block;
+                        translate: none;
+                        rotate: none;
+                        scale: none;
+                        transform: translate(0px, 120%);
+                      "
+                    >
+                      22314
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="cw-outro-location-action"
+                  style="
+                    translate: none;
+                    rotate: none;
+                    scale: none;
+                    transform: translate(0px, 70px);
+                    opacity: 0;
+                  "
+                >
+                  <a
+                    class="cw-btn cw-btn_cta -md -inverse"
+                    href="mailto:info@cuberto.com"
+                    ><span class="cw-btn_cta-border"></span
+                    ><span class="cw-btn_cta-ripple"><span></span></span
+                    ><span class="cw-btn_cta-title"
+                      ><span data-text="info@cuberto.com"
+                        >info@cuberto.com</span
+                      ></span
+                    ></a
+                  >
+                </div>
+              </div>
+              <div class="cw-outro-location">
+                <div class="cw-outro-location-caption" style="opacity: 0">
+                  Second office
+                </div>
+                <div class="cw-outro-location-address">
+                  <div
+                    style="
+                      position: relative;
+                      display: inline-block;
+                      margin: -0.2em;
+                      padding: 0.2em;
+                      vertical-align: top;
+                      overflow: hidden;
+                    "
+                  >
+                    <div
+                      style="
+                        position: relative;
+                        display: inline-block;
+                        translate: none;
+                        rotate: none;
+                        scale: none;
+                        transform: translate(0px, 120%);
+                      "
+                    >
+                      Na
+                    </div>
+                  </div>
+                  <div
+                    style="
+                      position: relative;
+                      display: inline-block;
+                      margin: -0.2em;
+                      padding: 0.2em;
+                      vertical-align: top;
+                      overflow: hidden;
+                    "
+                  >
+                    <div
+                      style="
+                        position: relative;
+                        display: inline-block;
+                        translate: none;
+                        rotate: none;
+                        scale: none;
+                        transform: translate(0px, 120%);
+                      "
+                    >
+                      Perstyne
+                    </div>
+                  </div>
+                  <br />
+                  <div
+                    style="
+                      position: relative;
+                      display: inline-block;
+                      margin: -0.2em;
+                      padding: 0.2em;
+                      vertical-align: top;
+                      overflow: hidden;
+                    "
+                  >
+                    <div
+                      style="
+                        position: relative;
+                        display: inline-block;
+                        translate: none;
+                        rotate: none;
+                        scale: none;
+                        transform: translate(0px, 120%);
+                      "
+                    >
+                      342/1,
+                    </div>
+                  </div>
+                  <div
+                    style="
+                      position: relative;
+                      display: inline-block;
+                      margin: -0.2em;
+                      padding: 0.2em;
+                      vertical-align: top;
+                      overflow: hidden;
+                    "
+                  >
+                    <div
+                      style="
+                        position: relative;
+                        display: inline-block;
+                        translate: none;
+                        rotate: none;
+                        scale: none;
+                        transform: translate(0px, 120%);
+                      "
+                    >
+                      11000
+                    </div>
+                  </div>
+                  <div
+                    style="
+                      position: relative;
+                      display: inline-block;
+                      margin: -0.2em;
+                      padding: 0.2em;
+                      vertical-align: top;
+                      overflow: hidden;
+                    "
+                  >
+                    <div
+                      style="
+                        position: relative;
+                        display: inline-block;
+                        translate: none;
+                        rotate: none;
+                        scale: none;
+                        transform: translate(0px, 120%);
+                      "
+                    >
+                      Prague
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="cw-outro-location-action"
+                  style="
+                    translate: none;
+                    rotate: none;
+                    scale: none;
+                    transform: translate(0px, 70px);
+                    opacity: 0;
+                  "
+                >
+                  <a
+                    class="cw-btn cw-btn_cta -md -inverse"
+                    href="tel:+13015499309"
+                    ><span class="cw-btn_cta-border"></span
+                    ><span class="cw-btn_cta-ripple"><span></span></span
+                    ><span class="cw-btn_cta-title"
+                      ><span data-text="+1 301 549 9309"
+                        >+1 301 549 9309</span
+                      ></span
+                    ></a
+                  >
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-
+      <footer class="cw-footer" data-cursor="-inverse">
+        <div class="cw-footer-bg">
+          <div class="cw-footer-bg-media">
+            <video
+              crossorigin="anonymous"
+              autoplay=""
+              playsinline=""
+              loop=""
+              muted=""
+              style="display: none"
+            >
+              <source
+                src="https://cuberto.com/assets/footer/ropes.mp4"
+                media="(min-width:768px)"
+              />
+              <source src="https://cuberto.com/assets/footer/ropes-sm.mp4?2" /></video
+            ><canvas
+              data-engine="three.js r167"
+              width="1367"
+              height="956"
+              style="display: block; width: 1367px; height: 956px"
+            ></canvas>
+          </div>
+        </div>
+        <div class="cw-footer-content">
+          <div class="cw-footer-top">
+            <div class="cw-footer-container -sm">
+              <div class="cw-footer-header">
+                <h2 style="">
+                  <div
+                    style="
+                      display: block;
+                      text-align: center;
+                      position: relative;
+                      margin: -0.2em;
+                      padding: 0.2em;
+                      vertical-align: top;
+                      overflow: hidden;
+                    "
+                  >
+                    <div
+                      style="
+                        display: block;
+                        text-align: center;
+                        position: relative;
+                        translate: none;
+                        rotate: none;
+                        scale: none;
+                        transform: translate(0px, 120%);
+                        will-change: transform;
+                      "
+                    >
+                      Have
+                    </div>
+                  </div>
+                  <div
+                    style="
+                      display: block;
+                      text-align: center;
+                      position: relative;
+                      margin: -0.2em;
+                      padding: 0.2em;
+                      vertical-align: top;
+                      overflow: hidden;
+                    "
+                  >
+                    <div
+                      style="
+                        display: block;
+                        text-align: center;
+                        position: relative;
+                        translate: none;
+                        rotate: none;
+                        scale: none;
+                        transform: translate(0px, 120%);
+                        will-change: transform;
+                      "
+                    >
+                      <em>an idea?</em>
+                    </div>
+                  </div>
+                </h2>
+              </div>
+              <div class="cw-footer-action">
+                <a
+                  class="cw-btn cw-btn_cta -xl -inverse"
+                  href="/contacts/"
+                  style="pointer-events: none"
+                  ><span
+                    class="cw-btn_cta-border"
+                    style="
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      opacity: 0;
+                      will-change: transform;
+                      transform: scale(0, 0.5);
+                    "
+                  ></span
+                  ><span class="cw-btn_cta-ripple"><span></span></span
+                  ><span
+                    class="cw-btn_cta-title"
+                    style="
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      will-change: transform;
+                      transform: translate(0px, 110%) scale(0.5, 0.5);
+                    "
+                    ><span data-text="Tell us">Tell us</span></span
+                  ></a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="cw-footer-bottom">
+            <div class="cw-footer-container -sm">
+              <div class="cw-footer-grid">
+                <div class="cw-footer-grid-col -left">
+                  <div class="cw-footer-tags">
+                    <div class="cw-footer-tag" style="opacity: 0">
+                      <a
+                        class="cw-btn cw-btn_cta -sm -inverse"
+                        href="mailto:info@cuberto.com"
+                        ><span class="cw-btn_cta-border"></span
+                        ><span class="cw-btn_cta-ripple"><span></span></span
+                        ><span class="cw-btn_cta-title"
+                          ><span data-text="info@cuberto.com"
+                            >info@cuberto.com</span
+                          ></span
+                        ></a
+                      >
+                    </div>
+                    <div class="cw-footer-tag" style="opacity: 0">
+                      <a
+                        class="cw-btn cw-btn_cta -sm -inverse"
+                        href="tel:+13015499309"
+                        ><span class="cw-btn_cta-border"></span
+                        ><span class="cw-btn_cta-ripple"><span></span></span
+                        ><span class="cw-btn_cta-title"
+                          ><span data-text="+1 301 549 9309"
+                            >+1 301 549 9309</span
+                          ></span
+                        ></a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="cw-footer-grid-col -center">
+                  <div class="cw-footer-links">
+                    <a
+                      class="cw-footer-link"
+                      href="/privacy/"
+                      style="opacity: 0"
+                      ><span>Privacy Policy</span></a
+                    >
+                  </div>
+                </div>
+                <div class="cw-footer-grid-col -right"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </main>
-    <script src="assets/js/bundle.js" defer></script>
+    <script async="" src="https://mc.webvisor.org/metrika/tag_ww.js"></script>
+    <script src="https://cuberto.com/assets/js/bundle.js?v=5.3.17" async=""></script>
+    <script>
+      (function (m, e, t, r, i, k, a) {
+        m[i] =
+          m[i] ||
+          function () {
+            (m[i].a = m[i].a || []).push(arguments);
+          };
+        m[i].l = 1 * new Date();
+        for (var j = 0; j < document.scripts.length; j++) {
+          if (document.scripts[j].src === r) {
+            return;
+          }
+        }
+        (k = e.createElement(t)),
+          (a = e.getElementsByTagName(t)[0]),
+          (k.async = 1),
+          (k.src = r),
+          a.parentNode.insertBefore(k, a);
+      })(
+        window,
+        document,
+        "script",
+        "https://mc.webvisor.org/metrika/tag_ww.js",
+        "ym"
+      );
+      ym((window.ymID = 22519915), "init", {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+        webvisor: true,
+      });
+    </script>
+    <noscript
+      ><div>
+        <img
+          src="https://mc.webvisor.org/watch/22519915"
+          style="position: absolute; left: -9999px"
+        /></div
+    ></noscript>
+    <div
+      class="cw-cursor -hidden"
+      style="
+        translate: none;
+        rotate: none;
+        scale: none;
+        will-change: auto;
+        transform: translate(1619.95px, 559.158px) rotate(-71.221deg)
+          scale(1.00025, 0.99975);
+      "
+    >
+      <div
+        class="cw-cursor-inner"
+        style="
+          translate: none;
+          rotate: none;
+          scale: none;
+          transform: rotate(71.221deg);
+        "
+      >
+        <div class="cw-cursor-media">
+          <div class="cw-cursor-media-box"></div>
+        </div>
+        <div class="cw-cursor-text">Explore</div>
+      </div>
+    </div>
   </body>
 </html>
